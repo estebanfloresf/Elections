@@ -1,22 +1,25 @@
-var express = require('express');
-var path = require('path');
-var favicon = require('serve-favicon');
-var logger = require('morgan');
-var cookieParser = require('cookie-parser');
-var bodyParser = require('body-parser');
-var sassMiddleware = require('node-sass-middleware');
+const express = require('express');
+const path = require('path');
+const favicon = require('serve-favicon');
+const logger = require('morgan');
+const cookieParser = require('cookie-parser');
+const bodyParser = require('body-parser');
+const sassMiddleware = require('node-sass-middleware');
+const helpers = require('./helpers');
 
-var index = require('./routes/index');
-var users = require('./routes/users');
+
+const index = require('./routes/index');
+const users = require('./routes/users');
 
 const app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'jade');
+
+app.set('view engine', 'pug');
 
 // uncomment after placing your favicon in /public
-//app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
+app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -29,8 +32,21 @@ app.use(sassMiddleware({
 }));
 app.use(express.static(path.join(__dirname, 'public')));
 
+// pass variables to our templates + all requests
+app.use((req, res, next) => {
+  res.locals.h = helpers;
+  // res.locals.flashes = req.flash();
+  res.locals.user = req.user || null;
+  res.locals.currentPath = req.path;
+  next();
+});
+
+
 app.use('/', index);
 app.use('/users', users);
+
+
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
