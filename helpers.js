@@ -23,6 +23,7 @@ exports.siteName = `Elecciones`;
 exports.menu = [
   { slug: '/surveys', title: 'Surveys', icon: 'survey', },
     { slug: '/candidates', title: 'Candidates', icon: 'candidates', },
+    { slug: '/dashboard', title: 'Dashboard', icon: 'dashboard', },
   // { slug: '/tags', title: 'Tags', icon: 'tag', },
   // { slug: '/top', title: 'Top', icon: 'top', },
   // { slug: '/add', title: 'Add', icon: 'add', },
