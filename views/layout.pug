@@ -25,15 +25,36 @@ html
                         each item in h.menu
                             li.nav__item
                                 a.nav__link(href=item.slug, class=(currentPath.startsWith(item.slug) ? 'nav__link--active' : ''))
-                                    img(src=`./images/icons/${item.icon}.svg` style="width:30px; height:20px")
-                                    //!= h.icon(item.icon)
-                                    span  #{item.title}
+                                    //img(src=`./images/icons/${item.icon}.svg` style="width:30px; height:15px")
+                                    //!= h.icon(item.icon
+                                    span.glyphicon
+                                        img(src=`./images/icons/${item.icon}.svg` style="width:30px; height:15px")
+                                    span #{item.title}
                     form.navbar-form.navbar-right
                         input.form-control(type='text', placeholder='Search...')
 
 
         div.container
             div.starter-template
+
+                block messages
+                    if locals.flashes
+                        .inner
+                            .flash-messages
+                                - const categories = Object.keys(locals.flashes)
+                                - const defaultoption = 'warning'
+                                each category in categories
+                                    each message in flashes[category]
+
+                                        //if category.contain('success','warning','info','danger')
+                                        //    pre= h.dump(flashes[category])
+
+
+                                        .alert(class=`alert alert-dismissible alert-${category} ` role="alert")
+                                            button.close(type="button", data-dismiss="alert", aria-label="Close" onClick="this.parentElement.remove()") &times;
+
+                                            p.flash__text!= message
+                                            //button.flash__remove(onClick="this.parentElement.remove()") &times;
 
                 block content
 

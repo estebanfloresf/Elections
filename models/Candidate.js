@@ -13,7 +13,7 @@ const candidateSchema = new mongoose.Schema({
     lastname :{
         type: String,
         lowercase:true,
-        required: 'Candidate must have a name'
+        required: 'Candidate must have a last name'
     },
     polorg :{
         type: String,
@@ -22,7 +22,7 @@ const candidateSchema = new mongoose.Schema({
     },
 
 
-    pre_photo : String
+    photo : String
 
 
 

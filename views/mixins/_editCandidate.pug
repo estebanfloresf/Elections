@@ -2,11 +2,14 @@ mixin editCandidate(candidate={})
 
     form(method="POST" action='/addCandidate')
         div.form-group
-            label(for="name") Candidate's Name
+            label(for="name")  Name
             input(type="text" name="name" value=candidate.name class="form-control")
         div.form-group
-            label(for="lastname") Candidate's Last Name
+            label(for="lastname")  Last Name
             input(type="text" name="lastname" value=candidate.lastname class="form-control")
+        div.form-group
+            label(for="polorg")  Political Organization
+            input(type="text" name="polorg" value=candidate.polorg class="form-control")
         div.form-group
             label(for="photo") Photo
             input(type="file" name="photo" id="photo" accept = "image/gif,image/png,image/jpeg")

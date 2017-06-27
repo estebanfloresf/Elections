@@ -13,6 +13,11 @@ exports.addCandidate = async (req,res) =>{
     // res.json(req.body);
     const candidate = await (new Candidate(req.body)).save();
 
+
+    if (!candidate){
+        req.flash('error','Whoops something went wrong');
+    }
+
     req.flash('success', `Succesfully created ${candidate.name}`);
     res.redirect('/');
 
