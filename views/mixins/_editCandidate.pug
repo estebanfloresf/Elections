@@ -1,0 +1,21 @@
+mixin editCandidate(candidate={})
+
+    form(method="POST" action='/addCandidate')
+        div.form-group
+            label(for="name") Candidate's Name
+            input(type="text" name="name" value=candidate.name class="form-control")
+        div.form-group
+            label(for="lastname") Candidate's Last Name
+            input(type="text" name="lastname" value=candidate.lastname class="form-control")
+        div.form-group
+            label(for="photo") Photo
+            input(type="file" name="photo" id="photo" accept = "image/gif,image/png,image/jpeg")
+            if candidate.photo
+                img(src=`/uploads/${candidate.photo}`, alt=candidate.name  width=200)
+        div.form-group
+            input(type="submit" value="Save →" class="btn btn-default btn-block")
+
+
+
+
+

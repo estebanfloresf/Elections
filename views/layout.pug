@@ -25,9 +25,9 @@ html
                         each item in h.menu
                             li.nav__item
                                 a.nav__link(href=item.slug, class=(currentPath.startsWith(item.slug) ? 'nav__link--active' : ''))
-
-                                    != h.icon(item.icon)
-                                    span #{item.title}
+                                    img(src=`./images/icons/${item.icon}.svg` style="width:30px; height:20px")
+                                    //!= h.icon(item.icon)
+                                    span  #{item.title}
                     form.navbar-form.navbar-right
                         input.form-control(type='text', placeholder='Search...')
 

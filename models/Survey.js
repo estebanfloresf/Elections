@@ -27,12 +27,14 @@ const firmSchema = new mongoose.Schema({
         cities: [String],
         candidates: [{
 
-            percentage: Number,
+
             candidate: {
                 type: mongoose.Schema.ObjectId,
-                ref: 'Candidate'
-            },
-            required: 'You must supply a candidate'
+                ref: 'Candidate',
+                percentage: Number,
+                required: 'You must supply a candidate'
+            }
+
 
         }]
 
