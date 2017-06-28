@@ -4,6 +4,16 @@
 const mongoose = require('mongoose');
 const Candidate = mongoose.model('Candidate');
 
+exports.getCandidates = async (req, res) =>{
+
+    //1. Query the database for a list of stores
+
+    const candidates = await Candidate.find();
+
+    res.render('candidates', {title: "Candidates", candidates});
+
+};
+
 
 exports.editCandidate = (req,res) =>{
   res.render('editCandidate', {title:'Edit Candidate'});

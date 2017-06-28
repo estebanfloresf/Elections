@@ -53,7 +53,7 @@ html
                                         .alert(class=`alert alert-dismissible alert-${category} ` role="alert")
                                             button.close(type="button", data-dismiss="alert", aria-label="Close" onClick="this.parentElement.remove()") &times;
 
-                                            p.flash__text!= message
+                                            p!= message
                                             //button.flash__remove(onClick="this.parentElement.remove()") &times;
 
                 block content

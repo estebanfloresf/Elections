@@ -21,17 +21,19 @@ const firmSchema = new mongoose.Schema({
         max: 5,
         required: 'Please enter a rating'
     },
+    source: String,
+
     firstpoll: [{
         date: Date,
         margin: Number,
         cities: [String],
+        source: String,
         candidates: [{
 
-
+            percentage: Number,
             candidate: {
                 type: mongoose.Schema.ObjectId,
                 ref: 'Candidate',
-                percentage: Number,
                 required: 'You must supply a candidate'
             }
 
@@ -43,14 +45,16 @@ const firmSchema = new mongoose.Schema({
         date: Date,
         margin: Number,
         cities: [String],
+        source: String,
         candidates: [{
 
             percentage: Number,
             candidate: {
                 type: mongoose.Schema.ObjectId,
-                ref: 'Candidate'
-            },
-            required: 'You must supply a candidate'
+                ref: 'Candidate',
+                required: 'You must supply a candidate'
+            }
+
 
         }]
 

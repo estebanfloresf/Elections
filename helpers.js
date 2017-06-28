@@ -18,14 +18,10 @@ exports.staticMap = ([lng, lat]) => `https://maps.googleapis.com/maps/api/static
 exports.icon = (name) => fs.readFileSync(`./public/images/icons/${name}.svg`);
 
 // Some details about the site
-exports.siteName = `Elecciones`;
+exports.siteName = 'Elections';
 
 exports.menu = [
     { slug: '/dashboard', title: 'Dashboard', icon: 'dashboard', },
     { slug: '/surveys', title: 'Surveys', icon: 'survey', },
-    { slug: '/candidates', title: 'Candidates', icon: 'candidates', },
-    // { slug: '/tags', title: 'Tags', icon: 'tag', },
-  // { slug: '/top', title: 'Top', icon: 'top', },
-  // { slug: '/add', title: 'Add', icon: 'add', },
-  // { slug: '/map', title: 'Map', icon: 'map', },
+    { slug: '/candidates', title: 'Candidates', icon: 'candidates', }
 ];

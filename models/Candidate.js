@@ -5,15 +5,15 @@ mongoose.Promise = global.Promise;
 
 const candidateSchema = new mongoose.Schema({
 
-    name :{
+    president :{
         type: String,
         lowercase:true,
-        required: 'Candidate must have a name'
+        required: 'There must be a president candidate'
     },
-    lastname :{
+    vicepresident :{
         type: String,
         lowercase:true,
-        required: 'Candidate must have a last name'
+        required: 'There must be a vicepresident candidate'
     },
     polorg :{
         type: String,
@@ -22,7 +22,8 @@ const candidateSchema = new mongoose.Schema({
     },
 
 
-    photo : String
+    photo_president : String,
+    photo_vicepresident : String
 
 
 

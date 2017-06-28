@@ -10,7 +10,9 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Home' });
 });
 
-router.get('/candidates', candidateController.editCandidate );
+
+// candidateController.editCandidate for edit
+router.get('/candidates', catchErrors( candidateController.getCandidates ));
 router.post('/addCandidate', catchErrors( candidateController.addCandidate));
 
 module.exports = router;

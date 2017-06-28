@@ -2,19 +2,25 @@ mixin editCandidate(candidate={})
 
     form(method="POST" action='/addCandidate')
         div.form-group
-            label(for="name")  Name
-            input(type="text" name="name" value=candidate.name class="form-control")
+            label(for="president")  President
+            input(type="text" name="president" value=candidate.president class="form-control")
         div.form-group
-            label(for="lastname")  Last Name
-            input(type="text" name="lastname" value=candidate.lastname class="form-control")
+            label(for="vicepresident") Vicepresident
+            input(type="text" name="vicepresident" value=candidate.vicepresident class="form-control")
         div.form-group
             label(for="polorg")  Political Organization
             input(type="text" name="polorg" value=candidate.polorg class="form-control")
         div.form-group
-            label(for="photo") Photo
-            input(type="file" name="photo" id="photo" accept = "image/gif,image/png,image/jpeg")
+            label(for="photo_president") President Photo
+            input(type="file" name="photo_president" id="presidentphoto" accept = "image/gif,image/png,image/jpeg")
             if candidate.photo
-                img(src=`/uploads/${candidate.photo}`, alt=candidate.name  width=200)
+                img(src=`/uploads/${candidate.photo_president}`, alt=candidate.president  width=200)
+        div.form-group
+
+            label(for="photo_vicepresident") VicePresident Photo
+            input(type="file" name="photo_vicepresident" id="vicepresidentphoto" accept = "image/gif,image/png,image/jpeg")
+            if candidate.photo
+                img(src=`/uploads/${candidate.photo_vicepresident}`, alt=candidate.vicepresident  width=200)
         div.form-group
             input(type="submit" value="Save →" class="btn btn-default btn-block")
 
