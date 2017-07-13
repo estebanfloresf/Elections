@@ -7,7 +7,7 @@ mongoose.Promise = global.Promise;
 const slug = require('slugs');
 
 
-const firmSchema = new mongoose.Schema({
+const surveySchema = new mongoose.Schema({
 
     name: {
         type: String,
@@ -23,7 +23,7 @@ const firmSchema = new mongoose.Schema({
     },
     source: String,
 
-    firstpoll: [{
+    firstround: [{
         date: Date,
         margin: Number,
         cities: [String],
@@ -41,7 +41,7 @@ const firmSchema = new mongoose.Schema({
         }]
 
     }],
-    secondPoll: [{
+    secondround: [{
         date: Date,
         margin: Number,
         cities: [String],
@@ -62,4 +62,4 @@ const firmSchema = new mongoose.Schema({
 
 });
 
-module.exports = mongoose.model('Survey', firmSchema);
+module.exports = mongoose.model('Survey', surveySchema);

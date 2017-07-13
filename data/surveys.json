@@ -1,0 +1,509 @@
+[
+  {
+    "slug": "p.opinion",
+    "name": "perfiles de opinion",
+    "ranking": 2,
+    "firstround": [
+      {
+        "source": "http://www.ecuadorinmediato.com/index.php?module=Noticias&func=news_user_view&id=2818815405",
+        "margin": 2.7,
+        "date": "5/2/2017",
+        "cities": [
+          "quito",
+          "guayaquil",
+          "cuenca",
+          "manta",
+          "portoviejo"
+        ],
+        "candidates": [
+          {
+            "$oid": "5954144faf07d4bc813515c6", 
+            "value": 16
+          },
+          {
+            "$oid": "5954144faf07d4bc813515c7", 
+            "value": 7
+          },
+          {
+            "$oid": "5954144faf07d4bc813515c8", 
+            "value": 4
+          },
+          {
+            "$oid": "5954144faf07d4bc813515c9", 
+            "value": 14
+          },
+          {
+            "$oid": "5954144faf07d4bc813515ca", 
+            "value": 35
+          },
+          {
+            "$oid": "5954144faf07d4bc813515cb", 
+            "value": 0.5
+          },
+          {
+            "$oid": "5954144faf07d4bc813515cc", 
+            "value": 4
+          },
+          {
+            "$oid": "5954144faf07d4bc813515cd", 
+            "value": 0.5
+          },
+          {
+            "$oid" : "5966c7eaf36d28096070ba20",
+            "value": 11
+          }
+          ,
+          {
+            "$oid" : "5966c887f36d28096070ba46",
+            "value": 8
+          }
+        ]
+      }
+    ],
+    "secondround": [
+      {
+        "source": "http://www.eltelegrafo.com.ec/noticias/politiko-2017/49/lenin-moreno-aventaja-a-guillermo-lasso-por-15-4-puntos-segun-perfiles-de-opinion",
+        "margin": 0,
+        "date": "14/3/2017",
+        "cities": ["several"],
+        "candidates": [
+          {
+            "$oid": "5954144faf07d4bc813515c6", 
+            "value": 35.53
+          },
+           {
+            "$oid": "5954144faf07d4bc813515ca", 
+            "value": 51.02
+          },
+          {
+            "$oid" : "5966c7eaf36d28096070ba20",
+            "value": 7.24
+          }
+          ,
+          {
+            "$oid" : "5966c887f36d28096070ba46",
+            "value": 6.21
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "o.publica",
+    "name": "opinion publica ecuador",
+    "ranking": 3,
+    "firstround": [
+      {
+        "source": "http://www.eluniverso.com/noticias/2017/02/08/nota/6038356/encuestadora-opinion-publica-situa-moreno-lasso-viteri-mayoria",
+        "margin": 0,
+        "date": "5/2/2017",
+        "cities": [],
+        "candidates": [
+          {
+            "$oid": "5954144faf07d4bc813515c6", 
+            "value": 18.2
+          },
+          {
+            "$oid": "5954144faf07d4bc813515c7", 
+            "value": 7.4
+          },
+          {
+            "$oid": "5954144faf07d4bc813515c8", 
+            "value": 3.6
+          },
+          {
+            "$oid": "5954144faf07d4bc813515c9", 
+            "value": 13.7
+          },
+          {
+            "$oid": "5954144faf07d4bc813515ca", 
+            "value": 34.2
+          },
+          {
+            "$oid": "5954144faf07d4bc813515cb", 
+            "value": 0.1
+          },
+          {
+            "$oid": "5954144faf07d4bc813515cc", 
+            "value": 2.5
+          },
+          {
+            "$oid": "5954144faf07d4bc813515cd", 
+            "value": 0.6
+          },
+          {
+            "$oid" : "5966c7eaf36d28096070ba20",
+            "value": 11.4
+          }
+          ,
+          {
+            "$oid" : "5966c887f36d28096070ba46",
+            "value": 8.3
+          }
+        ]
+      }
+    ],
+    "secondround": [
+      {
+        "source": "http://www.eleccionesenecuador.com/noticia-resultados-encuesta-opinion-publica-segunda-vuelta-marzo-2017-299.html",
+        "margin": 0,
+        "date": "12/3/2017",
+        "cities": ["several"],
+        "candidates": [
+          {
+            "$oid": "5954144faf07d4bc813515c6", 
+            "value": 35
+          },
+           {
+            "$oid": "5954144faf07d4bc813515ca", 
+            "value": 46
+          },
+          {
+            "$oid" : "5966c7eaf36d28096070ba20",
+            "value": 8
+          }
+          ,
+          {
+            "$oid" : "5966c887f36d28096070ba46",
+            "value": 11
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "cedatos",
+    "name": "centro de estudios y datos (cedatos)",
+    "ranking": 3,
+    "firstround": [
+      {
+        "source": "https://www.cedatos.com.ec/detalles_noticia.php?Id=284",
+        "margin": 3.2,
+        "date": "8/2/2017",
+        "cities": ["several"],
+        "candidates": [
+          {
+            "$oid": "5954144faf07d4bc813515c6", 
+            "value": 21.5
+          },
+          {
+            "$oid": "5954144faf07d4bc813515c7", 
+            "value": 7.7
+          },
+          {
+            "$oid": "5954144faf07d4bc813515c8", 
+            "value": 4.1
+          },
+          {
+            "$oid": "5954144faf07d4bc813515c9", 
+            "value": 14
+          },
+          {
+            "$oid": "5954144faf07d4bc813515ca", 
+            "value": 32.3
+          },
+          {
+            "$oid": "5954144faf07d4bc813515cb", 
+            "value": 0.5
+          },
+          {
+            "$oid": "5954144faf07d4bc813515cc", 
+            "value": 2.9
+          },
+          {
+            "$oid": "5954144faf07d4bc813515cd", 
+            "value": 0.6
+          },
+          {
+            "$oid" : "5966c7eaf36d28096070ba20",
+            "value": 4.5
+          },
+          {
+            "$oid" : "5966c887f36d28096070ba46",
+            "value": 11.8
+          }
+        ]
+      }
+    ],
+    "secondround": [
+      {
+        "source": "https://www.cedatos.com.ec/detalles_noticia.php?Id=317",
+        "margin": 3.4,
+        "date": "15/3/2017",
+        "cities": ["several"],
+        "candidates": [
+          {
+            "$oid": "5954144faf07d4bc813515c6", 
+            "value": 44.2
+          },
+           {
+            "$oid": "5954144faf07d4bc813515ca", 
+            "value": 42.8
+          },
+          {
+            "$oid" : "5966c7eaf36d28096070ba20",
+            "value": 6.5
+          }
+          ,
+          {
+            "$oid" : "5966c887f36d28096070ba46",
+            "value": 6.5
+          }
+        ]
+      }
+    ]
+
+
+  },
+  {
+    "slug": "market",
+    "name": "blasco penaherrera & asociados (market)",
+    "ranking": 2,
+    "firstround": [
+      {
+        "source": "http://www.eluniverso.com/noticias/2017/01/21/nota/6008230/intenciones-voto-bajan-segun-datos-market",
+        "margin": 3.2,
+        "date": "20/2/2017",
+        "cities": ["several"],
+        "candidates": [
+          {
+            "$oid": "5954144faf07d4bc813515c6", 
+            "value": 16.57
+          },
+          {
+            "$oid": "5954144faf07d4bc813515c7", 
+            "value": 13.22
+          },
+          {
+            "$oid": "5954144faf07d4bc813515c8", 
+            "value": 4.78
+          },
+          {
+            "$oid": "5954144faf07d4bc813515c9", 
+            "value": 17.98
+          },
+          {
+            "$oid": "5954144faf07d4bc813515ca", 
+            "value": 28.17
+          },
+          {
+            "$oid": "5954144faf07d4bc813515cb", 
+            "value": 0.59
+          },
+          {
+            "$oid": "5954144faf07d4bc813515cc", 
+            "value": 1.53
+          },
+          {
+            "$oid": "5954144faf07d4bc813515cd", 
+            "value": 1.30
+          },
+          {
+            "$oid" : "5966c7eaf36d28096070ba20",
+            "value": 6.7
+          },
+          {
+            "$oid" : "5966c887f36d28096070ba46",
+            "value": 9.2
+          }
+        ]
+      }
+    ],
+    "secondround": [
+      {
+        "source": "http://www.elcomercio.com/actualidad/encuesta-market-diferencia-moreno-lasso.html",
+        "margin": 2.8,
+        "date": "20/3/2017",
+        "cities": ["several"],
+        "candidates": [
+          {
+            "$oid": "5954144faf07d4bc813515c6", 
+            "value": 45
+          },
+           {
+            "$oid": "5954144faf07d4bc813515ca", 
+            "value": 48.9
+          },
+          {
+            "$oid" : "5966c7eaf36d28096070ba20",
+            "value": 1.9
+          }
+          ,
+          {
+            "$oid" : "5966c887f36d28096070ba46",
+            "value": 4.2
+          }
+        ]
+      }
+    ]
+
+
+  },
+  {
+    "slug": "cms",
+    "name": "consult marketing solutions",
+    "ranking": 2,
+    "firstround": [
+      {
+        "source": "http://www.elcomercio.com/actualidad/leninmoreno-guillermolasso-cynthiaviteri-pacomoncayo-intencion.html",
+        "margin": 0,
+        "date": "08/2/2017",
+        "cities": ["several"],
+        "candidates": [
+          {
+            "$oid": "5954144faf07d4bc813515c6", 
+            "value": 15.18
+          },
+          {
+            "$oid": "5954144faf07d4bc813515c7", 
+            "value": 5.52
+          },
+          {
+            "$oid": "5954144faf07d4bc813515c8", 
+            "value": 0
+          },
+          {
+            "$oid": "5954144faf07d4bc813515c9", 
+            "value": 6.64
+          },
+          {
+            "$oid": "5954144faf07d4bc813515ca", 
+            "value": 25.63
+          },
+          {
+            "$oid": "5954144faf07d4bc813515cb", 
+            "value": 0
+          },
+          {
+            "$oid": "5954144faf07d4bc813515cc", 
+            "value": 0
+          },
+          {
+            "$oid": "5954144faf07d4bc813515cd", 
+            "value": 0
+          },
+          {
+            "$oid" : "5966c7eaf36d28096070ba20",
+            "value": 0
+          },
+          {
+            "$oid" : "5966c887f36d28096070ba46",
+            "value": 0
+          }
+        ]
+      }
+    ],
+    "secondround": [
+      {
+        "source": "http://www.elcomercio.com/actualidad/ecuador-encuestadoras-resultados-electorales-sondeos.html",
+        "margin": 0,
+        "date": "19/3/2017",
+        "cities": ["several"],
+        "candidates": [
+          {
+            "$oid": "5954144faf07d4bc813515c6", 
+            "value": 35.86
+          },
+           {
+            "$oid": "5954144faf07d4bc813515ca", 
+            "value": 36.76
+          },
+          {
+            "$oid" : "5966c7eaf36d28096070ba20",
+            "value": 0
+          }
+          ,
+          {
+            "$oid" : "5966c887f36d28096070ba46",
+            "value": 0
+          }
+        ]
+      }
+    ]
+
+  },
+  {
+    "slug": "ciess",
+    "name": "centro de investigaciones y estudios (ciess)",
+    "ranking": 2,
+    "firstround": [
+      {
+        "source": "https://twitter.com/CIEESec/status/829469700849545217",
+        "margin": 3,
+        "date": "08/2/2017",
+        "cities": ["several"],
+        "candidates": [
+          {
+            "$oid": "5954144faf07d4bc813515c6", 
+            "value": 21.3
+          },
+          {
+            "$oid": "5954144faf07d4bc813515c7", 
+            "value": 10.8
+          },
+          {
+            "$oid": "5954144faf07d4bc813515c8", 
+            "value": 6.6
+          },
+          {
+            "$oid": "5954144faf07d4bc813515c9", 
+            "value": 12.6
+          },
+          {
+            "$oid": "5954144faf07d4bc813515ca", 
+            "value": 43.3
+          },
+          {
+            "$oid": "5954144faf07d4bc813515cb", 
+            "value": 1
+          },
+          {
+            "$oid": "5954144faf07d4bc813515cc", 
+            "value": 3.9
+          },
+          {
+            "$oid": "5954144faf07d4bc813515cd", 
+            "value": 0.6
+          },
+          {
+            "$oid" : "5966c7eaf36d28096070ba20",
+            "value": 0
+          },
+          {
+            "$oid" : "5966c887f36d28096070ba46",
+            "value": 0
+          }
+        ]
+      }
+    ],
+    "secondround": [
+      {
+        "source": "",
+        "margin": 0,
+        "date": "",
+        "cities": [],
+        "candidates": [
+          {
+            "$oid": "5954144faf07d4bc813515c6", 
+            "value": 0
+          },
+           {
+            "$oid": "5954144faf07d4bc813515ca", 
+            "value": 0
+          },
+          {
+            "$oid" : "5966c7eaf36d28096070ba20",
+            "value": 0
+          }
+          ,
+          {
+            "$oid" : "5966c887f36d28096070ba46",
+            "value": 0
+          }
+        ]
+      }
+    ]
+
+
+  }
+]
