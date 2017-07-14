@@ -18,7 +18,7 @@ const surveys = JSON.parse(fs.readFileSync(__dirname + '/surveys.json', 'utf-8')
 async function deleteData() {
   console.log('😢😢 Goodbye Data...');
   await Candidate.remove();
-  // await Review.remove();
+  await Survey.remove();
   // await User.remove();
   console.log('Data Deleted. To load sample data, run\n\n\t npm run sample\n\n');
   process.exit();
