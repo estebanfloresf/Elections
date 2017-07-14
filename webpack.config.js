@@ -6,6 +6,8 @@ const path = require('path');
 const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const autoprefixer = require('autoprefixer');
+
+
 /*
  webpack sees every file as a module.
  How to handle those files is up to loaders.
@@ -29,7 +31,8 @@ const javascript = {
 
 const postcss = {
     loader: 'postcss-loader',
-    // loader: ExtractTextPlugin.extract("style", "css!sass"),
+
+    // loader: ExtractTextPlugin.extract("style",'css?postcss!sass'),
     // loader: ExtractTextPlugin.extract({
     //     fallbackLoader: "style-loader",
     //     loader: "css-loader!sass-loader"
@@ -83,10 +86,12 @@ const config = {
     // plugins: [uglify]
     plugins: [
         // here is where we tell it to output our css to a separate file
+
         new ExtractTextPlugin('style.css')
     ]
 };
 // webpack is cranky about some packages using a soon to be deprecated API. shhhhhhh
+
 process.noDeprecation = true;
 
 module.exports = config;

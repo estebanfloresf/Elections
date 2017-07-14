@@ -20,6 +20,7 @@ mongoose.connection.on('error', (err) => {
 //import all our models
 require('./models/Candidate');
 require('./models/Survey');
+require('./models/Firm');
 
 
 

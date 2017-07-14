@@ -1,7 +1,0 @@
-{
-"version": 3,
-"mappings": "AAAA,IAAI;EACF,OAAO,EAAE,IAAI;EACb,IAAI,EAAE,kDAAkD;;AAE1D,CAAC;EACC,KAAK,EAAE,OAAO;;AAGhB,CAAC;EACC,KAAK,EAAE,OAAO;;AAEhB,EAAE;EACA,KAAK,EAAE,KAAK",
-"sources": ["webpack:///./public/sass/style.scss"],
-"names": [],
-"file": "style.css"
-}

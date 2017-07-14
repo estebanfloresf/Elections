@@ -8,7 +8,8 @@ const Survey = mongoose.model('Survey');
 
 exports.getSurveys = async (req,res)=>{
 
-    const surveys =  await Survey.find();
+
+    const surveys = await Survey.find();
 
     res.render('surveys', {title:"Surveys", surveys});
 

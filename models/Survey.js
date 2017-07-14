@@ -9,56 +9,31 @@ const slug = require('slugs');
 
 const surveySchema = new mongoose.Schema({
 
-    name: {
-        type: String,
-        trim: true,
-        lowercase: true,
-        required: 'Please enter a polling firm name!'
+    firm: {
+        type: mongoose.Schema.ObjectId,
+        ref: 'Firm',
+        required: 'Please enter a polling firm!'
     },
-    ranking: {
-        type: Number,
-        min: 1,
-        max: 5,
-        required: 'Please enter a rating'
-    },
+    number: Number,
+    name: String,
+    eleccion: String,
     source: String,
+    margin: Number,
+    date: Date,
+    cities: [String],
+    candidates: [{
 
-    firstround: [{
-        date: Date,
-        margin: Number,
-        cities: [String],
-        source: String,
-        candidates: [{
+        percentage: Number,
+        candidate: {
+            type: mongoose.Schema.ObjectId,
+            ref: 'Candidate',
+            required: 'You must supply a candidate'
+        }
 
-            percentage: Number,
-            candidate: {
-                type: mongoose.Schema.ObjectId,
-                ref: 'Candidate',
-                required: 'You must supply a candidate'
-            }
-
-
-        }]
-
-    }],
-    secondround: [{
-        date: Date,
-        margin: Number,
-        cities: [String],
-        source: String,
-        candidates: [{
-
-            percentage: Number,
-            candidate: {
-                type: mongoose.Schema.ObjectId,
-                ref: 'Candidate',
-                required: 'You must supply a candidate'
-            }
-
-
-        }]
 
     }]
+
+
 
 });
 
