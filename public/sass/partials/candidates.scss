@@ -1,0 +1,25 @@
+
+// CSS for the Candidates page
+.fun_hover {
+  font-size: 2rem;
+
+
+  background-image: linear-gradient(to right, white 50%, $color1 10%);
+  background-position: 0;
+  // make the background twice as big
+  background-size: 201%;
+  transition: all 0.4s;
+  &:hover {
+    text-decoration: none;
+    color: white;
+    background-position: -100%;
+  }
+
+}
+
+
+
+
+.orgpol {
+  color: $color1;
+}

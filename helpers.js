@@ -21,7 +21,7 @@ exports.icon = (name) => fs.readFileSync(`./public/images/icons/${name}.svg`);
 exports.siteName = 'Elections 17';
 
 exports.menu = [
-    { slug: '/dashboard', title: 'Dashboard', icon: 'dashboard', },
+    // { slug: '/dashboard', title: 'Dashboard', icon: 'dashboard', },
     { slug: '/surveys', title: 'Surveys', icon: 'survey', },
     { slug: '/candidates', title: 'Candidates', icon: 'candidates', }
 ];

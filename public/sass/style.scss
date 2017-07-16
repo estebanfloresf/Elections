@@ -1,23 +1,7 @@
 
-
-body {
-  padding: 200px;
-  font-family: 'Abel', sans-serif ;
-  font-size: 14px ;
-}
-a{
-  color: white;
-}
-
-p{
-  color: #04b0ff ;
-}
-h1{
-  color: #43c8ec ;
-}
+@import "partials/variables";
+@import "partials/navigation";
+@import "partials/typography";
+@import "partials/candidates";
 
 
-
-.nav__link--active{
-  color: white;
-}

@@ -8,10 +8,10 @@ html
         title= `${title} | ${h.siteName}`
 
         link(rel='stylesheet', href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" , integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" , crossorigin="anonymous")
-        //link(rel='stylesheet', href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" , integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" , crossorigin="anonymous")
-        link(rel='stylesheet', href="https://fonts.googleapis.com/css?family=Abel" type='text/css')
-        link(rel='stylesheet', href='/dist/style.css')
+        link(rel='stylesheet', href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" , integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" , crossorigin="anonymous")
+        link(rel='stylesheet', href="https://fonts.googleapis.com/css?family=Abel")
 
+        link(rel='stylesheet', href='../dist/style.css')
     body
         nav.navbar.navbar-inverse.navbar-fixed-top
             .container-fluid
@@ -25,12 +25,14 @@ html
                 #navbar.navbar-collapse.collapse
                     ul.nav.navbar-nav.navbar-right
                         each item in h.menu
-                            li.nav__item
-                                a.nav__link(href=item.slug, class=(currentPath.startsWith(item.slug) ? 'nav__link--active' : ''))
-                                    //img(src=`./images/icons/${item.icon}.svg` style="width:30px; height:15px")
-                                    //!= h.icon(item.icon
+                            li
+                                a(href=item.slug, class=(currentPath.startsWith(item.slug) ? 'active' : ''))
+                                    //img.img_menu_icon(src=`./images/icons/${item.icon}.svg`)
+                                    //.img_nav
+                                    //    != h.icon(item.icon)
                                     span.glyphicon
-                                        img(src=`./images/icons/${item.icon}.svg` style="width:30px; height:15px")
+                                        img.svg(src=`./images/icons/${item.icon}.svg` style="width:30px; height:15px")
+
                                     span #{item.title}
                     form.navbar-form.navbar-right
                         input.form-control(type='text', placeholder='Search...')
@@ -61,5 +63,17 @@ html
                 block content
 
         script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js')
+        script(src="/dist/App.bundle.js")
         // Include all compiled plugins (below), or include individual files as needed
+        //script(src='inlineSVG.min.js')
+        //script.
+        //    const inlineSVG = require('inline-svg');
+        //
+        //    inlineSVG.init({
+        //        svgSelector: 'img.svg', // the class attached to all images that should be inlined
+        //        initClass: 'js-inlinesvg' // class added to <html>
+        //    }, function () {
+        //        console.log('All SVGs inlined');
+        //    });
+
 

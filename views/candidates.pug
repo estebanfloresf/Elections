@@ -16,9 +16,10 @@ block content
                                 img.media-object(src=`${candidate.photo_president}`, alt=`${candidate.president}` style='width:64px; height:64px')
 
                         .media-body
-                            a(href='#')
-                                h4.media-heading.text-capitalize #{candidate.president}
-                            p.text-capitalize #{candidate.polorg}
+                            a.fun_hover.text-capitalize(href='#') #{candidate.president}
+
+                            p.text-capitalize
+                                small.orgpol #{candidate.polorg}
 
 
 
