@@ -21,6 +21,8 @@ mongoose.connection.on('error', (err) => {
 require('./models/Candidate');
 require('./models/Survey');
 require('./models/Firm');
+require('./models/Results');
+require('./models/Province');
 
 
 

@@ -30,4 +30,19 @@ const candidateSchema = new mongoose.Schema({
 });
 
 
+candidateSchema.statics.getNationResults = function () {
+    return this.aggregate([
+        {$lookup:
+            {from: 'results', localField: '_id', foreignField: 'candidate' , as: 'results1'}
+        },
+        {$match: {'results1.1': {$exists: true}}}, // just to get rid of no values
+        {$project:{
+            total: {$avg : '$results1.men ' }
+        }}
+
+
+
+    ]);
+};
+
 module.exports = mongoose.model('Candidate', candidateSchema);

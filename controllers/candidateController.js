@@ -3,14 +3,19 @@
  */
 const mongoose = require('mongoose');
 const Candidate = mongoose.model('Candidate');
+const Results = mongoose.model('Results');
 
 exports.getCandidates = async (req, res) =>{
 
-    //1. Query the database for a list of stores
+    //1. Query the database for a list of candidates and their results, so I query on the results collection
 
-    const candidates = await Candidate.find();
+    // const candidates = await Candidate.find();
 
-    res.render('candidates', {title: "Candidates", candidates});
+    // const results = await Results.find({},{'round_one.candidate':1, 'round_two.candidate':1, 'provincia':1, 'round_one.total':1}).populate('round_one.candidate round_two.candidate ', 'president');
+
+    const results =  await Candidate.getNationResults();
+
+    res.render('candidates', {title: "Candidates",  results});
 
 };
 

@@ -56,5 +56,20 @@
      "president": "patricio zuquilanda",
      "photo_vicepresident": "http://www.eleccionesenecuador.com/fotos/candidatos-vicepresidencia/imagen-Johnnie-Jorgge.jpg"
 
+  },
+  {
+     "photo_president": "",
+     "vicepresident": "blancos",
+     "polorg": "blancos",
+     "president": "blancos",
+     "photo_vicepresident": ""
+  },
+
+  {
+     "photo_president": "",
+     "vicepresident": "nulos",
+     "polorg": "nulos",
+     "president": "nulos",
+     "photo_vicepresident": ""
   }
 ]

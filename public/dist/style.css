@@ -14,21 +14,20 @@
 
 .navbar-inverse .navbar-nav > li > a:hover,
 .navbar-inverse .navbar-nav > li > a:focus {
-  box-shadow: inset 0 -3px 0 #e6af2e; }
+  box-shadow: inset 0 -3px 0 #3581b8; }
 
 .navbar-inverse .navbar-nav > li > a.active,
 .navbar-inverse .navbar-nav > li > a.active > .svg path {
-  color: #191716;
-  background: #e6af2e;
-  text-shadow: none;
-  fill: #191716; }
+  color: white;
+  background: #3581b8;
+  text-shadow: none; }
 
 svg {
   width: 26px;
   height: 15px; }
 
 svg path {
-  fill: #000 !important; }
+  fill: white !important; }
 
 body {
   padding: 60px;
@@ -45,6 +44,10 @@ a, a:hover, a:active, a:visited, a:focus {
   text-decoration: none;
   color: black;
   background-color: transparent; }
+
+.page-header {
+  border-bottom: 1px solid #3581b8;
+  padding-bottom: 5px; }
 
 .fun_hover {
   font-size: 2rem;
