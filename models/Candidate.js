@@ -33,12 +33,36 @@ const candidateSchema = new mongoose.Schema({
 candidateSchema.statics.getNationResults = function () {
     return this.aggregate([
         {$lookup:
-            {from: 'results', localField: '_id', foreignField: 'candidate' , as: 'results1'}
+            {from: 'results', localField: '_id', foreignField: 'candidate' , as: 'results'}
         },
-        {$match: {'results1.1': {$exists: true}}}, // just to get rid of no values
-        {$project:{
-            total: {$avg : '$results1.men ' }
-        }}
+        {$match: {'results.0': {$exists: true}}}, // just to get rid of no values
+        // {$unwind: '$results'},
+        // {
+        //     "$group":{
+        //         "_id":{
+        //             "name": "$results.candidate",
+        //             "men":  {"$sum" :"$results.men"}
+        //         }
+        //     }
+        // },
+
+        {
+            $project:{
+               "totalmen": {"$sum" :"$results.men"},
+                "totalwomen": {"$sum" :"$results.women"},
+                "president" : "$$ROOT.president"
+
+            }
+        },
+        {
+            $project:{
+                "president" : "$president",
+                "totalmen" : "$totalmen",
+                "totalwomen": "$totalwomen",
+                "total" : {"$add":["$totalmen","$totalwomen"]}
+            }
+        }
+
 
 
 
