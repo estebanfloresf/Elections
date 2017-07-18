@@ -13,9 +13,9 @@ exports.getCandidates = async (req, res) =>{
 
     // const results = await Results.find({},{'round_one.candidate':1, 'round_two.candidate':1, 'provincia':1, 'round_one.total':1}).populate('round_one.candidate round_two.candidate ', 'president');
 
-    const results =  await Candidate.getNationResults();
+    const candidates =  await Candidate.getNationResults();
 
-    res.render('candidates', {title: "Candidates",  results});
+    res.render('candidates', {title: "Candidates",  candidates});
 
 };
 

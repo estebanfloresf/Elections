@@ -3,24 +3,26 @@ extends layout
 
 
 block content
-    pre= h.dump(results)
-    //.page-header
-    //    h1= title
-    //.container-fluid
-    //    .row
-    //
-    //        each candidate in candidates
-    //            if candidate._id != "596bde9557cfe2310e8fb160" && candidate._id != "596bde9557cfe2310e8fb15f"
-    //                .media
-    //                    .media-left
-    //                        a(href='#')
-    //                            img.media-object(src=`${candidate.photo_president}`, alt=`${candidate.president}` style='width:64px; height:64px')
-    //
-    //                    .media-body
-    //                        a.fun_hover.text-capitalize(href='#') #{candidate.president}
-    //
-    //                        p.text-capitalize
-    //                            small.orgpol #{candidate.polorg}
+    //pre= h.dump(candidates)
+    .page-header
+        h1= title
+    .container-fluid
+        .row
+
+            each candidate in candidates
+                if candidate._id != "596bde9557cfe2310e8fb160" && candidate._id != "596bde9557cfe2310e8fb15f"
+                    .media
+                        .media-left
+                            a(href='#')
+                                img.media-object(src=`${candidate.photo_president}`, alt=`${candidate.president}` style='width:64px; height:64px')
+
+                        .media-body
+                            a.fun_hover.text-capitalize(href='#') #{candidate.president}
+
+                            p.text-capitalize
+                                small.orgpol #{candidate.polorg}
+                            p.text-capitalize
+                                small.orgpol #{candidate.total}
 
 
 
