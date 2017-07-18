@@ -8,6 +8,18 @@ block content
         h1= title
     .container-fluid
         .row
+            //pre= h.dump(candidates)
+            script(type='text/javascript').
+                var candidates =!{JSON.stringify(candidates)};
+                function getTotal() {
+                    var totalvotos = 0;
+                    for (k in candidates) {
+                        totalvotos += candidates[k].total;
+
+                    }
+                    return totalvotos;
+                }
+
 
             each candidate in candidates
                 if candidate._id != "596bde9557cfe2310e8fb160" && candidate._id != "596bde9557cfe2310e8fb15f"
@@ -25,6 +37,14 @@ block content
                             //    small.orgpol #{candidate.total}
 
 
+                            div
+
+                                svg(width='300 ', height='100')
+
+                                script(type='text/javascript').
+                                    var candidate =[!{JSON.stringify(candidate)}];
+
+                                script(src="/javascripts/modules/candidates_svg.js")
 
 
 

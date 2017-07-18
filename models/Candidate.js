@@ -61,8 +61,7 @@ candidateSchema.statics.getNationResults = function () {
                 "president": "$president",
                 "photo_president": "$photo_president",
                 "polorg": "$polorg",
-                // "totalmen" : "$totalmen",
-                // "totalwomen": "$totalwomen",
+
                 "total": {"$add": ["$totalmen", "$totalwomen"]}
             }
         }

@@ -63,4 +63,31 @@ a, a:hover, a:active, a:visited, a:focus {
 .orgpol {
   color: #3581b8; }
 
+body {
+  margin: 15px;
+  background-color: white; }
+
+.bar {
+  fill: #3581b8; }
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #191716;
+  stroke-width: 1px;
+  shape-rendering: crispEdges; }
+
+.x path {
+  display: none; }
+
+.toolTip {
+  position: absolute;
+  display: none;
+  min-width: 80px;
+  height: auto;
+  background: none repeat scroll 0 0 #ffffff;
+  border: 1px solid #cdedfd;
+  padding: 14px;
+  text-align: center; }
+
 /*# sourceMappingURL=style.css.map*/

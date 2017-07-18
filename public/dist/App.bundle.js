@@ -128,7 +128,7 @@ function inlinesvg(e) {
                 $svg = $svg.attr('id', imgID);
             }
             // Add replaced image's classes to the new SVG
-            console.log(imgClass);
+
 
             if (typeof imgClass !== 'undefined') {
                 $svg = $svg.attr('class', imgClass);
@@ -144,8 +144,6 @@ function inlinesvg(e) {
 
             // Replace image with new SVG
             $img.replaceWith($svg);
-
-            console.log($img);
         }, 'xml');
     });
 }
