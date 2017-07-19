@@ -1,9 +1,17 @@
 @import "variables";
 
 body {
-  margin: 15px;
-  background-color: white;
+  margin: 5px;
+
+
 }
+
+div > svg {
+  height: 200px;
+  width: 200px;
+  padding-left: 10px;
+}
+
 .bar {
   fill: $color1;
 }

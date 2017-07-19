@@ -4,7 +4,11 @@
   width: 20px; }
 
 .navbar {
-  border: 0; }
+  border: 0;
+  background-color: #191716; }
+
+nav > .container-fluid {
+  background-color: #191716; }
 
 .navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form,
 .navbar-inverse .navbar-nav > li > a,
@@ -64,8 +68,12 @@ a, a:hover, a:active, a:visited, a:focus {
   color: #3581b8; }
 
 body {
-  margin: 15px;
-  background-color: white; }
+  margin: 5px; }
+
+div > svg {
+  height: 200px;
+  width: 200px;
+  padding-left: 10px; }
 
 .bar {
   fill: #3581b8; }

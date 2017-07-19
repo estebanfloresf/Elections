@@ -33,13 +33,14 @@ block content
 
                             p.text-capitalize
                                 small.orgpol #{candidate.polorg}
+
+
                             //p.text-capitalize
                             //    small.orgpol #{candidate.total}
 
 
-                            div
+                            div(class=`${candidate.president}`)
 
-                                svg(width='300 ', height='100')
 
                                 script(type='text/javascript').
                                     var candidate =[!{JSON.stringify(candidate)}];

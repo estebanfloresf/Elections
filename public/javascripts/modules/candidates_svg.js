@@ -27,12 +27,19 @@ var margin = {
 };
 
 var width = 960 - margin.left - margin.right,
-    height = 500 - margin.top - margin.bottom;
+    height = 20 - margin.top - margin.bottom;
 
-var svg = d3.select("svg"),
-    margin = {top: 20, right: 20, bottom: 30, left: 80},
+
+var m_div = d3.select("."+candidate[0].president+'"');
+
+var svg = m_div.append("svg"),
+    margin = {top: 10, right: 10, bottom: 10, left: 10},
     width = +svg.attr("width") - margin.left - margin.right,
     height = +svg.attr("height") - margin.top - margin.bottom;
+
+
+
+console.log(width);
 
 var tooltip = d3.select("body").append("div").attr("class", "toolTip");
 
@@ -45,21 +52,25 @@ var g = svg.append("g")
 
 x.domain([0, d3.max(candidate, function(d) {
 
-    return d.percentage;
+    return d.percentage+10;
 })]);
 y.domain(candidate.map(function(d) {
 
     return d.president;
-})).padding(0.1);
+})).padding(0.25);
 
 g.append("g")
     .attr("class", "x axis")
     .attr("transform", "translate(0," + height + ")")
-    .call(d3.axisBottom(x).ticks(5).tickFormat(function(d) { return parseInt(d / 1000); }).tickSizeInner([-height]));
+    .call(d3.axisBottom(x).ticks(5).tickFormat(function(d) { return parseInt(d); }).tickSizeInner([-height]));
+
+
+
 
 g.append("g")
     .attr("class", "y axis")
-    .call(d3.axisLeft(y));
+    .call(d3.axisLeft(y))
+    .style("text-transform", "text-capitalize");
 
 g.selectAll(".bar")
     .data(candidate)
@@ -74,7 +85,8 @@ g.selectAll(".bar")
             .style("left", d3.event.pageX - 50 + "px")
             .style("top", d3.event.pageY - 70 + "px")
             .style("display", "inline-block")
-            .html((d.president) + "<br>" + "£" + (d.percentage));
+            .style("text-transform", "text-capitalize")
+            .html((d.president) + "<br>"  + (d.percentage)+ "%");
     })
     .on("mouseout", function(d){ tooltip.style("display", "none");});
 
