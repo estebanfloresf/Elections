@@ -70,9 +70,9 @@ a, a:hover, a:active, a:visited, a:focus {
 body {
   margin: 5px; }
 
-div > svg {
-  height: 200px;
-  width: 200px;
+.media-body > div {
+  height: 300px;
+  width: 300px;
   padding-left: 10px; }
 
 .bar {

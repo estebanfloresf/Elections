@@ -35,17 +35,13 @@ block content
                                 small.orgpol #{candidate.polorg}
 
 
-                            //p.text-capitalize
-                            //    small.orgpol #{candidate.total}
-
-
                             div(class=`${candidate.president}`)
 
 
-                                script(type='text/javascript').
-                                    var candidate =[!{JSON.stringify(candidate)}];
+                            script(type='text/javascript').
+                                        var candidate =[!{JSON.stringify(candidate)}];
 
-                                script(src="/javascripts/modules/candidates_svg.js")
+                            script(src="/javascripts/modules/candidates_svg.js")
 
 
 

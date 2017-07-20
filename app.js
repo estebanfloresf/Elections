@@ -31,7 +31,7 @@ app.use(favicon(__dirname + '/public/images/icons/favicon.ico'));
 
 // serves up static files from the public folder. Anything in public/ will just be served up as the file it is
 app.use(express.static(path.join(__dirname, 'public')));
-console.log(path.join(__dirname, 'public'));
+
 // Takes the raw requests and turns them into usable properties on req.body
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
