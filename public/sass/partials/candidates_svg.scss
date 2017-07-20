@@ -6,24 +6,31 @@ body {
 
 }
 
-.media-body > div {
-  height: 300px;
-  width: 300px;
-  padding-left: 10px;
 
+
+.media-body > svg {
+  height: 110px;
+  width: 500px;
+  padding-left: 2px;
 
 }
+
 
 .bar {
   fill: $color1;
 }
+
 .axis path,
 .axis line {
   fill: none;
   stroke: $color3;
-  stroke-width: 1px;
+  stroke-width: 0.4px;
   shape-rendering: crispEdges;
 }
+.axis text{
+  background-color: black;
+}
+
 .x path {
   display: none;
 }
@@ -36,4 +43,5 @@ body {
   border: 1px solid $color2;
   padding: 14px;
   text-align: center;
+
 }

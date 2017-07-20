@@ -70,10 +70,10 @@ a, a:hover, a:active, a:visited, a:focus {
 body {
   margin: 5px; }
 
-.media-body > div {
-  height: 300px;
-  width: 300px;
-  padding-left: 10px; }
+.media-body > svg {
+  height: 110px;
+  width: 500px;
+  padding-left: 2px; }
 
 .bar {
   fill: #3581b8; }
@@ -82,8 +82,11 @@ body {
 .axis line {
   fill: none;
   stroke: #191716;
-  stroke-width: 1px;
+  stroke-width: 0.4px;
   shape-rendering: crispEdges; }
+
+.axis text {
+  background-color: black; }
 
 .x path {
   display: none; }
