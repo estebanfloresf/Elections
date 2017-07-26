@@ -1,3 +1,14 @@
+.page-header {
+  border-bottom: 1px solid #3581b8;
+  padding-bottom: 5px; }
+
+.footer {
+  bottom: 0px;
+  margin: 0;
+  background-color: #000;
+  height: 100px;
+  /* or however high you would like */ }
+
 /*Here the nav section*/
 .img_nav {
   height: 20px;
@@ -49,10 +60,6 @@ a, a:hover, a:active, a:visited, a:focus {
   color: black;
   background-color: transparent; }
 
-.page-header {
-  border-bottom: 1px solid #3581b8;
-  padding-bottom: 5px; }
-
 .fun_hover {
   font-size: 2rem;
   background-image: linear-gradient(to right, white 50%, #3581b8 10%);
@@ -71,12 +78,15 @@ body {
   margin: 5px; }
 
 .media-body > svg {
-  height: 110px;
+  height: 100px;
   width: 500px;
-  padding-left: 2px; }
+  padding-left: 0px; }
 
 .bar {
   fill: #3581b8; }
+
+.background-bar {
+  fill: #cdedfd; }
 
 .axis path,
 .axis line {

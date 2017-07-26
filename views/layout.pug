@@ -62,6 +62,11 @@ html
                                             //button.flash__remove(onClick="this.parentElement.remove()") &times;
 
                 block content
+        footer
+            .container-fluid
+                - const d = new Date()
+                - const n = d.getFullYear()
+                span.text-muted Copyright © #{n} FunData.
 
         script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js')
         script(src="/dist/App.bundle.js")
