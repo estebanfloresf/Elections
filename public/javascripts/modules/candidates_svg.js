@@ -58,13 +58,13 @@ g.append("g")
     }).tickSizeInner([0.1]));
 
 // text label for the x axis
-g.append("text")
-    .attr("transform",
-        "translate(" + (width / 2) + " ," +
-        (height + margin.top + 12) + ")")
-    .style("text-anchor", "middle")
-    .style("font-size", ".6em")
-    .text("Fuente: CNE");
+// g.append("text")
+//     .attr("transform",
+//         "translate(" + (width / 2) + " ," +
+//         (height + margin.top + 12) + ")")
+//     .style("text-anchor", "middle")
+//     .style("font-size", ".6em")
+//     .text("Fuente: CNE");
 
 
 g.append("g")
@@ -102,7 +102,11 @@ g.selectAll(".background-bar")
     //     return d.percentage;
     // });
 
+var pattern = g.append("pattern")
+    .attrs({ id:"hash4_4", width:"8", height:"2", patternUnits:"userSpaceOnUse", patternTransform:"rotate(0)"})
+    .append("rect")
 
+    .attrs({ width:"4", height:"8", transform:"translate(0,0)",  id:"pattern" });
 
 var graph = g.selectAll(".bar")
     .data(data)
@@ -118,7 +122,8 @@ var graph = g.selectAll(".bar")
         return x(d.percentage);
     })
     .attr("rx", 2)
-    .attr("ry", 2);
+    .attr("ry", 2)
+    .style("fill", "url(#hash4_4)");
 
 
     // .append("text")
