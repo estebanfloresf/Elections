@@ -1,0 +1,56 @@
+@import "variables";
+
+body {
+  margin: 5px;
+
+
+}
+
+
+
+.media-body > svg {
+  height: 100px;
+  width: 500px;
+  padding-left: 0px;
+
+
+}
+
+
+.bar {
+  fill: $color1;
+}
+.background-bar{
+  fill: $color2 ;
+}
+
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: $color3;
+  stroke-width: 0.4px;
+  shape-rendering: crispEdges;
+}
+.axis text{
+  background-color: black;
+}
+
+.x path {
+  display: none;
+}
+.toolTip {
+  position: absolute;
+  display: none;
+  min-width: 80px;
+  height: auto;
+  background: none repeat scroll 0 0 #ffffff;
+  border: 1px solid $color2;
+  padding: 14px;
+  text-align: center;
+
+}
+
+pattern{
+  fill: $color1;
+}

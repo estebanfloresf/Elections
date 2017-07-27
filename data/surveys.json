@@ -1,0 +1,506 @@
+[
+  {
+    "firm": "59692485b0fdfea158eb74d8",
+    "number": 1,
+    "name": "primera vuelta",
+    "eleccion": "2017",
+    "source": "http://www.ecuadorinmediato.com/index.php?module=Noticias&func=news_user_view&id=2818815405",
+    "margin": 2.7,
+    "date": "2017-02-05T00:00:00.00Z",
+    "cities": [
+      "quito",
+      "guayaquil",
+      "cuenca",
+      "manta",
+      "portoviejo"
+    ],
+    "candidates": [
+      {
+        "candidate": "5954144faf07d4bc813515c6",
+        "percentage": 16
+      },
+      {
+        "candidate": "5954144faf07d4bc813515c7",
+        "percentage": 7
+      },
+      {
+        "candidate": "5954144faf07d4bc813515c8",
+        "percentage": 4
+      },
+      {
+        "candidate": "5954144faf07d4bc813515c9",
+        "percentage": 14
+      },
+      {
+        "candidate": "5954144faf07d4bc813515ca",
+        "percentage": 35
+      },
+      {
+        "candidate": "5954144faf07d4bc813515cb",
+        "percentage": 0.5
+      },
+      {
+        "candidate": "5954144faf07d4bc813515cc",
+        "percentage": 4
+      },
+      {
+        "candidate": "5954144faf07d4bc813515cd",
+        "percentage": 0.5
+      },
+      {
+        "candidate": "596bde9557cfe2310e8fb15f",
+        "percentage": 11
+      },
+      {
+        "candidate": "596bde9557cfe2310e8fb160",
+        "percentage": 8
+      }
+    ]
+  },
+  {
+    "firm": "59692485b0fdfea158eb74d8",
+    "number": 2,
+    "name": "segunda vuelta",
+    "eleccion": "2017",
+    "source": "http://www.eltelegrafo.com.ec/noticias/politiko-2017/49/lenin-moreno-aventaja-a-guillermo-lasso-por-15-4-puntos-segun-perfiles-de-opinion",
+    "margin": 0,
+    "date": "2017-03-14T00:00:00.00Z",
+    "cities": [
+      "several"
+    ],
+    "candidates": [
+      {
+        "candidate": "5954144faf07d4bc813515c6",
+        "percentage": 35.53
+      },
+      {
+        "candidate": "5954144faf07d4bc813515ca",
+        "percentage": 51.02
+      },
+      {
+        "candidate": "596bde9557cfe2310e8fb15f",
+        "percentage": 7.24
+      },
+      {
+        "candidate": "596bde9557cfe2310e8fb160",
+        "percentage": 6.21
+      }
+    ]
+  },
+  {
+    "firm": "59692485b0fdfea158eb74d9",
+    "number": 1,
+    "name": "primera vuelta",
+    "eleccion": "2017",
+    "source": "http://www.eluniverso.com/noticias/2017/02/08/nota/6038356/encuestadora-opinion-publica-situa-moreno-lasso-viteri-mayoria",
+    "margin": 0,
+    "date": "2017-02-05T00:00:00.00Z",
+    "cities": [],
+    "candidates": [
+      {
+        "candidate": "5954144faf07d4bc813515c6",
+        "percentage": 18.2
+      },
+      {
+        "candidate": "5954144faf07d4bc813515c7",
+        "percentage": 7.4
+      },
+      {
+        "candidate": "5954144faf07d4bc813515c8",
+        "percentage": 3.6
+      },
+      {
+        "candidate": "5954144faf07d4bc813515c9",
+        "percentage": 13.7
+      },
+      {
+        "candidate": "5954144faf07d4bc813515ca",
+        "percentage": 34.2
+      },
+      {
+        "candidate": "5954144faf07d4bc813515cb",
+        "percentage": 0.1
+      },
+      {
+        "candidate": "5954144faf07d4bc813515cc",
+        "percentage": 2.5
+      },
+      {
+        "candidate": "5954144faf07d4bc813515cd",
+        "percentage": 0.6
+      },
+      {
+        "candidate": "596bde9557cfe2310e8fb15f",
+        "percentage": 11.4
+      },
+      {
+        "candidate": "596bde9557cfe2310e8fb160",
+        "percentage": 8.3
+      }
+    ]
+  },
+  {
+    "firm": "59692485b0fdfea158eb74d9",
+    "number": 2,
+    "name": "segunda vuelta",
+    "eleccion": "2017",
+    "source": "http://www.eleccionesenecuador.com/noticia-resultados-encuesta-opinion-publica-segunda-vuelta-marzo-2017-299.html",
+    "margin": 0,
+    "date": "2017-03-12T00:00:00.00Z",
+    "cities": [
+      "several"
+    ],
+    "candidates": [
+      {
+        "candidate": "5954144faf07d4bc813515c6",
+        "percentage": 35
+      },
+      {
+        "candidate": "5954144faf07d4bc813515ca",
+        "percentage": 46
+      },
+      {
+        "candidate": "596bde9557cfe2310e8fb15f",
+        "percentage": 8
+      },
+      {
+        "candidate": "596bde9557cfe2310e8fb160",
+        "percentage": 11
+      }
+    ]
+  },
+  {
+    "firm": "59692485b0fdfea158eb74da",
+    "number": 1,
+    "name": "primera vuelta",
+    "eleccion": "2017",
+    "source": "https://www.cedatos.com.ec/detalles_noticia.php?Id=284",
+    "margin": 3.2,
+    "date": "2017-02-08T00:00:00.00Z",
+    "cities": [
+      "several"
+    ],
+    "candidates": [
+      {
+        "candidate": "5954144faf07d4bc813515c6",
+        "percentage": 21.5
+      },
+      {
+        "candidate": "5954144faf07d4bc813515c7",
+        "percentage": 7.7
+      },
+      {
+        "candidate": "5954144faf07d4bc813515c8",
+        "percentage": 4.1
+      },
+      {
+        "candidate": "5954144faf07d4bc813515c9",
+        "percentage": 14
+      },
+      {
+        "candidate": "5954144faf07d4bc813515ca",
+        "percentage": 32.3
+      },
+      {
+        "candidate": "5954144faf07d4bc813515cb",
+        "percentage": 0.5
+      },
+      {
+        "candidate": "5954144faf07d4bc813515cc",
+        "percentage": 2.9
+      },
+      {
+        "candidate": "5954144faf07d4bc813515cd",
+        "percentage": 0.6
+      },
+      {
+        "candidate": "596bde9557cfe2310e8fb15f",
+        "percentage": 4.5
+      },
+      {
+        "candidate": "596bde9557cfe2310e8fb160",
+        "percentage": 11.8
+      }
+    ]
+  },
+  {
+    "firm": "59692485b0fdfea158eb74da",
+    "number": 2,
+    "name": "segunda vuelta",
+    "eleccion": "2017",
+    "source": "https://www.cedatos.com.ec/detalles_noticia.php?Id=317",
+    "margin": 3.4,
+    "date": "2017-03-15T00:00:00.00Z",
+    "cities": [
+      "several"
+    ],
+    "candidates": [
+      {
+        "candidate": "5954144faf07d4bc813515c6",
+        "percentage": 44.2
+      },
+      {
+        "candidate": "5954144faf07d4bc813515ca",
+        "percentage": 42.8
+      },
+      {
+        "candidate": "596bde9557cfe2310e8fb15f",
+        "percentage": 6.5
+      },
+      {
+        "candidate": "596bde9557cfe2310e8fb160",
+        "percentage": 6.5
+      }
+    ]
+  },
+  {
+    "firm": "59692485b0fdfea158eb74db",
+    "number": 1,
+    "name": "primera vuelta",
+    "eleccion": "2017",
+    "source": "http://www.eluniverso.com/noticias/2017/01/21/nota/6008230/intenciones-voto-bajan-segun-datos-market",
+    "margin": 3.2,
+    "date": "2017-02-20T00:00:00.00Z",
+    "cities": [
+      "several"
+    ],
+    "candidates": [
+      {
+        "candidate": "5954144faf07d4bc813515c6",
+        "percentage": 16.57
+      },
+      {
+        "candidate": "5954144faf07d4bc813515c7",
+        "percentage": 13.22
+      },
+      {
+        "candidate": "5954144faf07d4bc813515c8",
+        "percentage": 4.78
+      },
+      {
+        "candidate": "5954144faf07d4bc813515c9",
+        "percentage": 17.98
+      },
+      {
+        "candidate": "5954144faf07d4bc813515ca",
+        "percentage": 28.17
+      },
+      {
+        "candidate": "5954144faf07d4bc813515cb",
+        "percentage": 0.59
+      },
+      {
+        "candidate": "5954144faf07d4bc813515cc",
+        "percentage": 1.53
+      },
+      {
+        "candidate": "5954144faf07d4bc813515cd",
+        "percentage": 1.30
+      },
+      {
+        "candidate": "596bde9557cfe2310e8fb15f",
+        "percentage": 6.7
+      },
+      {
+        "candidate": "596bde9557cfe2310e8fb160",
+        "percentage": 9.2
+      }
+    ]
+  },
+  {
+    "firm": "59692485b0fdfea158eb74db",
+    "number": 2,
+    "name": "segunda vuelta",
+    "eleccion": "2017",
+    "source": "http://www.elcomercio.com/actualidad/encuesta-market-diferencia-moreno-lasso.html",
+    "margin": 2.8,
+    "date": "2017-03-20T00:00:00.00Z",
+    "cities": [
+      "several"
+    ],
+    "candidates": [
+      {
+        "candidate": "5954144faf07d4bc813515c6",
+        "percentage": 45
+      },
+      {
+        "candidate": "5954144faf07d4bc813515ca",
+        "percentage": 48.9
+      },
+      {
+        "candidate": "596bde9557cfe2310e8fb15f",
+        "percentage": 1.9
+      },
+      {
+        "candidate": "596bde9557cfe2310e8fb160",
+        "percentage": 4.2
+      }
+    ]
+  },
+  {
+    "firm": "59692485b0fdfea158eb74dc",
+    "number": 1,
+    "name": "primera vuelta",
+    "eleccion": "2017",
+    "source": "http://www.elcomercio.com/actualidad/leninmoreno-guillermolasso-cynthiaviteri-pacomoncayo-intencion.html",
+    "margin": 0,
+    "date": "2017-02-08T00:00:00.00Z",
+    "cities": [
+      "several"
+    ],
+    "candidates": [
+      {
+        "candidate": "5954144faf07d4bc813515c6",
+        "percentage": 15.18
+      },
+      {
+        "candidate": "5954144faf07d4bc813515c7",
+        "percentage": 5.52
+      },
+      {
+        "candidate": "5954144faf07d4bc813515c8",
+        "percentage": 0
+      },
+      {
+        "candidate": "5954144faf07d4bc813515c9",
+        "percentage": 6.64
+      },
+      {
+        "candidate": "5954144faf07d4bc813515ca",
+        "percentage": 25.63
+      },
+      {
+        "candidate": "5954144faf07d4bc813515cb",
+        "percentage": 0
+      },
+      {
+        "candidate": "5954144faf07d4bc813515cc",
+        "percentage": 0
+      },
+      {
+        "candidate": "5954144faf07d4bc813515cd",
+        "percentage": 0
+      },
+      {
+        "candidate": "596bde9557cfe2310e8fb15f",
+        "percentage": 0
+      },
+      {
+        "candidate": "596bde9557cfe2310e8fb160",
+        "percentage": 0
+      }
+    ]
+  },
+  {
+    "firm": "59692485b0fdfea158eb74dc",
+    "number": 2,
+    "name": "segunda vuelta",
+    "eleccion": "2017",
+    "source": "http://www.elcomercio.com/actualidad/ecuador-encuestadoras-resultados-electorales-sondeos.html",
+    "margin": 0,
+    "date": "2017-03-19T00:00:00.00Z",
+    "cities": [
+      "several"
+    ],
+    "candidates": [
+      {
+        "candidate": "5954144faf07d4bc813515c6",
+        "percentage": 35.86
+      },
+      {
+        "candidate": "5954144faf07d4bc813515ca",
+        "percentage": 36.76
+      },
+      {
+        "candidate": "596bde9557cfe2310e8fb15f",
+        "percentage": 0
+      },
+      {
+        "candidate": "596bde9557cfe2310e8fb160",
+        "percentage": 0
+      }
+    ]
+  },
+  {
+    "firm": "59692485b0fdfea158eb74dd",
+    "number": 1,
+    "name": "primera vuelta",
+    "eleccion": "2017",
+    "source": "https://twitter.com/CIEESec/status/829469700849545217",
+    "margin": 3,
+    "date": "2017-02-08T00:00:00.00Z",
+    "cities": [
+      "several"
+    ],
+    "candidates": [
+      {
+        "candidate": "5954144faf07d4bc813515c6",
+        "percentage": 21.3
+      },
+      {
+        "candidate": "5954144faf07d4bc813515c7",
+        "percentage": 10.8
+      },
+      {
+        "candidate": "5954144faf07d4bc813515c8",
+        "percentage": 6.6
+      },
+      {
+        "candidate": "5954144faf07d4bc813515c9",
+        "percentage": 12.6
+      },
+      {
+        "candidate": "5954144faf07d4bc813515ca",
+        "percentage": 43.3
+      },
+      {
+        "candidate": "5954144faf07d4bc813515cb",
+        "percentage": 1
+      },
+      {
+        "candidate": "5954144faf07d4bc813515cc",
+        "percentage": 3.9
+      },
+      {
+        "candidate": "5954144faf07d4bc813515cd",
+        "percentage": 0.6
+      },
+      {
+        "candidate": "596bde9557cfe2310e8fb15f",
+        "percentage": 0
+      },
+      {
+        "candidate": "596bde9557cfe2310e8fb160",
+        "percentage": 0
+      }
+    ]
+  },
+  {
+    "firm": "59692485b0fdfea158eb74dd",
+    "number": 2,
+    "name": "segunda vuelta",
+    "eleccion": "2017",
+    "source": "",
+    "margin": 0,
+    "date": "",
+    "cities": [],
+    "candidates": [
+      {
+        "candidate": "5954144faf07d4bc813515c6",
+        "percentage": 0
+      },
+      {
+        "candidate": "5954144faf07d4bc813515ca",
+        "percentage": 0
+      },
+      {
+        "candidate": "596bde9557cfe2310e8fb15f",
+        "percentage": 0
+      },
+      {
+        "candidate": "596bde9557cfe2310e8fb160",
+        "percentage": 0
+      }
+    ]
+  }
+]

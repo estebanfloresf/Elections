@@ -1,0 +1,56 @@
+
+extends layout
+
+
+block content
+    //pre= h.dump(candidates)
+    .page-header
+        h1= title
+    .container-fluid
+        .row
+            p These are the candidates that postulated for the Presidential Election on Feb 29, 2017 in Ecuador. The results shown are the final results published by the
+                mark
+                    a(href="http://cne.gob.ec/es/")  National Electoral Council
+
+        .row
+            //pre= h.dump(candidates)
+            script(type='text/javascript').
+                var candidates =!{JSON.stringify(candidates)};
+                function getTotal() {
+                    var totalvotos = 0;
+                    for (k in candidates) {
+                        totalvotos += candidates[k].total;
+
+                    }
+                    return totalvotos;
+                }
+
+
+            each candidate in candidates
+                if candidate._id != "596bde9557cfe2310e8fb160" && candidate._id != "596bde9557cfe2310e8fb15f"
+                    .media
+                        .media-left
+                            a(href='#')
+                                img.media-object(src=`${candidate.photo_president}`, alt=`${candidate.president}` style='width:64px; height:64px')
+
+                        .media-body
+                            a.fun_hover.text-capitalize(href='#') #{candidate.president}
+
+                            p.text-capitalize
+                                small.orgpol #{candidate.polorg}
+
+                            //div(class= `${candidate.president}`)
+
+
+                            svg(class=`${candidate.president.split(' ').slice(-1).join(' ')}` width="500" height="80")
+
+
+                            script(type='text/javascript').
+                                        var candidate =[!{JSON.stringify(candidate)}];
+
+                            script(src="/javascripts/modules/candidates_svg.js")
+
+
+
+
+

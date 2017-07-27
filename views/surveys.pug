@@ -1,0 +1,13 @@
+extends layout
+
+
+block content
+    .page-header
+        h1= title
+
+    .container-fluid
+        .row
+
+            each survey in surveys
+                p.text-capitalize #{survey.name}
+

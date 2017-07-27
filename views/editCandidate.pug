@@ -1,0 +1,10 @@
+extends layout
+
+include mixins/_editCandidate
+
+block content
+    .container-fluid
+        div.col-xs-12
+            h1= title
+        div.col-xs-12.col-md-8
+            +editCandidate()
