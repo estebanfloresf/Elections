@@ -1,3 +1,21 @@
+html {
+  position: relative;
+  min-height: 100%;
+  height: 100%; }
+
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+  height: 100%; }
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  background-color: #191716; }
+
 .page-header {
   border-bottom: 1px solid #3581b8;
   padding-bottom: 5px; }
@@ -8,6 +26,24 @@
   background-color: #000;
   height: 100px;
   /* or however high you would like */ }
+
+.btn-group {
+  margin-bottom: 30px;
+  padding: 2px; }
+
+.btn-group button {
+  padding: 1px;
+  border-radius: 5px;
+  color: #3581b8;
+  background-color: #cdedfd; }
+
+.btn-group button:hover, .btn.active {
+  padding: 1px;
+  border-radius: 5px;
+  border-color: #3581b8;
+  color: white;
+  background-color: #3581b8;
+  font-weight: bold; }
 
 /*Here the nav section*/
 .img_nav {
@@ -86,7 +122,8 @@ body {
   fill: #3581b8; }
 
 .background-bar {
-  fill: #cdedfd; }
+  fill: #cdedfd;
+  opacity: .4; }
 
 .axis path,
 .axis line {
