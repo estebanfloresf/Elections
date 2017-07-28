@@ -25,3 +25,5 @@ exports.menu = [
     { slug: '/surveys', title: 'Surveys', icon: 'survey', },
     { slug: '/candidates', title: 'Candidates', icon: 'candidates', }
 ];
+
+

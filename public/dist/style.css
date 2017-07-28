@@ -9,6 +9,16 @@
   height: 100px;
   /* or however high you would like */ }
 
+.btn-group {
+  margin-bottom: 30px;
+  padding: 2px; }
+
+.btn-group button {
+  padding: 1px;
+  border-radius: 15x;
+  color: #3581b8;
+  background-color: #cdedfd; }
+
 /*Here the nav section*/
 .img_nav {
   height: 20px;
@@ -86,7 +96,8 @@ body {
   fill: #3581b8; }
 
 .background-bar {
-  fill: #cdedfd; }
+  fill: #cdedfd;
+  opacity: .4; }
 
 .axis path,
 .axis line {

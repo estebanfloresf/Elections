@@ -13,6 +13,17 @@ block content
                     a(href="http://cne.gob.ec/es/")  National Electoral Council
 
         .row
+            h4 Sort By:
+
+            .btn-group.btn-group-justified(role='group')
+                .btn-group(role='group')
+                    button(type='button',  class='btn' id='name') Name
+
+                .btn-group(role='group')
+                    button(type='button', class='btn' id='percentage') Percentage
+
+
+        .row.candidate
             //pre= h.dump(candidates)
             script(type='text/javascript').
                 var candidates =!{JSON.stringify(candidates)};
@@ -28,27 +39,29 @@ block content
 
             each candidate in candidates
                 if candidate._id != "596bde9557cfe2310e8fb160" && candidate._id != "596bde9557cfe2310e8fb15f"
-                    .media
-                        .media-left
-                            a(href='#')
-                                img.media-object(src=`${candidate.photo_president}`, alt=`${candidate.president}` style='width:64px; height:64px')
 
-                        .media-body
-                            a.fun_hover.text-capitalize(href='#') #{candidate.president}
+                        .media
+                            .media-left
+                                a(href='#')
+                                    img.media-object(src=`${candidate.photo_president}`, alt=`${candidate.president}` style='width:64px; height:64px')
 
-                            p.text-capitalize
-                                small.orgpol #{candidate.polorg}
+                            .media-body
+                                a.fun_hover.text-capitalize(href='#') #{candidate.president}
 
-                            //div(class= `${candidate.president}`)
+                                p.text-capitalize
+                                    small.orgpol #{candidate.polorg}
+                                span(type='hidden', name=`${candidate.president}`, value=`${candidate.total}`)
+
+                                //div(class= `${candidate.president}`)
 
 
-                            svg(class=`${candidate.president.split(' ').slice(-1).join(' ')}` width="500" height="80")
+                                svg(class=`${candidate.president.split(' ').slice(-1).join(' ')}` width="500" height="80")
 
 
-                            script(type='text/javascript').
-                                        var candidate =[!{JSON.stringify(candidate)}];
+                                script(type='text/javascript').
+                                            var candidate =[!{JSON.stringify(candidate)}];
 
-                            script(src="/javascripts/modules/candidates_svg.js")
+                                script(src="/javascripts/modules/candidates_svg.js")
 
 
 

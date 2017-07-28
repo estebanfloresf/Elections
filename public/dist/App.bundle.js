@@ -171,11 +171,76 @@ var _inline_svg = __webpack_require__(1);
 
 var _inline_svg2 = _interopRequireDefault(_inline_svg);
 
+var _orderBy = __webpack_require__(10);
+
+var _orderBy2 = _interopRequireDefault(_orderBy);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 (0, _inline_svg2.default)((0, _bling.$)('.active  img.svg'));
 
-// console.log($('img.svg'));
+(0, _orderBy2.default)((0, _bling.$)('#media'));
+
+(0, _bling.$)(function () {
+    (0, _bling.$)("button").click(function () {
+        animateSort("#candidate", "#main", "data-value");
+    });
+});
+
+/***/ }),
+/* 4 */,
+/* 5 */,
+/* 6 */,
+/* 7 */,
+/* 8 */,
+/* 9 */,
+/* 10 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+
+function orderBy(e) {
+
+    var promises = [];
+    var positions = [];
+    var originals = $(parent).find(child);
+    var sorted = originals.toArray().sort(function (a, b) {
+        return $(a).attr(sortAttribute) > $(b).attr(sortAttribute);
+    });
+
+    originals.each(function () {
+        //store original positions
+        positions.push($(this).position());
+    }).each(function (originalIndex) {
+        //change items to absolute position
+        var $this = $(this);
+        var newIndex = sorted.indexOf(this);
+        sorted[newIndex] = $this.clone(); //copy the original item before messing with its positioning
+        $this.css("position", "absolute").css("top", positions[originalIndex].top + "px").css("left", positions[originalIndex].left + "px");
+
+        //animate to the new position
+        var promise = $this.animate({
+            top: positions[newIndex].top + "px",
+            left: positions[newIndex].left + "px"
+        }, 1000);
+        promises.push(promise);
+    });
+
+    //instead of leaving the items out-of-order and positioned, replace them in sorted order
+    $.when.apply($, promises).done(function () {
+        originals.each(function (index) {
+            $(this).replaceWith(sorted[index]);
+        });
+    });
+}
+
+exports.default = orderBy;
 
 /***/ })
 /******/ ]);
