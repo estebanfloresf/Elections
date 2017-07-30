@@ -12,7 +12,7 @@ const expressValidator = require('express-validator');
 const routes = require('./routes/index');
 const helpers = require('./helpers');
 const errorHandlers = require('./handlers/errorHandlers');
-const favicon = require('express-favicon');
+// const favicon = require('express-favicon');
 
 
 
@@ -26,7 +26,7 @@ const app = express();
 app.set('views', path.join(__dirname, 'views')); // this is the folder where we keep our pug files
 app.set('view engine', 'pug'); // we use the engine pug, mustache or EJS work great too
 
-app.use(favicon(__dirname + '/public/images/icons/favicon.ico'));
+// app.use(favicon(__dirname + '/public/images/icons/favicon.ico'));
 
 
 // serves up static files from the public folder. Anything in public/ will just be served up as the file it is

@@ -27,7 +27,11 @@ html
                         span.icon-bar
                         span.icon-bar
                         span.icon-bar
-                    a.navbar-brand(href='/') #{h.siteName}
+
+                    a.navbar-brand(href='/')
+                        span
+                            img(alt='Brand', src='./images/photos/logo.png' width="20px" height="10px")
+                        |  #{h.siteName}
                 #navbar.navbar-collapse.collapse
                     ul.nav.navbar-nav.navbar-right
                         each item in h.menu
@@ -67,11 +71,6 @@ html
                                             //button.flash__remove(onClick="this.parentElement.remove()") &times;
 
                 block content
-        footer.navbar-fixed-bottom
-            .container-fluid
-                - const d = new Date()
-                - const n = d.getFullYear()
-                span.text-muted Copyright © #{n} FunData.
 
 
         script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js')

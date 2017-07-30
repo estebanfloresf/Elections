@@ -8,14 +8,6 @@ body {
   margin-bottom: 60px;
   height: 100%; }
 
-.footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  /* Set the fixed height of the footer here */
-  height: 60px;
-  background-color: #191716; }
-
 .page-header {
   border-bottom: 1px solid #3581b8;
   padding-bottom: 5px; }

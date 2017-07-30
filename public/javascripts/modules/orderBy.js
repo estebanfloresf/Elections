@@ -1,6 +1,8 @@
-$(document).ready(function() {
+$(document).ready(function () {
     $("#percentage").first().addClass("active");
+    $("#list").first().addClass("active");
     $("button").click(function () {
+        if (this.id === "percentage" || this.id === "name") {
         $("button").removeClass("active");
 
         $(this).addClass("active");
@@ -8,21 +10,22 @@ $(document).ready(function() {
         let value = "";
 
 
-        if (this.id == "percentage"){
+        if (this.id === "percentage") {
             value = "data-value";
         }
-        else{
+        else {
             value = "data-name";
         }
 
 
 
-        animateSort(".candidate", "div.media", value);
+            animateSort(".candidate", "div.media", value);
+        }
+
+
 
 
     });
-
-
 
 
 });
@@ -35,9 +38,9 @@ function animateSort(parent, child, sortAttribute) {
     const originals = $(parent).find(child);
     let sorted = {};
 
-    if(sortAttribute=="data-name"){
+    if (sortAttribute == "data-name") {
 
-        sorted = originals.toArray().sort(function (a,b) {
+        sorted = originals.toArray().sort(function (a, b) {
             const aName = $(a).attr(sortAttribute).toLowerCase();
             const bName = $(b).attr(sortAttribute).toLowerCase();
             return ((aName < bName) ? -1 : ((aName > bName) ? 1 : 0));
@@ -51,10 +54,10 @@ function animateSort(parent, child, sortAttribute) {
         });
     }
 
-    originals.each(function() {
+    originals.each(function () {
         //store original positions
         positions.push($(this).position());
-    }).each(function(originalIndex) {
+    }).each(function (originalIndex) {
         //change items to absolute position
         const $this = $(this);
         const newIndex = sorted.indexOf(this);
@@ -70,8 +73,8 @@ function animateSort(parent, child, sortAttribute) {
     });
 
     //instead of leaving the items out-of-order and positioned, replace them in sorted order
-    $.when.apply($, promises).done(function() {
-        originals.each(function(index) {
+    $.when.apply($, promises).done(function () {
+        originals.each(function (index) {
             $(this).replaceWith(sorted[index]);
         });
     });

@@ -36,15 +36,7 @@ candidateSchema.statics.getNationResults = function () {
                 {from: 'results', localField: '_id', foreignField: 'candidate', as: 'results'}
         },
         {$match: {'results.0': {$exists: true}}}, // just to get rid of no values
-        // {$unwind: '$results'},
-        // {
-        //     "$group":{
-        //         "_id":{
-        //             "name": "$results.candidate",
-        //             "men":  {"$sum" :"$results.men"}
-        //         }
-        //     }
-        // },
+
 
         {
             $project: {
@@ -56,6 +48,7 @@ candidateSchema.statics.getNationResults = function () {
 
             }
         },
+
         {
             $project: {
                 "president": "$president",
@@ -63,7 +56,8 @@ candidateSchema.statics.getNationResults = function () {
                 "polorg": "$polorg",
 
                 "total": {"$add": ["$totalmen", "$totalwomen"]}
-            }
+            },
+
         }
 
 

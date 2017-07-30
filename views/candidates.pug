@@ -1,4 +1,3 @@
-
 extends layout
 
 
@@ -13,20 +12,33 @@ block content
                     a(href="http://cne.gob.ec/es/")  National Electoral Council
 
         .row
-            h4 Sort By:
+            .col-md-6
+                h4.text-center Sort By
 
-            .btn-group.btn-group-justified(role='group')
-                .btn-group(role='group')
-                    button(type='button',  class='btn sort' id='name') Name
+                .btn-group.btn-group-justified(role='sort')
 
-                .btn-group(role='group')
-                    button(type='button', class='btn sort' id='percentage') Percentage
+                    .btn-group(role='group')
+                        button(type='button',  class='btn sort' id='name') Name
 
+                    .btn-group(role='group')
+                        button(type='button', class='btn sort' id='percentage') Percentage
+            .col-md-2
+                h4.text-center View
+
+                .btn-group.btn-group-justified(role='view')
+
+                    .btn-group(role='group')
+                        button(type='button',  class='btn view' id='grid')
+                            span.glyphicon.glyphicon-th-large(aria-hidden='true')
+
+                    .btn-group(role='group')
+                        button(type='button', class='btn view' id='list')
+                            span.glyphicon.glyphicon-th-list(aria-hidden='true')
 
         .row.candidate
-            //pre= h.dump(candidates)
+
             script(type='text/javascript').
-                var candidates =!{JSON.stringify(candidates)};
+                var candidates = !{JSON.stringify(candidates)};
                 function getTotal() {
                     var totalvotos = 0;
                     for (k in candidates) {
@@ -37,31 +49,33 @@ block content
                 }
 
 
+
             each candidate in candidates
+
                 if candidate._id != "596bde9557cfe2310e8fb160" && candidate._id != "596bde9557cfe2310e8fb15f"
 
-                        .media(data-value=`${candidate.total}`  data-name=`${candidate.president.split(' ').slice(0,1).join(' ')}`)
-                            .media-left
-                                a(href='#')
-                                    img.media-object(src=`${candidate.photo_president}`, alt=`${candidate.president}` style='width:64px; height:64px')
+                    .media(data-value=`${candidate.total}`  data-name=`${candidate.president.split(' ').slice(0, 1).join(' ')}`)
+                        .media-left
+                            a(href='#')
+                                img.media-object(src=`${candidate.photo_president}`, alt=`${candidate.president}` style='width:64px; height:64px')
 
-                            .media-body
-                                a.fun_hover.text-capitalize(href='#') #{candidate.president}
+                        .media-body
+                            a.fun_hover.text-capitalize(href='#') #{candidate.president}
 
-                                p.text-capitalize
-                                    small.orgpol #{candidate.polorg}
-                                span(type='hidden', name=`${candidate.president}`, value=`${candidate.total}`)
+                            p.text-capitalize
+                                small.orgpol #{candidate.polorg}
+                            span(type='hidden', name=`${candidate.president}`, value=`${candidate.total}`)
 
-                                //div(class= `${candidate.president}`)
-
-
-                                svg(class=`${candidate.president.split(' ').slice(-1).join(' ')}` width="500" height="80")
+                            //div(class= `${candidate.president}`)
 
 
-                                script(type='text/javascript').
-                                            var candidate =[!{JSON.stringify(candidate)}];
+                            svg(class=`${candidate.president.split(' ').slice(-1).join(' ')}` width="500" height="80")
 
-                                script(src="/javascripts/modules/candidates_svg.js")
+
+                            script(type='text/javascript').
+                                var candidate = [!{JSON.stringify(candidate)}];
+
+                            script(src="/javascripts/modules/candidates_svg.js")
 
 
 
