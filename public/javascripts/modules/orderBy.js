@@ -1,9 +1,18 @@
+
+
 $(document).ready(function () {
+
+
+
     $("#percentage").first().addClass("active");
     $("#list").first().addClass("active");
-    $("button").click(function () {
-        if (this.id === "percentage" || this.id === "name") {
-        $("button").removeClass("active");
+
+    let view = "media";
+    // This function is for sorting the candidates (calls the animateSort function)
+
+    $(".btn.sort").click(function () {
+
+        $(".btn.sort").removeClass("active");
 
         $(this).addClass("active");
 
@@ -19,16 +28,44 @@ $(document).ready(function () {
 
 
 
-            animateSort(".candidate", "div.media", value);
-        }
-
-
+            animateSort(".candidate", "div."+view, value);
 
 
     });
 
 
+    // This function is for displaying the candidates (calls the changeView function)
+    $('.btn.view').click(function (e) {
+
+        const $$ = document.querySelectorAll.bind(document);
+        $(".btn.view").removeClass("active");
+
+        $(this).addClass("active");
+
+
+
+        if ($(this).hasClass('media')) {
+
+            $('.row.candidate> .grid').removeClass('grid').addClass('media');
+            $('.img-circle').removeClass('.img-responsive img-circle').addClass('media-object');
+
+            $('.media-body > svg').show();
+            view = 'media';
+
+        }
+        else if ($(this).hasClass('grid')) {
+            $('.row.candidate> .media').removeClass('media').addClass('grid');
+
+            $('.media-object').removeClass('media-object').addClass('.img-responsive img-circle');
+
+            $('.media-body > svg').hide();
+            view = 'grid';
+        }
+    });
+
+
 });
+
 
 function animateSort(parent, child, sortAttribute) {
 
@@ -38,7 +75,7 @@ function animateSort(parent, child, sortAttribute) {
     const originals = $(parent).find(child);
     let sorted = {};
 
-    if (sortAttribute == "data-name") {
+    if (sortAttribute === "data-name") {
 
         sorted = originals.toArray().sort(function (a, b) {
             const aName = $(a).attr(sortAttribute).toLowerCase();
@@ -79,4 +116,3 @@ function animateSort(parent, child, sortAttribute) {
         });
     });
 }
-

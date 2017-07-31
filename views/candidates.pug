@@ -28,11 +28,11 @@ block content
                 .btn-group.btn-group-justified(role='view')
 
                     .btn-group(role='group')
-                        button(type='button',  class='btn view' id='grid')
+                        button(type='button',  class='btn view grid' id='grid')
                             span.glyphicon.glyphicon-th-large(aria-hidden='true')
 
                     .btn-group(role='group')
-                        button(type='button', class='btn view' id='list')
+                        button(type='button', class='btn view media' id='list')
                             span.glyphicon.glyphicon-th-list(aria-hidden='true')
 
         .row.candidate
@@ -52,7 +52,7 @@ block content
 
             each candidate in candidates
 
-                if candidate._id != "596bde9557cfe2310e8fb160" && candidate._id != "596bde9557cfe2310e8fb15f"
+                if candidate.president !== "null"
 
                     .media(data-value=`${candidate.total}`  data-name=`${candidate.president.split(' ').slice(0, 1).join(' ')}`)
                         .media-left
@@ -66,10 +66,11 @@ block content
                                 small.orgpol #{candidate.polorg}
                             span(type='hidden', name=`${candidate.president}`, value=`${candidate.total}`)
 
-                            //div(class= `${candidate.president}`)
 
 
                             svg(class=`${candidate.president.split(' ').slice(-1).join(' ')}` width="500" height="80")
+
+                            div(class=`circle-${candidate.president.split(' ').slice(-1).join(' ')}` width="500" height="80")
 
 
                             script(type='text/javascript').
