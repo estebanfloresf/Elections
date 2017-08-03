@@ -111,7 +111,7 @@ a, a:hover, a:active, a:visited, a:focus {
   color: #3581b8; }
 
 .row.candidate > .grid {
-  transition: all 0.4s cubic-bezier(0.23, 0.95, 1, 1);
+  transition: all 0.4s cubic-bezier(0.99, 0.53, 0.58, 1.1);
   float: left;
   width: 25%;
   height: 150px;

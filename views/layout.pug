@@ -64,7 +64,7 @@ html
                                         //    pre= h.dump(flashes[category])
 
 
-                                        .alert(class=`alert alert-dismissible alert-${category} ` role="alert")
+                                        .alert(class="alert alert-dismissible alert-"+`${category}` role="alert")
                                             button.close(type="button", data-dismiss="alert", aria-label="Close" onClick="this.parentElement.remove()") &times;
 
                                             p!= message

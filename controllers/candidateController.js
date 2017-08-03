@@ -25,9 +25,22 @@ exports.getCandidates = async (req, res) =>{
         return 0;
     }
 
+
+    const totalvotes = await Results.getTotalVoters();
+    // res.json(totalvotes[0].total);
+
     const candidates =  await Candidate.getNationResults();
 
+
     candidates.sort(order);
+
+    candidates.forEach(function (candidate) {
+        candidate["percentage"] = ((candidate["total"] / totalvotes[0].total) ).toFixed(4);
+
+
+    });
+
+    // res.json(candidates);
 
     res.render('candidates', {title: "Candidates",  candidates});
 

@@ -1,6 +1,9 @@
 'use strict';
+
+
 const mongoose = require('mongoose');
 mongoose.Promise = global.Promise;
+const Results = mongoose.model('Results');
 
 
 const candidateSchema = new mongoose.Schema({
@@ -27,6 +30,8 @@ const candidateSchema = new mongoose.Schema({
 
 
 });
+
+
 
 
 candidateSchema.statics.getNationResults = function () {

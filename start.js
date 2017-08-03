@@ -18,10 +18,10 @@ mongoose.connection.on('error', (err) => {
 });
 
 //import all our models
+require('./models/Results');
 require('./models/Candidate');
 require('./models/Survey');
 require('./models/Firm');
-require('./models/Results');
 require('./models/Province');
 
 

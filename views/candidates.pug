@@ -37,16 +37,7 @@ block content
 
         .row.candidate
 
-            script(type='text/javascript').
-                var candidates = !{JSON.stringify(candidates)};
-                function getTotal() {
-                    var totalvotos = 0;
-                    for (k in candidates) {
-                        totalvotos += candidates[k].total;
 
-                    }
-                    return totalvotos;
-                }
 
 
 

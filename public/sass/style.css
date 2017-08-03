@@ -8,14 +8,6 @@ body {
   margin-bottom: 60px;
   height: 100%; }
 
-.footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  /* Set the fixed height of the footer here */
-  height: 60px;
-  background-color: #191716; }
-
 .page-header {
   border-bottom: 1px solid #3581b8;
   padding-bottom: 5px; }
@@ -38,6 +30,14 @@ body {
   background-color: #cdedfd; }
 
 .btn-group button:hover, .btn.active {
+  padding: 1px;
+  border-radius: 5px;
+  border-color: #3581b8;
+  color: white;
+  background-color: #3581b8;
+  font-weight: bold; }
+
+.btn.view.active {
   padding: 1px;
   border-radius: 5px;
   border-color: #3581b8;
@@ -109,6 +109,31 @@ a, a:hover, a:active, a:visited, a:focus {
 
 .orgpol {
   color: #3581b8; }
+
+.row.candidate > .grid {
+  -webkit-transition: all 0.6s cubic-bezier(0.99, 0.53, 0.58, 1.1);
+  -moz-transition: all 0.6s cubic-bezier(0.99, 0.53, 0.58, 1.1);
+  -o-transition: all 0.6s cubic-bezier(0.99, 0.53, 0.58, 1.1);
+  transition: all 0.4s cubic-bezier(0.99, 0.53, 0.58, 1.1);
+  float: left;
+  width: 25%;
+  height: 150px;
+  border: 1px solid #f1f1f1;
+  border-radius: 2px;
+  padding: 20px; }
+
+.row.candidate > .media {
+  -webkit-transition: all  0.6s ease-out;
+  -moz-transition: all  0.6s ease-out;
+  -o-transition: all 0.6s ease-out;
+  transition: all 0.6s ease-out;
+  border-top: 1px solid #f1f1f1;
+  padding-top: 2px; }
+
+.progress-meter text {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 24px;
+  font-weight: bold; }
 
 body {
   margin: 5px; }

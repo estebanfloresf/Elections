@@ -27,4 +27,27 @@ const resultsSchema = new mongoose.Schema({
 
 });
 
+
+resultsSchema.statics.getTotalVoters = function () {
+    return this.aggregate([
+        {
+            $group: {
+                _id: "$round",
+                totalmen: {$sum: '$men'},
+                totalwomen: {$sum: '$women'}
+            }
+        },
+        {
+            $project:{
+                _id: "$_id",
+                totalmen: '$totalmen',
+                totalwomen: '$totalwomen',
+                total: {"$add": ["$totalmen", "$totalwomen"]}
+
+            }
+        }
+    ])
+};
+
+
 module.exports = mongoose.model('Results', resultsSchema);
