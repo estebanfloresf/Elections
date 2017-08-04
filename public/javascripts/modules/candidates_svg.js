@@ -1,18 +1,11 @@
 
 
-// var div = d3.select("div."+candidate[0].president)
-//     .append("svg")
-//     .attr('width',400)
-//     .attr('height',100);
-
 last = candidate[0].president.split(' ').slice(-1).join(' ');
 
 
 // var formatPercent = d3.format(",.2%");
 var p = Math.max(0, d3.precisionFixed(0.05) );
 var formatPercent = d3.format("." + p + "%");
-
-
 
 
 
@@ -34,7 +27,7 @@ var g = svg.append("g")
 data = candidate;
 
 data.sort(function (a, b) {
-    return a.percentage - b.percentage;
+    return b.percentage - a.percentage;
 });
 
 x.domain([0, d3.max(data, function (d) {

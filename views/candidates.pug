@@ -61,13 +61,14 @@ block content
 
                             svg(class=`${candidate.president.split(' ').slice(-1).join(' ')}` width="500" height="80")
 
-                            div(class=`circle-${candidate.president.split(' ').slice(-1).join(' ')}` width="500" height="80")
+                            div(class=`circle-${candidate.president.split(' ').slice(-1).join(' ').trim()}` style=" width:960px; height:500px;")
 
-
+                            //
                             script(type='text/javascript').
                                 var candidate = [!{JSON.stringify(candidate)}];
 
                             script(src="/javascripts/modules/candidates_svg.js")
+                            script(src="/javascripts/modules/test.js")
 
 
 

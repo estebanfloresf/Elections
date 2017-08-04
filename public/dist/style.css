@@ -170,4 +170,11 @@ body {
 pattern {
   fill: #3581b8; }
 
+.arc text {
+  font: 10px sans-serif;
+  text-anchor: middle; }
+
+.arc path {
+  stroke: #fff; }
+
 /*# sourceMappingURL=style.css.map*/
