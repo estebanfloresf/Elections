@@ -113,6 +113,7 @@ Object.defineProperty(exports, "__esModule", {
 function inlinesvg(e) {
 
     jQuery(e).each(function () {
+
         var $img = jQuery(this);
 
         var imgID = $img.attr('id');
@@ -173,7 +174,10 @@ var _inline_svg2 = _interopRequireDefault(_inline_svg);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-(0, _inline_svg2.default)((0, _bling.$)('.active  img.svg'));
+// inlinesvg($('.active  img.svg'));
+
+
+(0, _inline_svg2.default)((0, _bling.$$)('.svgEmbed'));
 
 /***/ })
 /******/ ]);

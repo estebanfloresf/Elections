@@ -6,10 +6,10 @@ import inlinesvg from './modules/inline_svg';
 
 
 
-inlinesvg($('.active  img.svg'));
+// inlinesvg($('.active  img.svg'));
 
 
-
+inlinesvg($$('.svgEmbed'));
 
 
 

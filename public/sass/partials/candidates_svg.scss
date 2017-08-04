@@ -60,11 +60,10 @@ pattern{
 }
 
 
-.arc text {
-  font: 10px sans-serif;
-  text-anchor: middle;
+div.media-body > svg.svgEmbed > path {
+  fill: red;
+
+
 }
 
-.arc path {
-  stroke: #fff;
-}
+

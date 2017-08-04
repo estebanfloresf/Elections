@@ -6,7 +6,9 @@
 
 function inlinesvg(e){
 
+
     jQuery(e).each(function(){
+
     const $img = jQuery(this);
 
     const imgID = $img.attr('id');

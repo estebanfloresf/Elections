@@ -61,7 +61,10 @@ block content
 
                             svg(class=`${candidate.president.split(' ').slice(-1).join(' ')}` width="500" height="80")
 
-                            div(class=`circle-${candidate.president.split(' ').slice(-1).join(' ').trim()}` style=" width:960px; height:500px;")
+                            div(id=`circle-${candidate.president.split(' ').slice(-1).join(' ').trim()}` style=" width:auto; height:auto; background-color: #4F4F4F")
+                            svg(class="svgEmbed" id=`svgEmbed-${candidate.president.split(' ').slice(-1).join(' ').trim()}` width="200" height="200" style=" height: 200px;                         ")
+
+
 
                             //
                             script(type='text/javascript').
