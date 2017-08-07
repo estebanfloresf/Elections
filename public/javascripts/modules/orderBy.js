@@ -8,8 +8,8 @@ $(document).ready(function () {
     $("#list").first().addClass("active");
 
     let view = "media";
-    // This function is for sorting the candidates (calls the animateSort function)
 
+    // This function is for sorting the candidates (calls the animateSort function)
     $(".btn.sort").click(function () {
 
         $(".btn.sort").removeClass("active");

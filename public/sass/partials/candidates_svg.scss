@@ -63,7 +63,25 @@ pattern{
 div.media-body > svg.svgEmbed > path {
   fill: red;
 
-
 }
+
+
+.barchart text{
+  fill: $color1;
+
+  font-size: .8em;
+  text-anchor: middle;
+}
+
+
+.barchart .bartext{
+  fill: $color4;
+
+  font-size: .8em;
+  text-anchor: middle;
+}
+
+
+
 
 

@@ -14,70 +14,74 @@ html
         link(rel='stylesheet', href='../dist/style.css')
         script(src="https://d3js.org/d3.v4.min.js")
         script(src="https://d3js.org/d3-selection-multi.v0.4.min.js")
+        //script(src='//cdnjs.cloudflare.com/ajax/libs/topojson/1.6.9/topojson.min.js')
+        //script(src="/maps/datamaps.all.min.js")
 
 
 
 
-    body
-        nav.navbar.navbar-inverse.navbar-fixed-top
-            .container-fluid
-                .navbar-header
-                    button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#navbar', aria-expanded='false', aria-controls='navbar')
-                        span.sr-only Toggle navigation
-                        span.icon-bar
-                        span.icon-bar
-                        span.icon-bar
+body
+    nav.navbar.navbar-inverse.navbar-fixed-top
+        .container-fluid
+            .navbar-header
+                button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#navbar', aria-expanded='false', aria-controls='navbar')
+                    span.sr-only Toggle navigation
+                    span.icon-bar
+                    span.icon-bar
+                    span.icon-bar
 
-                    a.navbar-brand(href='/')
-                        span
-                            img(alt='Brand', src='./images/photos/logo.png' width="20px" height="10px")
-                        |  #{h.siteName}
-                #navbar.navbar-collapse.collapse
-                    ul.nav.navbar-nav.navbar-right
-                        each item in h.menu
-                            li
-                                a(href=item.slug, class=(currentPath.startsWith(item.slug) ? 'active' : ''))
-                                    //img.img_menu_icon(src=`./images/icons/${item.icon}.svg`)
-                                    //.img_nav
-                                    //    != h.icon(item.icon)
-                                    span.glyphicon
-                                        img.svg(src=`./images/icons/${item.icon}.svg` style="width:30px; height:15px")
+                a.navbar-brand(href='/')
+                    span
+                        img(alt='Brand', src='../images/photos/logo.png' width="20px" height="10px")
+                    |  #{h.siteName}
+            #navbar.navbar-collapse.collapse
+                ul.nav.navbar-nav.navbar-right
+                    each item in h.menu
+                        li
+                            a(href=item.slug, class=(currentPath.startsWith(item.slug) ? 'active' : ''))
 
-                                    span #{item.title}
-                    form.navbar-form.navbar-right
-                        input.form-control(type='text', placeholder='Search...')
+                                span.glyphicon
+                                    img.svg(src=`../images/icons/${item.icon}.svg` style="width:30px; height:15px")
+
+                                span #{item.title}
+                form.navbar-form.navbar-right
+                    input.form-control(type='text', placeholder='Search...')
 
 
-        div.container
-            div.starter-template
+    div.container
+        div.starter-template
 
-                block messages
-                    if locals.flashes
-                        .inner
-                            .flash-messages
-                                - const categories = Object.keys(locals.flashes)
-                                - const defaultoption = 'warning'
-                                each category in categories
-                                    each message in flashes[category]
+            block messages
+                if locals.flashes
+                    .inner
+                        .flash-messages
+                            - const categories = Object.keys(locals.flashes)
+                            - const defaultoption = 'warning'
+                            each category in categories
+                                each message in flashes[category]
 
-                                        //if category.contain('success','warning','info','danger')
-                                        //    pre= h.dump(flashes[category])
-
-
-                                        .alert(class="alert alert-dismissible alert-"+`${category}` role="alert")
-                                            button.close(type="button", data-dismiss="alert", aria-label="Close" onClick="this.parentElement.remove()") &times;
-
-                                            p!= message
-                                            //button.flash__remove(onClick="this.parentElement.remove()") &times;
-
-                block content
+                                    //if category.contain('success','warning','info','danger')
+                                    //    pre= h.dump(flashes[category])
 
 
-        script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js')
-        script(src='https://code.jquery.com/jquery-3.2.1.min.js', integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=', crossorigin='anonymous')
+                                    .alert(class="alert alert-dismissible alert-" + `${category}` role="alert")
+                                        button.close(type="button", data-dismiss="alert", aria-label="Close" onClick="this.parentElement.remove()") &times;
 
-        script(src="/dist/App.bundle.js")
-        script(src="/javascripts/modules/orderBy.js")
+                                        p!= message
+                                        //button.flash__remove(onClick="this.parentElement.remove()") &times;
+
+            block content
+
+
+
+
+
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js')
+    script(src='https://code.jquery.com/jquery-3.2.1.min.js', integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=', crossorigin='anonymous')
+    script(src="/dist/App.bundle.js")
+    script(src="/javascripts/modules/orderBy.js")
+
+
 
 
 

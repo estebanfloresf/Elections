@@ -174,9 +174,6 @@ var _inline_svg2 = _interopRequireDefault(_inline_svg);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-// inlinesvg($('.active  img.svg'));
-
-
 (0, _inline_svg2.default)((0, _bling.$$)('.svgEmbed'));
 
 /***/ })

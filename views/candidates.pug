@@ -2,7 +2,7 @@ extends layout
 
 
 block content
-    //pre= h.dump(candidates)
+
     .page-header
         h1= title
     .container-fluid
@@ -44,25 +44,40 @@ block content
             each candidate in candidates
 
                 if candidate.president !== "null"
+                    - var lastname = candidate.president.split(' ').slice(-1).join(' ').trim();
 
                     .media(data-value=`${candidate.total}`  data-name=`${candidate.president.split(' ').slice(0, 1).join(' ')}`)
                         .media-left
                             a(href='#')
                                 img.media-object(src=`${candidate.photo_president}`, alt=`${candidate.president}` style='width:64px; height:64px')
 
+
+
                         .media-body
-                            a.fun_hover.text-capitalize(href='#') #{candidate.president}
 
-                            p.text-capitalize
-                                small.orgpol #{candidate.polorg}
-                            span(type='hidden', name=`${candidate.president}`, value=`${candidate.total}`)
+                            .containerFlex
+                                .col-md-4
+                                    a.fun_hover.text-capitalize(href='#') #{candidate.president}
+
+                                    p.text-capitalize
+                                        small.orgpol #{candidate.polorg}
+                                        span(type='hidden', name=`${candidate.president}`, value=`${candidate.total}`)
+                                .col-md-8
+                                    div.col-md-6(id=`bar-${lastname}` class="barchart")
 
 
 
-                            svg(class=`${candidate.president.split(' ').slice(-1).join(' ')}` width="500" height="80")
 
-                            div(id=`circle-${candidate.president.split(' ').slice(-1).join(' ').trim()}` style=" width:auto; height:auto; background-color: #4F4F4F")
-                            svg(class="svgEmbed" id=`svgEmbed-${candidate.president.split(' ').slice(-1).join(' ').trim()}` width="200" height="200" style=" height: 200px;                         ")
+
+
+
+                            //svg(class=`${lastname}` width="500" height="80")
+
+
+
+
+                            //div.col-md-6(id=`bar-${lastname}` class="map" style="width: 50%")
+
 
 
 
@@ -70,13 +85,9 @@ block content
                             script(type='text/javascript').
                                 var candidate = [!{JSON.stringify(candidate)}];
 
-                            script(src="/javascripts/modules/candidates_svg.js")
-                            script(src="/javascripts/modules/test.js")
-
-
-
-
-
-
-
-
+                            script(src="/javascripts/candidates/candidatesBar.js")
+                            //script(src="/javascripts/modules/raphael.min.js")
+                            //script(src="/javascripts/candidates/candidateMap.js")
+                            //
+                            //
+                            //

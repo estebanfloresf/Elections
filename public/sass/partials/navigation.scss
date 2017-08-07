@@ -40,5 +40,5 @@ nav > .container-fluid{
 
 // SVG Icons images for navigation
 
-svg {width: 26px; height: 15px;}
-svg path {fill: white !important;}
+.navbar-inverse .navbar-nav > li > a > svg {width: 26px; height: 15px;}
+.navbar-inverse .navbar-nav > li > a > svg  {fill: white !important;}
