@@ -73,11 +73,11 @@ nav > .container-fluid {
   background: #3581b8;
   text-shadow: none; }
 
-svg {
+.navbar-inverse .navbar-nav > li > a > svg {
   width: 26px;
   height: 15px; }
 
-svg path {
+.navbar-inverse .navbar-nav > li > a > svg {
   fill: white !important; }
 
 body {
@@ -130,10 +130,24 @@ a, a:hover, a:active, a:visited, a:focus {
   border-top: 1px solid #f1f1f1;
   padding-top: 2px; }
 
-.progress-meter text {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 24px;
-  font-weight: bold; }
+div.map > svg {
+  height: 100%;
+  width: 100%;
+  transform: scale(0.75); }
+
+.containerFlex {
+  display: flex; }
+
+.containerFlex > .col-md-4 {
+  flex: 0 0 230px; }
+
+.containerFlex > .col-md-8 {
+  flex: 1;
+  height: 50px; }
+
+.barchart {
+  width: 100%;
+  height: 50%; }
 
 body {
   margin: 5px; }
@@ -178,5 +192,15 @@ pattern {
 
 div.media-body > svg.svgEmbed > path {
   fill: red; }
+
+.barchart text {
+  fill: #3581b8;
+  font-size: .8em;
+  text-anchor: middle; }
+
+.barchart .bartext {
+  fill: #e6af2e;
+  font-size: .8em;
+  text-anchor: middle; }
 
 /*# sourceMappingURL=style.css.map */
