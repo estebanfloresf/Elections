@@ -1,58 +1,143 @@
-var data = candidate;
+
+
+
+var formatPercent = d3.format("." + p + "%");
+
+
+
 var dataset = [
-    {label: 'Abulia', count: 10},
-    {label: 'Betelgeuse', count: 20},
-    {label: 'Cantaloupe', count: 30},
-    {label: 'Dijkstra', count: 40}
-];
+        {category: "Mujeres", measure: candidate[0].totalwomen / candidate[0].total},
+        {category: "Hombres", measure: candidate[0].totalmen / candidate[0].total},
 
-var width = 150;
-var height = 150;
-var radius = Math.min(width, height) / 2;
-var donutWidth = 40;                            // NEW
+    ];
 
-var color = d3.scaleOrdinal(["#3581B8", "#F45B69"]);
+var width = 60,
+    height = 60,
+    outerRadius = Math.min(width, height) / 2,
+    innerRadius = outerRadius * 0.9,
+    // for animation
+    innerRadiusFinal = outerRadius * .65,
+    innerRadiusFinal3 = outerRadius * .45,
+    color = d3.scaleOrdinal(['#FF5555','#3581B8']);   //builtin range of colors
+;
 
-
-var svg = d3.select("#pie-" + last)
-    .append('svg')
-    .attr('width', width)
-    .attr('height', height)
-    .append('g')
-    .attr('transform', 'translate(' + (width / 2) +
-        ',' + (height / 2) + ')');
+var vis = d3.select("#pie-" + last)
+    .append("svg:svg")
+    .data([dataset])
+    .attr("width", width)
+    .attr("height", height)
+    .append("svg:g")
+    .attr("transform", "translate(" + outerRadius + "," + outerRadius + ")")
+;
 
 var arc = d3.arc()
-    .innerRadius(radius - donutWidth)
-    .outerRadius(radius);
+    .outerRadius(outerRadius).innerRadius(innerRadius);
 
+// for animation
+var arcFinal = d3.arc().innerRadius(innerRadiusFinal).outerRadius(outerRadius);
+var arcFinal3 = d3.arc().innerRadius(innerRadiusFinal3).outerRadius(outerRadius);
 
 var pie = d3.pie()
     .value(function (d) {
-        return d.count;
-    })
-    .sort(null);
+        return d.measure;
+    });
 
-var path = svg.selectAll('path')
-    .data(pie(dataset))
+var arcs = vis.selectAll("g.slice")
+    .data(pie)
     .enter()
-    .append('path')
-    .attr('d', arc)
-    .attr('fill', function (d, i) {
-        return color(d.data.label);
+    .append("svg:g")
+    .attr("class", "slice")
+    .on("mouseover", mouseover)
+    .on("mouseout", mouseout)
+    .on("click", up)
+;
+
+arcs.append("svg:path")
+    .attr("fill", function (d, i) {
+        return color(i);
+    })
+    .attr("d", arc)
+    .append("svg:title")
+    .text(function (d) {
+        return d.data.category + ": " + formatPercent(d.data.measure);
     });
 
-path.append("text")
-    .each(function(d) {
-        var centroid = arc.centroid(d);
-        d3.select(this)
-            .attr('x', centroid[0])
-            .attr('y', centroid[1])
-            .attr('dy', '0.33em')
-            .style("color","#000")
-            .text(
+d3.selectAll("g.slice").selectAll("path").transition()
+    .duration(750)
+    .delay(10)
+    .attr("d", arcFinal)
+;
 
-                d.data.label);
-    });
+arcs.filter(function (d) {
+    return d.endAngle - d.startAngle > .2;
+})
+    .append("svg:text")
+    // .attr("dy", ".2em")
+    // .attr("text-anchor", "start")
+    // .attr("class","pieText")
+    // .attr("transform", function (d) {
+    //     return "translate(" + arcFinal.centroid(d) + ")rotate(" + angle(d) + ")";
+    // })
+    //
+    // .text(function (d) {
+    //     return d.data.category;
+    // })
+;
+
+function angle(d) {
+    var a = (d.startAngle + d.endAngle) * 90 / Math.PI - 90;
+    return a > 90 ? a - 180 : a;
+}
 
 
+var selected = "";
+// Pie chart title
+// vis.append("svg:text")
+//     .attr("dy", ".35em")
+//     .attr("text-anchor", "middle")
+//     .text(function () {
+//         console.log(selected);
+//         return "s";
+//     })
+//     .attr("class", "title")
+// ;
+
+
+function mouseover() {
+    d3.select(this).select("path").transition()
+        .duration(0.2)
+        // .attr("stroke","red")
+        // .attr("stroke-width", 1.5)
+        .attr("d", arcFinal3)
+    ;
+}
+
+function mouseout() {
+    d3.select(this).select("path").transition()
+        .duration(0.2)
+        //.attr("stroke","blue")
+        //.attr("stroke-width", 1.5)
+        .attr("d", arcFinal)
+    ;
+}
+
+function up(d) {
+
+    selected = ""
+    selected = d.data.measure;
+
+    console.log(d3.select(this.g));
+
+    d3.select(this).append("svg:text")
+        .attr("dy", ".35em")
+        .attr("text-anchor", "middle")
+        .text(function () {
+
+            return selected;
+        })
+        .attr("class", "title")
+    ;
+    
+
+
+}
