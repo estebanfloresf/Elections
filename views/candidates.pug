@@ -56,16 +56,16 @@ block content
                         .media-body
 
                             .containerFlex
-                                .col-md-4
+                                div.itemflex
                                     a.fun_hover.text-capitalize(href='#') #{candidate.president}
 
                                     p.text-capitalize
                                         small.orgpol #{candidate.polorg}
                                         span(type='hidden', name=`${candidate.president}`, value=`${candidate.total}`)
-                                .col-md-4
+                                div.itemflex
                                     div(id=`bar-${lastname}` class="barchart")
 
-                                .col-md-4
+                                div.itemflex
                                     div(id=`pie-${lastname}` class="piechart")
 
 

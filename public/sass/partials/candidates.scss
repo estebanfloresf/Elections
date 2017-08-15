@@ -69,6 +69,15 @@ div.map > svg{
 .containerFlex{
   display: flex;
   height: inherit;
+  align-content: space-around;
+  flex-flow: row;
+}
+
+
+.itemflex{
+  align-content: center;
+  //flex: 0 0 230px;
+  flex: 1;
 }
 
 .containerFlex > .col-md-4 {
