@@ -46,27 +46,43 @@ block content
                 if candidate.president !== "null"
                     - var lastname = candidate.president.split(' ').slice(-1).join(' ').trim();
 
-                    .media(data-value=`${candidate.total}`  data-name=`${candidate.president.split(' ').slice(0, 1).join(' ')}`)
-                        .media-left
-                            a(href='#')
-                                img.media-object(src=`${candidate.photo_president}`, alt=`${candidate.president}` style='width:64px; height:64px')
+
+                .containerFlex
+                    .itemflex a
+                    .itemflex b
+                    .itemflex c
+                    .itemflex d
+                    .itemflex e
 
 
-
-                        .media-body
-
-                            .containerFlex
-                                div.itemflex
-                                    a.fun_hover.text-capitalize(href='#') #{candidate.president}
-
-                                    p.text-capitalize
-                                        small.orgpol #{candidate.polorg}
-                                        span(type='hidden', name=`${candidate.president}`, value=`${candidate.total}`)
-                                div.itemflex
-                                    div(id=`bar-${lastname}` class="barchart")
-
-                                div.itemflex
-                                    div(id=`pie-${lastname}` class="piechart")
+                    //
+                    //.media(data-value=`${candidate.total}`  data-name="#{lastName}")
+                    //    .media-left
+                    //        .containerFlex
+                    //            .itemflex
+                    //                a(href='#')
+                    //                    img.media-object(src=`${candidate.photo_president}`, alt=`${candidate.president}` style='width:64px; height:64px')
+                    //
+                    //
+                    //
+                    //    .media-body
+                    //
+                    //        .containerFlex
+                    //            div.itemflex
+                    //                a.fun_hover.text-capitalize(href='#') #{candidate.president}
+                    //                p.text-capitalize
+                    //                    small.orgpol #{candidate.polorg}
+                    //                    span(type='hidden', name=`${candidate.president}`, value=`${candidate.total}`)
+                    //
+                    //            div.itemflex
+                    //                div(id=`bar-${lastname}` class="barchart")
+                    //
+                    //            div.itemflex
+                    //                div(id=`pie-${lastname}` class="piechart")
+                    //
+                    //            div.itemflex
+                    //                p Text
+                    //
 
 
 

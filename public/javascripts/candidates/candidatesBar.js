@@ -7,9 +7,9 @@ var formatPercent = d3.format("." + p + "%");
 
 
 var svg = d3.select("#bar-" + last).append('svg:svg'),
-    margin = {top: 5, right: 10, bottom: 6, left: 6},
+    margin = {top: 5, right: 10, bottom: 1, left: 6},
     width = +300 - margin.left - margin.right - 20,
-    height = +80 - margin.top - margin.bottom - 20;
+    height = +80 -  margin.bottom - 20;
 
 
 var tooltip = d3.select("body").append("div").attr("class", "toolTip");
