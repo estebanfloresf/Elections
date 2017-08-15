@@ -1,13 +1,17 @@
 
 
 
+
+var lastName = candidate[0].president.split(' ').slice(-1).join(' ');
 var formatPercent = d3.format("." + p + "%");
 
+var women = candidate[0].totalwomen / candidate[0].total;
+var men = candidate[0].totalmen / candidate[0].total;
 
 
 var dataset = [
-        {category: "Mujeres", measure: candidate[0].totalwomen / candidate[0].total},
-        {category: "Hombres", measure: candidate[0].totalmen / candidate[0].total},
+        {category: "women", measure: women},
+        {category: "men", measure: men},
 
     ];
 
@@ -18,15 +22,17 @@ var width = 60,
     // for animation
     innerRadiusFinal = outerRadius * .65,
     innerRadiusFinal3 = outerRadius * .45,
-    color = d3.scaleOrdinal(['#FF5555','#3581B8']);   //builtin range of colors
+    color = d3.scaleOrdinal(['#ff005b','#3581B8']);   //builtin range of colors
 ;
 
 var vis = d3.select("#pie-" + last)
     .append("svg:svg")
     .data([dataset])
+    .attr("class", "pie-"+lastName)
     .attr("width", width)
     .attr("height", height)
     .append("svg:g")
+
     .attr("transform", "translate(" + outerRadius + "," + outerRadius + ")")
 ;
 
@@ -90,17 +96,7 @@ function angle(d) {
 }
 
 
-var selected = "";
-// Pie chart title
-// vis.append("svg:text")
-//     .attr("dy", ".35em")
-//     .attr("text-anchor", "middle")
-//     .text(function () {
-//         console.log(selected);
-//         return "s";
-//     })
-//     .attr("class", "title")
-// ;
+
 
 
 function mouseover() {
@@ -121,23 +117,63 @@ function mouseout() {
     ;
 }
 
-function up(d) {
+var newText = "";
+var style = "";
 
-    selected = ""
-    selected = d.data.measure;
+function up() {
 
-    console.log(d3.select(this.g));
 
-    d3.select(this).append("svg:text")
-        .attr("dy", ".35em")
-        .attr("text-anchor", "middle")
-        .text(function () {
 
-            return selected;
-        })
-        .attr("class", "title")
-    ;
-    
+    if(d3.select(".title-"+lastName)){
+
+        console.log(formatPercent(dataset[0].measure));
+
+        d3.select(".title-"+lastName).remove();
+        newText =formatPercent(dataset[0].measure);
+
+        if(dataset[0].category ==='men'){
+            style = '#3581B8';
+        }
+        else {
+            style = '#ff005b';
+        }
+
+
+    }
+    return [newText,style];
+
+
+
+// Pie chart title
+//     d3.select(this).append("svg:text")
+//         .attr("dy", "0.3em")
+//         .style("font-size","10px")
+//         .style("font-weight","bold")
+//         .style("fill", style)
+//         .attr("text-anchor", "middle")
+//         .text(function () {
+//
+//             return newText;
+//         })
+//         .attr("class", "title-"+lastName);
+
+
+
+
+
 
 
 }
+
+
+   vis.append("svg:text")
+        .attr("dy", "0.3em")
+        .style("font-size","10px")
+        .style("font-weight","bold")
+        .style("fill", up().style)
+        .attr("text-anchor", "middle")
+        .text(function () {
+
+            return newText;
+        })
+        .attr("class", "title-"+lastName);

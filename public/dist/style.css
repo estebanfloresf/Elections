@@ -27,7 +27,7 @@ body {
   padding: 1px;
   border-radius: 5px;
   color: #3581b8;
-  background-color: #cdedfd; }
+  background-color: #c4e5f5; }
 
 .btn-group button:hover, .btn.active {
   padding: 1px;
@@ -172,7 +172,7 @@ body {
   fill: #3581b8; }
 
 .background-bar {
-  fill: #cdedfd;
+  fill: #c4e5f5;
   opacity: .4; }
 
 .axis path,
@@ -194,7 +194,7 @@ body {
   min-width: 80px;
   height: auto;
   background: none repeat scroll 0 0 #ffffff;
-  border: 1px solid #cdedfd;
+  border: 1px solid #c4e5f5;
   padding: 14px;
   text-align: center; }
 
@@ -210,7 +210,7 @@ div.media-body > svg.svgEmbed > path {
   text-anchor: middle; }
 
 .barchart .bartext {
-  fill: #e6af2e;
+  fill: #ffc531;
   font-size: .8em;
   text-anchor: middle; }
 

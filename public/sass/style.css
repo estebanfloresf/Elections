@@ -27,7 +27,7 @@ body {
   padding: 1px;
   border-radius: 5px;
   color: #3581b8;
-  background-color: #cdedfd; }
+  background-color: #c4e5f5; }
 
 .btn-group button:hover, .btn.active {
   padding: 1px;
@@ -128,7 +128,11 @@ a, a:hover, a:active, a:visited, a:focus {
   -o-transition: all 0.6s ease-out;
   transition: all 0.6s ease-out;
   border-top: 1px solid #f1f1f1;
-  padding-top: 2px; }
+  padding-top: 2px;
+  height: 75px; }
+
+.row.candidate > .media > .media-body {
+  height: 75px; }
 
 div.map > svg {
   height: 100%;
@@ -136,18 +140,25 @@ div.map > svg {
   transform: scale(0.75); }
 
 .containerFlex {
-  display: flex; }
+  display: flex;
+  height: inherit; }
 
 .containerFlex > .col-md-4 {
-  flex: 0 0 230px; }
+  flex: 0 0 230px;
+  align-content: center;
+  height: inherit; }
 
 .containerFlex > .col-md-8 {
   flex: 1;
-  height: 50px; }
+  height: 50px;
+  align-content: center; }
 
 .barchart {
   width: 100%;
   height: 50%; }
+
+.piechart {
+  padding-top: 5px; }
 
 body {
   margin: 5px; }
@@ -161,7 +172,7 @@ body {
   fill: #3581b8; }
 
 .background-bar {
-  fill: #cdedfd;
+  fill: #c4e5f5;
   opacity: .4; }
 
 .axis path,
@@ -183,7 +194,7 @@ body {
   min-width: 80px;
   height: auto;
   background: none repeat scroll 0 0 #ffffff;
-  border: 1px solid #cdedfd;
+  border: 1px solid #c4e5f5;
   padding: 14px;
   text-align: center; }
 
@@ -199,8 +210,12 @@ div.media-body > svg.svgEmbed > path {
   text-anchor: middle; }
 
 .barchart .bartext {
-  fill: #e6af2e;
+  fill: #ffc531;
   font-size: .8em;
   text-anchor: middle; }
+
+.pieText {
+  color: #fff200;
+  background-color: #fff200; }
 
 /*# sourceMappingURL=style.css.map */
