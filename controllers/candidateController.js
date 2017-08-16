@@ -35,7 +35,10 @@ exports.getCandidates = async (req, res) =>{
     candidates.sort(order);
 
     candidates.forEach(function (candidate) {
+
         candidate["percentage"] = ((candidate["total"] / totalvotes[0].total) ).toFixed(4);
+        candidate["menPerc"] = ((candidate["totalmen"] / candidate['total']) ).toFixed(4);
+        candidate["womenPerc"] = ((candidate["totalwomen"] / candidate['total']) ).toFixed(4);
 
 
     });

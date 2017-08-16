@@ -13,17 +13,26 @@ var pieInnerStyle = "#3581B8";
 var dataset = [
     {category: "women", measure: women},
     {category: "men", measure: men},
+    // {category: "women", measure: women},
+    // {category: "men", measure: men},
+    // {category: "women", measure: women},
+    // {category: "men", measure: men},
+    // {category: "women", measure: women},
+    // {category: "men", measure: men},
+    // {category: "women", measure: women},
+    // {category: "men", measure: men},
 
 ];
 
-var width = 70,
-    height = 70,
+var width = 80,
+    height = 80,
     outerRadius = Math.min(width, height) / 2,
-    innerRadius = outerRadius * 0.9,
+    innerRadius = outerRadius * 0.5,
     // for animation
-    innerRadiusFinal = outerRadius * .65,
-    innerRadiusFinal3 = outerRadius * .45,
-    color = d3.scaleOrdinal(['#ff005b', '#3581B8']);   //builtin range of colors
+    innerRadiusFinal = outerRadius * .85,
+    innerRadiusFinal3 = outerRadius * .65,
+   color = d3.scaleOrdinal(['#ff005b', '#3581B8']);   //builtin range of colors
+    // color = d3.scaleOrdinal(d3.schemeCategory10) ;
 
 
 var vis = d3.select("#pie-" + last)
@@ -95,7 +104,7 @@ arcs.filter(function (d) {
 // Pie chart title
 vis.append("svg:text")
     .attr("dy", "0.3em")
-    .style("font-size","10px")
+    .style("font-size","12px")
     .style("font-weight","bold")
     .style("fill", pieInnerStyle)
     .attr("text-anchor", "middle")

@@ -8,6 +8,11 @@ const fs = require('fs');
 // moment.js is a handy library for displaying dates. We need this in our templates to display things like "Posted 5 minutes ago"
 exports.moment = require('moment');
 
+
+//for formmating numbers ->  http://numeraljs.com/
+
+exports.numeral = require('numeral');
+
 // Dump is a handy debugging function we can use to sort of "console.log" our data
 exports.dump = (obj) => JSON.stringify(obj, null, 2);
 
@@ -25,5 +30,9 @@ exports.menu = [
     { slug: '/surveys', title: 'Surveys', icon: 'survey', },
     { slug: '/candidates', title: 'Candidates', icon: 'candidates', }
 ];
+
+
+
+
 
 
