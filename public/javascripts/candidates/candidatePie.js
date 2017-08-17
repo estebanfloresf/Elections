@@ -5,9 +5,18 @@ var women = candidate[0].totalwomen / candidate[0].total;
 var men = candidate[0].totalmen / candidate[0].total;
 
 
-
 var pieInnerText = formatPercent(men);
 var pieInnerStyle = "#3581B8";
+
+
+var style = {
+    fontsize: "12px",
+    fontWeight: "bold",
+    fill: pieInnerStyle
+};
+
+
+var tooltip = d3.select("body").append("div").attr("class", "toolTip");
 
 
 var dataset = [
@@ -31,8 +40,8 @@ var width = 80,
     // for animation
     innerRadiusFinal = outerRadius * .85,
     innerRadiusFinal3 = outerRadius * .65,
-   color = d3.scaleOrdinal(['#ff005b', '#3581B8']);   //builtin range of colors
-    // color = d3.scaleOrdinal(d3.schemeCategory10) ;
+    color = d3.scaleOrdinal(['#ff005b', '#3581B8']);   //builtin range of colors
+// color = d3.scaleOrdinal(d3.schemeCategory10) ;
 
 
 var vis = d3.select("#pie-" + last)
@@ -62,10 +71,10 @@ var arcs = vis.selectAll("g.slice")
     .data(pie)
     .enter()
     .append("svg:g")
-    .attr("class", "slice-"+lastName)
+    .attr("class", "slice-" + lastName)
     .on("mouseover", mouseover)
     .on("mouseout", mouseout)
-    .on("click", up)
+    .on("click", click)
 ;
 
 arcs.append("svg:path")
@@ -78,7 +87,7 @@ arcs.append("svg:path")
         return d.data.category + ": " + formatPercent(d.data.measure);
     });
 
-d3.selectAll("g.slice-"+lastName).selectAll("path").transition()
+d3.selectAll("g.slice-" + lastName).selectAll("path").transition()
     .duration(750)
     .delay(10)
     .attr("d", arcFinal)
@@ -104,15 +113,15 @@ arcs.filter(function (d) {
 // Pie chart title
 vis.append("svg:text")
     .attr("dy", "0.3em")
-    .style("font-size","12px")
-    .style("font-weight","bold")
+    .style("font-size", style.fontsize)
+    .style("font-weight", style.fontWeight)
     .style("fill", pieInnerStyle)
     .attr("text-anchor", "middle")
     .text(function () {
 
         return pieInnerText;
     })
-    .attr("class", "title-"+lastName);
+    .attr("class", "title-" + lastName);
 
 
 function angle(d) {
@@ -121,13 +130,23 @@ function angle(d) {
 }
 
 
-function mouseover() {
+function mouseover(d) {
     d3.select(this).select("path").transition()
         .duration(0.2)
         // .attr("stroke","red")
         // .attr("stroke-width", 1.5)
-        .attr("d", arcFinal3)
-    ;
+        .attr("d", arcFinal3);
+
+    tooltip
+        .style("left", d3.event.pageX - 50 + "px")
+        .style("top", d3.event.pageY - 70 + "px")
+        .style("display", "inline-block")
+        .style("text-transform", "capitalize")
+        .html((d.data.measure) + "<br>" + formatPercent(d.data.category));
+
+
+
+
 }
 
 function mouseout() {
@@ -140,42 +159,36 @@ function mouseout() {
 }
 
 
-
-function up(d) {
-
+function click(d) {
 
 
-
-        var selectedLastName = d3.select(this).attr("class").split('-').slice(1,2).join(' ');
-       
-
-
-        d3.select(".title-" + selectedLastName).remove();
-        pieInnerText = formatPercent(d.data.measure);
-
-        if (d.data.category === 'men') {
-            pieInnerStyle = '#3581B8';
-        }
-        else {
-            pieInnerStyle = '#ff005b';
-        }
+    var selectedLastName = d3.select(this).attr("class").split('-').slice(1, 2).join(' ');
 
 
 
 
+    d3.select(".title-" + selectedLastName).remove();
+    pieInnerText = formatPercent(d.data.measure);
+
+    if (d.data.category === 'men') {
+        pieInnerStyle = '#3581B8';
+    }
+    else {
+        pieInnerStyle = '#ff005b';
+    }
 
 
 // Pie chart title
     d3.select(this).append("svg:text")
         .attr("dy", "0.3em")
-        .style("font-size","10px")
-        .style("font-weight","bold")
+        .style("font-size", style.fontsize)
+        .style("font-weight", style.fontWeight)
         .style("fill", pieInnerStyle)
         .attr("text-anchor", "middle")
         .text(function () {
 
             return pieInnerText;
         })
-        .attr("class", "title-"+selectedLastName);
+        .attr("class", "title-" + selectedLastName);
 }
 
