@@ -194,7 +194,7 @@ div.map > svg {
 .women {
   background-color: #ff005b; }
 
-@media (max-width: 500px) {
+@media (max-width: 200px) {
   .results {
     -ms-flex-direction: column;
         flex-direction: column; }

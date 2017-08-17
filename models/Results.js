@@ -25,6 +25,13 @@ const resultsSchema = new mongoose.Schema({
     women: Number
 
 
+},{
+    toObject: {
+        virtuals: true
+    },
+    toJSON: {
+        virtuals: true
+    }
 });
 
 
@@ -49,5 +56,8 @@ resultsSchema.statics.getTotalVoters = function () {
     ])
 };
 
+resultsSchema.virtual('total').get(function () {
+    return this.men+this.women;
+});
 
 module.exports = mongoose.model('Results', resultsSchema);

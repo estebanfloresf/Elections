@@ -29,7 +29,7 @@ app.set('view engine', 'pug'); // we use the engine pug, mustache or EJS work gr
 // app.use(favicon(__dirname + '/public/images/icons/favicon.ico'));
 
 
-// serves up static files from the public folder. Anything in public/ will just be served up as the file it is
+// serves click static files from the public folder. Anything in public/ will just be served click as the file it is
 app.use(express.static(path.join(__dirname, 'public')));
 
 

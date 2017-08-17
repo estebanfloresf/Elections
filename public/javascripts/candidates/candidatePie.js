@@ -65,7 +65,7 @@ var arcs = vis.selectAll("g.slice")
     .attr("class", "slice-"+lastName)
     .on("mouseover", mouseover)
     .on("mouseout", mouseout)
-    .on("click", up)
+    .on("click", click)
 ;
 
 arcs.append("svg:path")
@@ -141,7 +141,7 @@ function mouseout() {
 
 
 
-function up(d) {
+function click(d) {
 
 
 
