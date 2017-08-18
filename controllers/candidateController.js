@@ -4,15 +4,11 @@
 const mongoose = require('mongoose');
 const Candidate = mongoose.model('Candidate');
 const Results = mongoose.model('Results');
+const Province = mongoose.model('Province');
 
 exports.getCandidates = async (req, res) =>{
 
-    //1. Query the database for a list of candidates and their results, so I query on the results collection
-
-    // const candidates = await Candidate.find();
-
-    // const results = await Results.find({},{'round_one.candidate':1, 'round_two.candidate':1, 'provincia':1, 'round_one.total':1}).populate('round_one.candidate round_two.candidate ', 'president');
-
+   //Order the candidates by their total votes
     function order(a,b) {
 
 
@@ -26,15 +22,46 @@ exports.getCandidates = async (req, res) =>{
     }
 
 
+
+
     const totalvotes = await Results.getTotalVoters();
-    // res.json(totalvotes[0].total);
+
 
     const candidates =  await Candidate.getNationResults();
+
+
+    const pro = await Province.find({});
+    console.log(pro);
+
+
+    // 1) Loop throught the array of candidates
+    // 2) get the top provinces votes from each provinceand save it into an array
+    //3) save that array as part of the candidate value
+
+    for(let i=0; i<candidates.length; i++){
+
+
+
+         const topProvinces = await Results
+             .find({'candidate':candidates[i]._id})
+             // .populate('province');
+             .select('province candidate total  men women  ')
+             // .sort({'total':1})
+             //
+             .limit(10);
+
+
+        // console.log(topProvinces);
+
+
+    }
 
 
     candidates.sort(order);
 
     candidates.forEach(function (candidate) {
+
+
 
         candidate["percentage"] = ((candidate["total"] / totalvotes[0].total) ).toFixed(4);
         candidate["menPerc"] = ((candidate["totalmen"] / candidate['total']) ).toFixed(4);
@@ -43,7 +70,8 @@ exports.getCandidates = async (req, res) =>{
 
     });
 
-    // res.json(candidates);
+
+
 
     res.render('candidates', {title: "Candidates",  candidates});
 

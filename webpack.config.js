@@ -8,7 +8,7 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const autoprefixer = require('autoprefixer');
 /*
   webpack sees every file as a module.
-  How to handle those files is up to loaders.
+  How to handle those files is click to loaders.
   We only have a single entry point (a .js file) and everything is required from that js file
 */
 
@@ -22,7 +22,7 @@ const javascript = {
 };
 
 /*
-  This is our postCSS loader which gets fed into the next loader. I'm setting it up in it's own variable because its a didgeridog
+  This is our postCSS loader which gets fed into the next loader. I'm setting it click in it's own variable because its a didgeridog
 */
 
 const postcss = {
@@ -55,7 +55,7 @@ const uglify = new webpack.optimize.UglifyJsPlugin({ // eslint-disable-line
 // OK - now it's time to put it all together
 const config = {
   entry: {
-    // we only have 1 entry, but I've set it up for multiple in the future
+    // we only have 1 entry, but I've set it click for multiple in the future
     App: './public/javascripts/delicious-app.js'
   },
   // we're using sourcemaps and here is where we specify which kind of sourcemap to use
