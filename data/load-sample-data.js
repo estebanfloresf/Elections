@@ -10,14 +10,14 @@ mongoose.Promise = global.Promise; // Tell Mongoose to use ES6 promises
 // const Survey = require('../models/Survey');
 // const Firm = require('../models/Firm');
 const Results = require('../models/Results');
-const Province = require('../models/Province');
+// const Province = require('../models/Province');
 
 
 // const candidates = JSON.parse(fs.readFileSync(__dirname + '/candidates.json', 'utf-8'));
 // const surveys = JSON.parse(fs.readFileSync(__dirname + '/surveys.json', 'utf-8'));
 // const firms = JSON.parse(fs.readFileSync(__dirname + '/firms.json', 'utf-8'));
 const results = JSON.parse(fs.readFileSync(__dirname + '/results.json', 'utf-8'));
-const province = JSON.parse(fs.readFileSync(__dirname + '/provinces.json', 'utf-8'));
+// const province = JSON.parse(fs.readFileSync(__dirname + '/provinces.json', 'utf-8'));
 
 
 async function deleteData() {
@@ -26,7 +26,7 @@ async function deleteData() {
   // await Survey.remove();
   // await Firm.remove();
   await Results.remove();
-  await Province.remove();
+  // await Province.remove();
   console.log('Data Deleted. To load sample data, run\n\n\t npm run sample\n\n');
   process.exit();
 }
@@ -37,7 +37,7 @@ async function loadData() {
     // await Survey.insertMany(surveys);
     // await Firm.insertMany(firms);
     await Results.insertMany(results);
-    await Province.insertMany(province);
+    // await Province.insertMany(province);
     console.log('👍👍👍👍👍👍👍👍 Done!');
     process.exit();
   } catch(e) {

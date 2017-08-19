@@ -30,8 +30,6 @@ exports.getCandidates = async (req, res) =>{
     const candidates =  await Candidate.getNationResults();
 
 
-    const pro = await Province.find({});
-    console.log(pro);
 
 
     // 1) Loop throught the array of candidates
@@ -41,17 +39,18 @@ exports.getCandidates = async (req, res) =>{
     for(let i=0; i<candidates.length; i++){
 
 
-
+    const fields = {'province':1, 'men':1,'women':1};
          const topProvinces = await Results
              .find({'candidate':candidates[i]._id})
-             // .populate('province');
-             .select('province candidate total  men women  ')
+
+             .populate(' province ','name')
+             .select(' province men women -_id')
              // .sort({'total':1})
              //
              .limit(10);
 
 
-        // console.log(topProvinces);
+        console.log(topProvinces);
 
 
     }
