@@ -22,13 +22,9 @@ exports.getCandidates = async (req, res) =>{
     }
 
 
-
-
-    const totalvotes = await Results.getTotalVoters();
-
+    const totalvotes = await Results.getNationResults();
 
     const candidates =  await Candidate.getNationResults();
-
 
 
 
@@ -38,59 +34,35 @@ exports.getCandidates = async (req, res) =>{
 
     for(let i=0; i<candidates.length; i++){
 
-
-
-            //
-            // .limit(5);
-
-        const topProvinces = await Results
-            .find({'candidate': candidates[i]._id})
-            .sort({'total': -1})
-            .limit(5)
-            .select('candidate province men women -_id')
-
-            .populate('candidate province ', 'president name -_id')
-            ;
-
-
-
-
-        console.log(topProvinces);
+        const topProvinces = await Results.getTopProvinces( candidates[i]._id);
 
         var totalPercentage = 0;
 
         topProvinces.forEach(function (elem) {
 
-            totalPercentage += elem.total;
+            totalPercentage += elem.men+ elem.women;
 
         });
-
-
 
 
         candidates[i]['topProvinces'] = [];
         topProvinces.forEach(function (elem) {
 
 
-
             candidates[i]['topProvinces'].push({
                 province : elem.province.name,
-                percentage: (elem.total / totalPercentage).toFixed(4)
+                percentage: ((elem.men+elem.women)/ totalPercentage).toFixed(4)
             });
         });
-
-
-
-
 
 
 
     }
 
 
-    candidates.sort(order);
 
     candidates.forEach(function (candidate) {
+
 
 
         candidate["percentage"] = ((candidate["total"] / totalvotes[0].total) ).toFixed(4);
@@ -100,8 +72,8 @@ exports.getCandidates = async (req, res) =>{
 
     });
 
+    candidates.sort(order);
 
-    // res.json(candidates);
 
     res.render('candidates', {title: "Candidates",  candidates});
 

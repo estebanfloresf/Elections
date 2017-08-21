@@ -135,6 +135,17 @@ div.map > svg{
  }
 
 
+// Pie Chart
+
+.itemflex >  small{
+
+  color: $color3;
+  font-weight: 200;
+  text-align: center;
+}
+
+
+
 @media (max-width: 200px) {
   .results {
     flex-direction: column;

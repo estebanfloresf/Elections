@@ -64,27 +64,24 @@ g.selectAll(".background-bar")
         .attr("x", function (d) {
             return x(d.percentage);
         })
-        .attr("height", y.bandwidth())
-    .append("text")
+        .attr("height", y.bandwidth());
+
+
+g.append("text")
         .text(function (d) {
 
-            return d.percentage;
+            return formatPercent( data[0].percentage);
+        })
+        .attr("x", function (d) {
+
+            return x(data[0].percentage)+20;
         })
         .attr("class", "bartext")
 
-        .attr("x", function (d) {
-
-            return x(d.percentage); // +5
-        })
         .attr("y", function (d) {
 
-            return y(d.candidate);
-        })
-        // .attr("dy", "35em") //vertical align middle
-        // .attr("font-family", "sans-serif")
-        .attr("font-size", "11px")
-        .attr("fill", "blue")
-        .attr("text-anchor", "end");
+            return  y(data[0].candidate)+28;
+        });
 
 var pattern = g.append("pattern")
     .attrs({id: "hash4_4", width: "8", height: "2", patternUnits: "userSpaceOnUse", patternTransform: "rotate(0)"})

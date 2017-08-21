@@ -25,7 +25,7 @@ const resultsSchema = new mongoose.Schema({
     women: Number
 
 
-},{
+}, {
     toObject: {
         virtuals: true
     },
@@ -35,7 +35,7 @@ const resultsSchema = new mongoose.Schema({
 });
 
 
-resultsSchema.statics.getTotalVoters = function () {
+resultsSchema.statics.getNationResults = function () {
     return this.aggregate([
         {
             $group: {
@@ -45,7 +45,7 @@ resultsSchema.statics.getTotalVoters = function () {
             }
         },
         {
-            $project:{
+            $project: {
                 _id: "$_id",
                 totalmen: '$totalmen',
                 totalwomen: '$totalwomen',
@@ -56,8 +56,41 @@ resultsSchema.statics.getTotalVoters = function () {
     ])
 };
 
-resultsSchema.virtual('total').get(function () {
-    return this.men+this.women;
-});
+resultsSchema.statics.getCandidateResults = function (id) {
+
+
+    return this.aggregate([
+        {
+            $group: {
+                _id: id,
+                totalmen: {$sum: '$men'},
+                totalwomen: {$sum: '$women'}
+
+            }
+        },
+
+        {
+            $project: {
+                _id: '$_id',
+                totalmen: '$totalmen',
+                totalwomen: '$totalwomen',
+                total: {"$add": ["$totalmen", "$totalwomen"]}
+            }
+        }
+    ]);
+};
+
+
+resultsSchema.statics.getTopProvinces = function (id) {
+
+    return this.find({candidate: id})
+        .sort({'men': -1})
+        .limit(5)
+        .select('candidate province men women -_id')
+        .populate(' province ', ' name -_id')
+
+        ;
+
+};
 
 module.exports = mongoose.model('Results', resultsSchema);

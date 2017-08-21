@@ -184,6 +184,11 @@ div.map > svg {
 .women {
   background-color: #ff005b; }
 
+.itemflex > small {
+  color: #191716;
+  font-weight: 200;
+  text-align: center; }
+
 @media (max-width: 200px) {
   .results {
     flex-direction: column; }
@@ -235,11 +240,12 @@ div.media-body > svg.svgEmbed > path {
 .barchart text {
   fill: #3581b8;
   font-size: .8em;
-  text-anchor: middle; }
+  text-anchor: middle;
+  text-align: center; }
 
 .barchart .bartext {
-  fill: #ffc531;
-  font-size: .8em;
+  fill: #3581b8;
+  font-size: .95em;
   text-anchor: middle; }
 
 .pieText {

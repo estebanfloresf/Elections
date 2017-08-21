@@ -7,8 +7,6 @@ men = candidate[0].totalmen / candidate[0].total;
 
 
 
-
-
 dataset = candidate[0].topProvinces;
 
 
@@ -37,7 +35,7 @@ var width = 80,
 
 color.domain(dataset);
 
-
+var tooltip = d3.select("body").append("div").attr("class", "toolTip");
 
 var vis = d3.select("#pie-" + last)
     .append("svg:svg")
@@ -68,7 +66,19 @@ var arcs = vis.selectAll("g.slice")
     .enter()
     .append("svg:g")
     .attr("class", "slice-" + lastName)
-    .on("mouseover", mouseover)
+    .on("mouseover", function (d) {
+
+        d3.select(this).select("path").transition()
+            .duration(0.2)
+            .attr("d", arcFinal3);
+
+        tooltip
+            .style("left", d3.event.pageX - 50 + "px")
+            .style("top", d3.event.pageY - 70 + "px")
+            .style("display", "inline-block")
+            .style("text-transform", "capitalize")
+            .html((d.data.province) + "<br>" + formatPercent(d.data.percentage));
+    })
     .on("mouseout", mouseout)
     .on("click", click)
 ;
@@ -77,11 +87,7 @@ arcs.append("svg:path")
     .attr("fill", function (d, i) {
         return color(i);
     })
-    .attr("d", arc)
-    .append("svg:title")
-    .text(function (d) {
-        return d.data.province + ": " + formatPercent(d.data.percentage);
-    });
+    .attr("d", arc) ;
 
 d3.selectAll("g.slice-" + lastName).selectAll("path").transition()
     .duration(750)
@@ -98,28 +104,29 @@ arcs.filter(function (d) {
 })
 
 
-// Pie chart title
+// Pie chart Province - Initial State
 vis.append("svg:text")
     .attr("dy", "0.1em")
     .style("font-size", "10px")
     .style("font-weight", "bold")
     .style("fill", function (d) {
-        return color(d.percentage);
+        return color(0);
     })
     .style("text-transform", "capitalize")
     .attr("text-anchor", "middle")
 
-    .html(
+    .text(
         ((dataset[0].province) )
     )
     .attr("class", "title-" + lastName);
 
+// Pie chart Province Percentage - Initial State
 vis.append("svg:text")
     .attr("dy", "1.3em")
     .style("font-size", "10px")
     .style("font-weight", "bold")
     .style("fill", function (d, i) {
-        return color(d.percentage);
+        return color(0);
     })
     .attr("text-anchor", "middle")
 
@@ -127,7 +134,6 @@ vis.append("svg:text")
         formatPercent(dataset[0].percentage)
     )
     .attr("class", "titleP-" + lastName);
-
 
 function angle(d) {
     var a = (d.startAngle + d.endAngle) * 90 / Math.PI - 90;
@@ -138,10 +144,9 @@ function angle(d) {
 function mouseover() {
     d3.select(this).select("path").transition()
         .duration(0.2)
-        // .attr("stroke","red")
-        // .attr("stroke-width", 1.5)
-        .attr("d", arcFinal3)
-    ;
+        .attr("d", arcFinal3);
+
+
 }
 
 function mouseout() {
@@ -149,13 +154,13 @@ function mouseout() {
         .duration(0.2)
         //.attr("stroke","blue")
         //.attr("stroke-width", 1.5)
-        .attr("d", arcFinal)
-    ;
+        .attr("d", arcFinal);
+
+    tooltip.style("display", "none");
 }
 
 
 function click(d) {
-
 
     var selectedLastName = d3.select(this).attr("class").split('-').slice(1, 2).join(' ');
     var colorShown = d3.select(".titleP-" + selectedLastName).attr('style').split(';').slice(2,3)[0];
