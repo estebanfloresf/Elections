@@ -39,18 +39,50 @@ exports.getCandidates = async (req, res) =>{
     for(let i=0; i<candidates.length; i++){
 
 
-    const fields = {'province':1, 'men':1,'women':1};
-         const topProvinces = await Results
-             .find({'candidate':candidates[i]._id})
 
-             .populate(' province ','name')
-             .select(' province men women -_id')
-             // .sort({'total':1})
-             //
-             .limit(10);
+            //
+            // .limit(5);
+
+        const topProvinces = await Results
+            .find({'candidate': candidates[i]._id})
+            .sort({'total': -1})
+            .limit(5)
+            .select('candidate province men women -_id')
+
+            .populate('candidate province ', 'president name -_id')
+            ;
+
+
 
 
         console.log(topProvinces);
+
+        var totalPercentage = 0;
+
+        topProvinces.forEach(function (elem) {
+
+            totalPercentage += elem.total;
+
+        });
+
+
+
+
+        candidates[i]['topProvinces'] = [];
+        topProvinces.forEach(function (elem) {
+
+
+
+            candidates[i]['topProvinces'].push({
+                province : elem.province.name,
+                percentage: (elem.total / totalPercentage).toFixed(4)
+            });
+        });
+
+
+
+
+
 
 
     }
@@ -61,7 +93,6 @@ exports.getCandidates = async (req, res) =>{
     candidates.forEach(function (candidate) {
 
 
-
         candidate["percentage"] = ((candidate["total"] / totalvotes[0].total) ).toFixed(4);
         candidate["menPerc"] = ((candidate["totalmen"] / candidate['total']) ).toFixed(4);
         candidate["womenPerc"] = ((candidate["totalwomen"] / candidate['total']) ).toFixed(4);
@@ -70,7 +101,7 @@ exports.getCandidates = async (req, res) =>{
     });
 
 
-
+    // res.json(candidates);
 
     res.render('candidates', {title: "Candidates",  candidates});
 

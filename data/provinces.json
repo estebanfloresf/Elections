@@ -1,138 +1,139 @@
 [
   {
     "name": "america latina caribe africa",
-    "photo": "",
+
+    "numbervotes": 31099,
     "flag": ""
 
   },
   {
     "name": "azuay",
-    "photo": "",
+    "numbervotes": 646455,
     "flag": ""
   },
   {
     "name": "bolivar",
-    "photo": "",
+    "numbervotes": 165381,
     "flag": ""
   },
   {
     "name": "canar",
-    "photo": "",
+    "numbervotes": 225788,
     "flag": ""
   },
   {
     "name": "carchi",
-    "photo": "",
+    "numbervotes": 0,
     "flag": ""
   },
   {
     "name": "chimborazo",
-    "photo": "",
+    "numbervotes": 0,
     "flag": ""
   },
   {
     "name": "cotopaxi",
-    "photo": "",
+    "numbervotes": 0,
     "flag": ""
   },
   {
     "name": "eeuu canada",
-    "photo": "",
+    "numbervotes": 0,
     "flag": ""
   },
   {
     "name": "el oro",
-    "photo": "",
+    "numbervotes": 0,
     "flag": ""
   },
   {
     "name": "esmeraldas",
-    "photo": "",
+    "numbervotes": 0,
     "flag": ""
   },
   {
     "name": "europa asia oceania",
-    "photo": "",
+    "numbervotes": 0,
     "flag": ""
   },
   {
     "name": "galapagos",
-    "photo": "",
+    "numbervotes": 0,
     "flag": ""
   },
   {
     "name": "guayas",
-    "photo": "",
+    "numbervotes": 0,
     "flag": ""
   },
   {
     "name": "imbabura",
-    "photo": "",
+    "numbervotes": 0,
     "flag": ""
   },
   {
     "name": "loja",
-    "photo": "",
+    "numbervotes": 0,
     "flag": ""
   },
   {
     "name": "los rios",
-    "photo": "",
+    "numbervotes": 0,
     "flag": ""
   },
   {
     "name": "manabi",
-    "photo": "",
+    "numbervotes": 0,
     "flag": ""
   },
   {
     "name": "morona santiago",
-    "photo": "",
+    "numbervotes": 0,
     "flag": ""
   },
   {
     "name": "napo",
-    "photo": "",
+    "numbervotes": 0,
     "flag": ""
   },
   {
     "name": "orellana",
-    "photo": "",
+    "numbervotes": 0,
     "flag": ""
   },
   {
     "name": "pastaza",
-    "photo": "",
+    "numbervotes": 0,
     "flag": ""
   },
   {
     "name": "pichincha",
-    "photo": "",
+    "numbervotes": 0,
     "flag": ""
   },
   {
     "name": "sta elena",
-    "photo": "",
+    "numbervotes": 0,
     "flag": ""
   },
   {
     "name": "sto domingo tsachilas",
-    "photo": "",
+    "numbervotes": 0,
     "flag": ""
   },
   {
     "name": "sucumbios",
-    "photo": "",
+    "numbervotes": 0,
     "flag": ""
   },
   {
     "name": "tungurahua",
-    "photo": "",
+    "numbervotes": 0,
     "flag": ""
   },
   {
     "name": "zamora chinchipe",
-    "photo": "",
+    "numbervotes": 0,
     "flag": ""
   }
 ]
