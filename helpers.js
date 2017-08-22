@@ -27,8 +27,9 @@ exports.siteName = 'Elections 2017';
 
 exports.menu = [
     // { slug: '/dashboard', title: 'Dashboard', icon: 'dashboard', },
-    { slug: '/surveys', title: 'Surveys', icon: 'survey', },
-    { slug: '/candidates', title: 'Candidates', icon: 'candidates', }
+    { slug: '/surveys', title: 'Surveys', icon: 'survey' },
+    { slug: '/candidates', title: 'Candidates', icon: 'candidates' },
+    { slug: '/map', title: 'Map', icon: 'map' }
 ];
 
 

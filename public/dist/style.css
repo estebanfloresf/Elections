@@ -171,7 +171,7 @@ div.map > svg {
   -ms-flex-direction: column;
       flex-direction: column;
   padding-bottom: 2px;
-  /*-ms-flex-pack: distribute;*/
+  -ms-flex-pack: distribute;
       justify-content: space-around;
   -ms-flex-line-pack: center;
       align-content: center; }

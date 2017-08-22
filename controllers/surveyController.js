@@ -11,15 +11,12 @@ const Candidate = mongoose.model('Candidate');
 exports.getSurveys = async (req,res)=>{
 
 
-    const surveys = await Survey.find();
-
-    const results = await Results.getTopProvinces('596bde9557cfe2310e8fb15a');
+    const surveys = await Survey.find().populate('firm candidates.candidate','name slug president -_id');
 
 
 
-    res.json(results);
 
-    // res.render('surveys', {title:"Surveys", surveys});
+    res.render('surveys', {title:"Surveys", surveys});
 
 };
 

@@ -1,6 +1,6 @@
 [
   {
-    "firm": "59692485b0fdfea158eb74d8",
+    "firm": "596bde9657cfe2310e8fb1c1",
     "number": 1,
     "name": "primera vuelta",
     "eleccion": "2017",
@@ -16,35 +16,35 @@
     ],
     "candidates": [
       {
-        "candidate": "5954144faf07d4bc813515c6",
+        "candidate": "596bde9557cfe2310e8fb157",
         "percentage": 16
       },
       {
-        "candidate": "5954144faf07d4bc813515c7",
+        "candidate": "596bde9557cfe2310e8fb158",
         "percentage": 7
       },
       {
-        "candidate": "5954144faf07d4bc813515c8",
+        "candidate": "596bde9557cfe2310e8fb159",
         "percentage": 4
       },
       {
-        "candidate": "5954144faf07d4bc813515c9",
+        "candidate": "596bde9557cfe2310e8fb15a",
         "percentage": 14
       },
       {
-        "candidate": "5954144faf07d4bc813515ca",
+        "candidate": "596bde9557cfe2310e8fb15b",
         "percentage": 35
       },
       {
-        "candidate": "5954144faf07d4bc813515cb",
+        "candidate": "596bde9557cfe2310e8fb15c",
         "percentage": 0.5
       },
       {
-        "candidate": "5954144faf07d4bc813515cc",
+        "candidate": "596bde9557cfe2310e8fb15d",
         "percentage": 4
       },
       {
-        "candidate": "5954144faf07d4bc813515cd",
+        "candidate": "596bde9557cfe2310e8fb15e",
         "percentage": 0.5
       },
       {
@@ -58,7 +58,7 @@
     ]
   },
   {
-    "firm": "59692485b0fdfea158eb74d8",
+    "firm": "596bde9657cfe2310e8fb1c1",
     "number": 2,
     "name": "segunda vuelta",
     "eleccion": "2017",
@@ -70,11 +70,11 @@
     ],
     "candidates": [
       {
-        "candidate": "5954144faf07d4bc813515c6",
+        "candidate": "596bde9557cfe2310e8fb157",
         "percentage": 35.53
       },
       {
-        "candidate": "5954144faf07d4bc813515ca",
+        "candidate": "596bde9557cfe2310e8fb15b",
         "percentage": 51.02
       },
       {
@@ -88,7 +88,7 @@
     ]
   },
   {
-    "firm": "59692485b0fdfea158eb74d9",
+    "firm": "596bde9657cfe2310e8fb1c2",
     "number": 1,
     "name": "primera vuelta",
     "eleccion": "2017",
@@ -98,35 +98,35 @@
     "cities": [],
     "candidates": [
       {
-        "candidate": "5954144faf07d4bc813515c6",
+        "candidate": "596bde9557cfe2310e8fb157",
         "percentage": 18.2
       },
       {
-        "candidate": "5954144faf07d4bc813515c7",
+        "candidate": "596bde9557cfe2310e8fb158",
         "percentage": 7.4
       },
       {
-        "candidate": "5954144faf07d4bc813515c8",
+        "candidate": "596bde9557cfe2310e8fb159",
         "percentage": 3.6
       },
       {
-        "candidate": "5954144faf07d4bc813515c9",
+        "candidate": "596bde9557cfe2310e8fb15a",
         "percentage": 13.7
       },
       {
-        "candidate": "5954144faf07d4bc813515ca",
+        "candidate": "596bde9557cfe2310e8fb15b",
         "percentage": 34.2
       },
       {
-        "candidate": "5954144faf07d4bc813515cb",
+        "candidate": "596bde9557cfe2310e8fb15c",
         "percentage": 0.1
       },
       {
-        "candidate": "5954144faf07d4bc813515cc",
+        "candidate": "596bde9557cfe2310e8fb15d",
         "percentage": 2.5
       },
       {
-        "candidate": "5954144faf07d4bc813515cd",
+        "candidate": "596bde9557cfe2310e8fb15e",
         "percentage": 0.6
       },
       {
@@ -140,7 +140,7 @@
     ]
   },
   {
-    "firm": "59692485b0fdfea158eb74d9",
+    "firm": "596bde9657cfe2310e8fb1c2",
     "number": 2,
     "name": "segunda vuelta",
     "eleccion": "2017",
@@ -152,11 +152,11 @@
     ],
     "candidates": [
       {
-        "candidate": "5954144faf07d4bc813515c6",
+        "candidate": "596bde9557cfe2310e8fb157",
         "percentage": 35
       },
       {
-        "candidate": "5954144faf07d4bc813515ca",
+        "candidate": "596bde9557cfe2310e8fb15b",
         "percentage": 46
       },
       {
@@ -170,7 +170,7 @@
     ]
   },
   {
-    "firm": "59692485b0fdfea158eb74da",
+    "firm": "596bde9657cfe2310e8fb1c3",
     "number": 1,
     "name": "primera vuelta",
     "eleccion": "2017",
@@ -182,35 +182,35 @@
     ],
     "candidates": [
       {
-        "candidate": "5954144faf07d4bc813515c6",
+        "candidate": "596bde9557cfe2310e8fb157",
         "percentage": 21.5
       },
       {
-        "candidate": "5954144faf07d4bc813515c7",
+        "candidate": "596bde9557cfe2310e8fb158",
         "percentage": 7.7
       },
       {
-        "candidate": "5954144faf07d4bc813515c8",
+        "candidate": "596bde9557cfe2310e8fb159",
         "percentage": 4.1
       },
       {
-        "candidate": "5954144faf07d4bc813515c9",
+        "candidate": "596bde9557cfe2310e8fb15a",
         "percentage": 14
       },
       {
-        "candidate": "5954144faf07d4bc813515ca",
+        "candidate": "596bde9557cfe2310e8fb15b",
         "percentage": 32.3
       },
       {
-        "candidate": "5954144faf07d4bc813515cb",
+        "candidate": "596bde9557cfe2310e8fb15c",
         "percentage": 0.5
       },
       {
-        "candidate": "5954144faf07d4bc813515cc",
+        "candidate": "596bde9557cfe2310e8fb15d",
         "percentage": 2.9
       },
       {
-        "candidate": "5954144faf07d4bc813515cd",
+        "candidate": "596bde9557cfe2310e8fb15e",
         "percentage": 0.6
       },
       {
@@ -224,7 +224,7 @@
     ]
   },
   {
-    "firm": "59692485b0fdfea158eb74da",
+    "firm": "596bde9657cfe2310e8fb1c3",
     "number": 2,
     "name": "segunda vuelta",
     "eleccion": "2017",
@@ -236,11 +236,11 @@
     ],
     "candidates": [
       {
-        "candidate": "5954144faf07d4bc813515c6",
+        "candidate": "596bde9557cfe2310e8fb157",
         "percentage": 44.2
       },
       {
-        "candidate": "5954144faf07d4bc813515ca",
+        "candidate": "596bde9557cfe2310e8fb15b",
         "percentage": 42.8
       },
       {
@@ -254,7 +254,7 @@
     ]
   },
   {
-    "firm": "59692485b0fdfea158eb74db",
+    "firm": "596bde9657cfe2310e8fb1c4",
     "number": 1,
     "name": "primera vuelta",
     "eleccion": "2017",
@@ -266,35 +266,35 @@
     ],
     "candidates": [
       {
-        "candidate": "5954144faf07d4bc813515c6",
+        "candidate": "596bde9557cfe2310e8fb157",
         "percentage": 16.57
       },
       {
-        "candidate": "5954144faf07d4bc813515c7",
+        "candidate": "596bde9557cfe2310e8fb158",
         "percentage": 13.22
       },
       {
-        "candidate": "5954144faf07d4bc813515c8",
+        "candidate": "596bde9557cfe2310e8fb159",
         "percentage": 4.78
       },
       {
-        "candidate": "5954144faf07d4bc813515c9",
+        "candidate": "596bde9557cfe2310e8fb15a",
         "percentage": 17.98
       },
       {
-        "candidate": "5954144faf07d4bc813515ca",
+        "candidate": "596bde9557cfe2310e8fb15b",
         "percentage": 28.17
       },
       {
-        "candidate": "5954144faf07d4bc813515cb",
+        "candidate": "596bde9557cfe2310e8fb15c",
         "percentage": 0.59
       },
       {
-        "candidate": "5954144faf07d4bc813515cc",
+        "candidate": "596bde9557cfe2310e8fb15d",
         "percentage": 1.53
       },
       {
-        "candidate": "5954144faf07d4bc813515cd",
+        "candidate": "596bde9557cfe2310e8fb15e",
         "percentage": 1.30
       },
       {
@@ -308,7 +308,7 @@
     ]
   },
   {
-    "firm": "59692485b0fdfea158eb74db",
+    "firm": "596bde9657cfe2310e8fb1c4",
     "number": 2,
     "name": "segunda vuelta",
     "eleccion": "2017",
@@ -320,11 +320,11 @@
     ],
     "candidates": [
       {
-        "candidate": "5954144faf07d4bc813515c6",
+        "candidate": "596bde9557cfe2310e8fb157",
         "percentage": 45
       },
       {
-        "candidate": "5954144faf07d4bc813515ca",
+        "candidate": "596bde9557cfe2310e8fb15b",
         "percentage": 48.9
       },
       {
@@ -338,7 +338,7 @@
     ]
   },
   {
-    "firm": "59692485b0fdfea158eb74dc",
+    "firm": "596bde9657cfe2310e8fb1c5",
     "number": 1,
     "name": "primera vuelta",
     "eleccion": "2017",
@@ -350,35 +350,35 @@
     ],
     "candidates": [
       {
-        "candidate": "5954144faf07d4bc813515c6",
+        "candidate": "596bde9557cfe2310e8fb157",
         "percentage": 15.18
       },
       {
-        "candidate": "5954144faf07d4bc813515c7",
+        "candidate": "596bde9557cfe2310e8fb158",
         "percentage": 5.52
       },
       {
-        "candidate": "5954144faf07d4bc813515c8",
+        "candidate": "596bde9557cfe2310e8fb159",
         "percentage": 0
       },
       {
-        "candidate": "5954144faf07d4bc813515c9",
+        "candidate": "596bde9557cfe2310e8fb15a",
         "percentage": 6.64
       },
       {
-        "candidate": "5954144faf07d4bc813515ca",
+        "candidate": "596bde9557cfe2310e8fb15b",
         "percentage": 25.63
       },
       {
-        "candidate": "5954144faf07d4bc813515cb",
+        "candidate": "596bde9557cfe2310e8fb15c",
         "percentage": 0
       },
       {
-        "candidate": "5954144faf07d4bc813515cc",
+        "candidate": "596bde9557cfe2310e8fb15d",
         "percentage": 0
       },
       {
-        "candidate": "5954144faf07d4bc813515cd",
+        "candidate": "596bde9557cfe2310e8fb15e",
         "percentage": 0
       },
       {
@@ -392,7 +392,7 @@
     ]
   },
   {
-    "firm": "59692485b0fdfea158eb74dc",
+    "firm": "596bde9657cfe2310e8fb1c5",
     "number": 2,
     "name": "segunda vuelta",
     "eleccion": "2017",
@@ -404,11 +404,11 @@
     ],
     "candidates": [
       {
-        "candidate": "5954144faf07d4bc813515c6",
+        "candidate": "596bde9557cfe2310e8fb157",
         "percentage": 35.86
       },
       {
-        "candidate": "5954144faf07d4bc813515ca",
+        "candidate": "596bde9557cfe2310e8fb15b",
         "percentage": 36.76
       },
       {
@@ -422,7 +422,7 @@
     ]
   },
   {
-    "firm": "59692485b0fdfea158eb74dd",
+    "firm": "596bde9657cfe2310e8fb1c6",
     "number": 1,
     "name": "primera vuelta",
     "eleccion": "2017",
@@ -434,35 +434,35 @@
     ],
     "candidates": [
       {
-        "candidate": "5954144faf07d4bc813515c6",
+        "candidate": "596bde9557cfe2310e8fb157",
         "percentage": 21.3
       },
       {
-        "candidate": "5954144faf07d4bc813515c7",
+        "candidate": "596bde9557cfe2310e8fb158",
         "percentage": 10.8
       },
       {
-        "candidate": "5954144faf07d4bc813515c8",
+        "candidate": "596bde9557cfe2310e8fb159",
         "percentage": 6.6
       },
       {
-        "candidate": "5954144faf07d4bc813515c9",
+        "candidate": "596bde9557cfe2310e8fb15a",
         "percentage": 12.6
       },
       {
-        "candidate": "5954144faf07d4bc813515ca",
+        "candidate": "596bde9557cfe2310e8fb15b",
         "percentage": 43.3
       },
       {
-        "candidate": "5954144faf07d4bc813515cb",
+        "candidate": "596bde9557cfe2310e8fb15c",
         "percentage": 1
       },
       {
-        "candidate": "5954144faf07d4bc813515cc",
+        "candidate": "596bde9557cfe2310e8fb15d",
         "percentage": 3.9
       },
       {
-        "candidate": "5954144faf07d4bc813515cd",
+        "candidate": "596bde9557cfe2310e8fb15e",
         "percentage": 0.6
       },
       {
@@ -476,7 +476,7 @@
     ]
   },
   {
-    "firm": "59692485b0fdfea158eb74dd",
+    "firm": "596bde9657cfe2310e8fb1c6",
     "number": 2,
     "name": "segunda vuelta",
     "eleccion": "2017",
@@ -486,11 +486,11 @@
     "cities": [],
     "candidates": [
       {
-        "candidate": "5954144faf07d4bc813515c6",
+        "candidate": "596bde9557cfe2310e8fb157",
         "percentage": 0
       },
       {
-        "candidate": "5954144faf07d4bc813515ca",
+        "candidate": "596bde9557cfe2310e8fb15b",
         "percentage": 0
       },
       {

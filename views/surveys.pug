@@ -8,6 +8,11 @@ block content
     .container-fluid
         .row
 
-            each survey in surveys
-                p.text-capitalize #{survey.name}
+            .col-md-6
+                .col-md-3
+                    button.btn.btn-block.btn-primary(type='button') 1st Round
+                .col-md-3
+                    button.btn.btn-block.btn-primary(type='button') 2nd Round
+
+
 
