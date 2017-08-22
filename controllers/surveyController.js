@@ -11,12 +11,13 @@ const Candidate = mongoose.model('Candidate');
 exports.getSurveys = async (req,res)=>{
 
 
-    const surveys = await Survey.find().populate('firm candidates.candidate','name slug president -_id');
+    const surveys = await Survey.find().populate('firm candidates.candidate','name slug  president id   -_id');
 
 
+    const candidates = await Candidate.find({});
 
 
-    res.render('surveys', {title:"Surveys", surveys});
+    res.render('surveys', {title:"Surveys", surveys,  candidates});
 
 };
 
