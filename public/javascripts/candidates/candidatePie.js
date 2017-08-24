@@ -29,8 +29,8 @@ var width = 80,
     // for animation
     innerRadiusFinal = outerRadius * .75,
     innerRadiusFinal3 = outerRadius * .65,
-    // color = d3.scaleOrdinal(['#ff005b', '#3581B8']);   //builtin range of colors
-    color = d3.scaleOrdinal(d3.schemeCategory10);
+    color = d3.scaleOrdinal(['#ff005b','#92aab6' ,'#1D3557','#FFC531','#3581B8']);   //builtin range of colors
+    // color = d3.scaleOrdinal(d3.scheme);
 
 
 color.domain(dataset);

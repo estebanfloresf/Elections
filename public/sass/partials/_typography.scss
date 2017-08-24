@@ -14,12 +14,12 @@ h1, h2, h3, h4, h5, h6 {
   color: $color3;
 }
 
-a , a:hover, a:active, a:visited, a:focus{
 
+
+a.link{
+  color: #000;
+  background-color: white;
+  border-bottom: 2px solid $color4  ;
   text-decoration: none;
-
-  color: black;
-  background-color: transparent;
-  //text-shadow: 1px 1px 0 rgba(63,107,169, 0.5);
 }
 
