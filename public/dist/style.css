@@ -52,16 +52,17 @@ body {
 
 .navbar {
   border: 0;
-  background-color: #191716; }
+  background-color: #1d3557; }
 
 nav > .container-fluid {
-  background-color: #191716; }
+  background-color: #1d3557; }
 
 .navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form,
 .navbar-inverse .navbar-nav > li > a,
 .navbar > .container-fluid .navbar-brand {
-  background-color: #191716;
-  border: none; }
+  background-color: #1d3557;
+  border: none;
+  color: white; }
 
 .navbar-inverse .navbar-nav > li > a:hover,
 .navbar-inverse .navbar-nav > li > a:focus {
@@ -73,23 +74,16 @@ nav > .container-fluid {
   background: #3581b8;
   text-shadow: none; }
 
-.navbar-inverse .navbar-nav > li > a > svg {
-  width: 26px;
-  height: 15px; }
-
-.navbar-inverse .navbar-nav > li > a > svg {
-  fill: white !important; }
-
 body {
   padding: 60px;
   font-family: 'Abel', sans-serif;
   font-size: 14px; }
 
 p {
-  color: #191716; }
+  color: #1d3557; }
 
 h1, h2, h3, h4, h5, h6 {
-  color: #191716; }
+  color: #1d3557; }
 
 a, a:hover, a:active, a:visited, a:focus {
   text-decoration: none;
@@ -180,7 +174,7 @@ div.map > svg {
   display: -ms-flexbox;
   display: flex;
   height: 100%;
-  border-top: 1px solid #191716; }
+  border-top: 1px solid #1d3557; }
 
 .resultsSplitItem {
   -ms-flex: 1;
@@ -195,7 +189,7 @@ div.map > svg {
   background-color: #ff005b; }
 
 .itemflex > small {
-  color: #191716;
+  color: #1d3557;
   font-weight: 200;
   text-align: center; }
 
@@ -223,7 +217,7 @@ body {
 .axis path,
 .axis line {
   fill: none;
-  stroke: #191716;
+  stroke: #1d3557;
   stroke-width: 0.4px;
   shape-rendering: crispEdges; }
 
@@ -263,5 +257,13 @@ div.media-body > svg.svgEmbed > path {
 .pieText {
   color: #fff200;
   background-color: #fff200; }
+
+.table > thead > tr > th {
+  cursor: pointer;
+  border-bottom: 1px solid #3581b8;
+  color: #3581b8; }
+
+.table > thead > tr > th > span > img.svg {
+  padding-bottom: 2px; }
 
 /*# sourceMappingURL=style.css.map*/

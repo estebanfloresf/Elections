@@ -18,6 +18,7 @@ nav > .container-fluid{
 .navbar > .container-fluid .navbar-brand {
   background-color: $color3;
   border: none;
+  color: white;
 }
 
 .navbar-inverse .navbar-nav > li > a:hover,
@@ -36,9 +37,3 @@ nav > .container-fluid{
 
 }
 
-
-
-// SVG Icons images for navigation
-
-.navbar-inverse .navbar-nav > li > a > svg {width: 26px; height: 15px;}
-.navbar-inverse .navbar-nav > li > a > svg  {fill: white !important;}

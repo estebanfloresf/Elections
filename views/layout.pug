@@ -79,15 +79,18 @@ body
 
 
     script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js')
+    script(src='//code.jquery.com/jquery-1.11.3.min.js')
     script(src='https://code.jquery.com/jquery-3.2.1.min.js', integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=', crossorigin='anonymous')
+    script(type='text/javascript', charset='utf8', src='//cdn.datatables.net/1.10.15/js/jquery.dataTables.js')
     script(src="/dist/App.bundle.js")
     script(src="/javascripts/modules/orderBy.js")
+    script(src="/javascripts/modules/sortTable.js")
+    script(src='/javascripts/modules/bootstrap-sortable.js')
 
-    script(type='text/javascript', charset='utf8', src='//cdn.datatables.net/1.10.15/js/jquery.dataTables.js')
-    script.
-        $(document).ready(function () {
-            $('#surveys').DataTable();
-        });
+    //script.
+    //    $(document).ready(function () {
+    //        $('#surveys').DataTable();
+    //    });
 
 
 

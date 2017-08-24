@@ -6,6 +6,9 @@ import inlinesvg from './modules/inline_svg';
 
 
 
+
+
+
 inlinesvg($$('.svgEmbed'));
 
 

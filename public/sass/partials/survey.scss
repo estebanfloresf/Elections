@@ -1,0 +1,11 @@
+
+.table>thead>tr>th {
+  cursor: pointer;
+  border-bottom: 1px solid $color1;
+  color: $color1;
+}
+
+.table>thead>tr>th > span > img.svg {
+  padding-bottom: 2px;
+
+}
