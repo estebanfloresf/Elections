@@ -9,3 +9,22 @@
   padding-bottom: 2px;
 
 }
+
+
+.surveyTitle{
+  padding-left: 20px;
+  border-bottom: 1px solid $color3;
+}
+
+dl.row {
+
+  margin: 5px;
+  margin-top: 15px;
+}
+
+dl.row > dd> a {
+  color: #000;
+  background-color: white;
+  border-bottom: 2px solid $color4  ;
+  text-decoration: none;
+}

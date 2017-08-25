@@ -62,7 +62,7 @@ resultsSchema.statics.getCandidateResults = function (id) {
     return this.aggregate([
         {
             $group: {
-                _id: id,
+                _id: '$candidate',
                 totalmen: {$sum: '$men'},
                 totalwomen: {$sum: '$women'}
 
@@ -88,7 +88,6 @@ resultsSchema.statics.getTopProvinces = function (id) {
         .limit(5)
         .select('candidate province men women -_id')
         .populate(' province ', ' name -_id')
-
         ;
 
 };

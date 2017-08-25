@@ -288,4 +288,18 @@ div.media-body > svg.svgEmbed > path {
 .table > thead > tr > th > span > img.svg {
   padding-bottom: 2px; }
 
+.surveyTitle {
+  padding-left: 20px;
+  border-bottom: 1px solid #1d3557; }
+
+dl.row {
+  margin: 5px;
+  margin-top: 15px; }
+
+dl.row > dd > a {
+  color: #000;
+  background-color: white;
+  border-bottom: 2px solid #ffc531;
+  text-decoration: none; }
+
 /*# sourceMappingURL=style.css.map*/

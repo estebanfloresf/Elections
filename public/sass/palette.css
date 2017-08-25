@@ -6,9 +6,9 @@ Error: Invalid CSS after "...(205, 237, 253)": expected "{", was "; #CDEDFD"
 8: $color5: hsla(355%, 87%, 66%, 1);
 9: 
 10: /* RGB *\/
-11: $color1: rgba(53, 129, 184, 1); #3581B8
+11: $color1: rgb(53, 129, 184); #3581B8
 12: $color2: rgb(205, 237, 253); #CDEDFD
-13: $color3: rgba(25, 23, 22, 1); #191716
+13: $color3: rgb(29, 53, 87);  #191716
 14: $color4: rgba(230, 175, 46, 1); #E6AF2E
 15: $color5: rgba(244, 91, 105, 1); #F45B69
 
@@ -42,4 +42,4 @@ C:/Ruby24-x64/bin/scss:22:in `<main>'
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Invalid CSS after \"...(205, 237, 253)\": expected \"{\", was \"; #CDEDFD\"\A         on line 12 of palette.scss\A \A 7: $color4: hsla(42%, 79%, 54%, 1);\A 8: $color5: hsla(355%, 87%, 66%, 1);\A 9: \A 10: /* RGB */\A 11: $color1: rgba(53, 129, 184, 1); #3581B8\A 12: $color2: rgb(205, 237, 253); #CDEDFD\A 13: $color3: rgba(25, 23, 22, 1); #191716\A 14: $color4: rgba(230, 175, 46, 1); #E6AF2E\A 15: $color5: rgba(244, 91, 105, 1); #F45B69"; }
+  content: "Error: Invalid CSS after \"...(205, 237, 253)\": expected \"{\", was \"; #CDEDFD\"\A         on line 12 of palette.scss\A \A 7: $color4: hsla(42%, 79%, 54%, 1);\A 8: $color5: hsla(355%, 87%, 66%, 1);\A 9: \A 10: /* RGB */\A 11: $color1: rgb(53, 129, 184); #3581B8\A 12: $color2: rgb(205, 237, 253); #CDEDFD\A 13: $color3: rgb(29, 53, 87);  #191716\A 14: $color4: rgba(230, 175, 46, 1); #E6AF2E\A 15: $color5: rgba(244, 91, 105, 1); #F45B69"; }

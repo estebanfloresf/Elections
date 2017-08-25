@@ -8,11 +8,11 @@
     "margin": 2.7,
     "date": "2017-02-05T00:00:00.00Z",
     "cities": [
-      "quito",
-      "guayaquil",
-      "cuenca",
-      "manta",
-      "portoviejo"
+      "uio",
+      "gye",
+      "cue",
+      "man",
+      "por"
     ],
     "candidates": [
       {
@@ -95,7 +95,7 @@
     "source": "http://www.eluniverso.com/noticias/2017/02/08/nota/6038356/encuestadora-opinion-publica-situa-moreno-lasso-viteri-mayoria",
     "margin": 0,
     "date": "2017-02-05T00:00:00.00Z",
-    "cities": [],
+    "cities":["No results"],
     "candidates": [
       {
         "candidate": "596bde9557cfe2310e8fb157",
@@ -483,7 +483,7 @@
     "source": "",
     "margin": 0,
     "date": "",
-    "cities": [],
+    "cities": ["No Results"],
     "candidates": [
       {
         "candidate": "596bde9557cfe2310e8fb157",

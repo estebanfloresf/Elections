@@ -22,17 +22,25 @@ block content
             each survey in surveys
 
                 if(survey.number === 1)
-                     .col-md-12
+                    .col-md-12
 
-                        .row.text-center
+                        h2.text-capitalize.surveyTitle  #{survey.firm.name}
+                        dl.row
+                            dt.col-sm-3 Date
+                            dd.col-sm-9 #{h.moment(survey.date).format('DD/MM/YYYY')}
+                            dt.col-sm-3 Error Range
+                            dd.col-sm-9
+                                | &plusmn;
+                                | #{survey.margin}
+                            dt.col-sm-3 Cities
+                            dd.col-sm-9.text-capitalize #{ survey.cities ? survey.cities : 'No results'}
+                            dt.col-sm-3 Source
+                            dd.col-sm-9
+                                a(href=`${survey.source}`) Click Here
 
-                            h4.text-capitalize  #{survey.firm.name}
-                            small
-                                a(href=`${survey.source}`)
-                                    mark  Source
 
 
-                        .col-md-6.text-center
+                        .col-md-6
 
 
 
@@ -41,10 +49,10 @@ block content
                                 thead
                                     tr
 
-                                        th.text-center Candidate
+                                        th Candidate
                                             span.glyphicon
                                                 img.svg(src=`../images/icons/sort.svg` style="width:20px; height:20px")
-                                        th.text-center Percentage
+                                        th Percentage
                                             span.glyphicon
                                                 img.svg(src=`../images/icons/sort.svg` style="width:20px; height:20px")
 
@@ -52,25 +60,22 @@ block content
                                     each candidate in survey.candidates
                                         tr
                                             td.text-capitalize(scope='row') #{candidate.candidate.president}
-                                            td #{(candidate.percentage*100).toFixed(2)}
+                                            td #{(candidate.percentage * 100).toFixed(2)}
 
 
 
                         .col-md-6
+                            div.radarChart
 
-                            h4.text-center.text-uppercase #{survey.firm.slug} vs CNE
+                            script(type='text/javascript').
+                                var survey = [!{JSON.stringify(survey)}];
+                                var candidates = [!{JSON.stringify(candidates)}];
+                            script(src="./javascripts/surveys/surveyRadar.js")
 
-                            table.table
-                                tbody
-                                    tr
-                                        td Date:
-                                        td #{survey.date}
-                                    tr
-                                        td Error Range:
-                                        td #{survey.margin}
-                                    tr
-                                        td Cities:
-                                        td #{survey.cities}
+
+
+
+
 
 
 
