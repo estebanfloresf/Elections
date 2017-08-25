@@ -2,13 +2,13 @@
 This is mostly a project I am developing as a self-learning project based on tools like
 
 
-* <img src="../public/images/photos/pug.png" width="20" height="15" style="padding-bottom:0"/> Jade / Pug
-* <img src="../public/images/photos/d3.png" width="20" height="15" style="padding-bottom:0"/> D3 library
+* <img src="https://github.com/estebanfloresf/Elections/blob/master/public/images/photos/pug.png" width="20" height="15" style="padding-bottom:0"/> Jade / Pug
+* <img src="https://github.com/estebanfloresf/Elections/blob/master/public/images/photos/d3.png" width="20" height="15" style="padding-bottom:0"/> D3 library
 
 * <div class="media">
   <div class="media-left media-top">
     <a href="#">
-      <img src="../public/images/photos/node.png" alt="node" width="20" height="15" style="padding-bottom:0"/>
+      <img src="https://github.com/estebanfloresf/Elections/blob/master/public/images/photos/node.png" alt="node" width="20" height="15" style="padding-bottom:0"/>
     </a> Node JS
   </div>
 
