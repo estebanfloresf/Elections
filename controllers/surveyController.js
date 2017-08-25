@@ -20,14 +20,14 @@ exports.getSurveys = async (req,res)=>{
     const totalNation = await Results.getNationResults();
 
     // console.log(totalNation);
+     const temp = await  Results.getCandidateResults();
+
+    console.log(temp);
 
     const finalArray = [];
 
+
     for(var i=0; i<candidates.length; i++){
-
-         const temp = await  Results.getCandidateResults(candidates[i]._id);
-
-         console.log(temp);
          // console.log(totalNation[0].total);
 
          // console.log(candidates[i].president);

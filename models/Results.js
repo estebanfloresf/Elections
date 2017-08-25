@@ -56,7 +56,7 @@ resultsSchema.statics.getNationResults = function () {
     ])
 };
 
-resultsSchema.statics.getCandidateResults = function (id) {
+resultsSchema.statics.getCandidateResults = function () {
 
 
     return this.aggregate([
@@ -64,7 +64,8 @@ resultsSchema.statics.getCandidateResults = function (id) {
             $group: {
                 _id: '$candidate',
                 totalmen: {$sum: '$men'},
-                totalwomen: {$sum: '$women'}
+                totalwomen: {$sum: '$women'},
+
 
             }
         },
@@ -74,7 +75,8 @@ resultsSchema.statics.getCandidateResults = function (id) {
                 _id: '$_id',
                 totalmen: '$totalmen',
                 totalwomen: '$totalwomen',
-                total: {"$add": ["$totalmen", "$totalwomen"]}
+                total: {"$add": ["$totalmen", "$totalwomen"]},
+                candidate: "ROOT.candidate"
             }
         }
     ]);
