@@ -2,13 +2,13 @@
 This is mostly a project I am developing as a self-learning project based on tools like
 
 
-* <img src="https://github.com/estebanfloresf/Elections/blob/master/public/images/photos/pug.png" width="20" height="15" style="padding-bottom:0"/> Jade / Pug
-* <img src="https://github.com/estebanfloresf/Elections/blob/master/public/images/photos/d3.png" width="20" height="15" style="padding-bottom:0"/> D3 library
+* <img src="https://raw.githubusercontent.com/estebanfloresf/Elections/master/public/images/photos//pug.png" width="20" height="15" style="padding-bottom:0"/> Jade / Pug
+* <img src="https://raw.githubusercontent.com/estebanfloresf/Elections/master/public/images/photos//d3.png" width="20" height="15" style="padding-bottom:0"/> D3 library
 
 * <div class="media">
   <div class="media-left media-top">
     <a href="#">
-      <img src="https://github.com/estebanfloresf/Elections/blob/master/public/images/photos/node.png" alt="node" width="20" height="15" style="padding-bottom:0"/>
+      <img src="https://raw.githubusercontent.com/estebanfloresf/Elections/master/public/images/photos/node.png" alt="node" width="20" height="15" style="padding-bottom:0"/>
     </a> Node JS
   </div>
 
@@ -27,7 +27,7 @@ and most importantly, there was no open data to share about the final results.
 
 Here is a little sneak peek:
 
-<img src="https://raw.githubusercontent.com/estebanfloresf/eleccion/master/public/images/photos/elections.png" alt="elections" width="100" height="100"/>
+<img src="https://raw.githubusercontent.com/estebanfloresf/Elections/master/public/images/photos/elections.png" alt="elections" width="100" height="100"/>
 
 
 
