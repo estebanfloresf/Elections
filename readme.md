@@ -27,7 +27,7 @@ and most importantly, there was no open data to share about the final results.
 
 Here is a little sneak peek:
 
-<img src="https://raw.githubusercontent.com/estebanfloresf/Elections/master/public/images/photos/elections.png" alt="elections" width="100" height="100"/>
+<img src="https://raw.githubusercontent.com/estebanfloresf/Elections/master/public/images/photos/elections.png" alt="elections" width="100%" height="100%"/>
 
 
 
