@@ -51,7 +51,8 @@ exports.getCandidates = async (req, res) =>{
 
             candidates[i]['topProvinces'].push({
                 province : elem.province.name,
-                percentage: ((elem.men+elem.women)/ totalPercentage).toFixed(4)
+                percentage: ((elem.men+elem.women)/ totalPercentage).toFixed(4),
+
             });
         });
 

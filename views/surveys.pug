@@ -65,11 +65,11 @@ block content
 
 
                         .col-md-6
-                            div.radarChart
+                            div(id=`radar-${surveyID}`)
 
                             script(type='text/javascript').
                                 var survey = [!{JSON.stringify(survey)}];
-                                var candidates = [!{JSON.stringify(candidates)}];
+                                var candidates = !{JSON.stringify(finalArray)};
                             script(src="./javascripts/surveys/surveyRadar.js")
 
 

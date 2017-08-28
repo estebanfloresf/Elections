@@ -19,23 +19,44 @@ exports.getSurveys = async (req,res)=>{
 
     const totalNation = await Results.getNationResults();
 
-    // console.log(totalNation);
-     const temp = await  Results.getCandidateResults();
 
-    console.log(temp);
 
     const finalArray = [];
 
-
     for(var i=0; i<candidates.length; i++){
-         // console.log(totalNation[0].total);
 
-         // console.log(candidates[i].president);
+         const temp = await  Results.getCandidateResults(candidates[i]._id);
+
+
+         if(temp[0]) {
+             const percent =(temp[0].total / totalNation[0].total).toFixed(4);
+             finalArray.push({
+                 president: candidates[i].president,
+                 percentage: parseFloat(percent),
+                 series: "cne" //needed for the d3 Chart
+             });
+         }
+
+         // Por el momento llenar nulos y blancos con 0
+
+
+
 
     }
 
+    finalArray.push({
+        president: "nulos",
+        percentage: 0,
+        series: "cne" //needed for the d3 Chart
+    });
+    finalArray.push({
+        president: "blancos",
+        percentage: 0,
+        series: "cne" //needed for the d3 Chart
+    });
 
-    res.render('surveys', {title:"Surveys", surveys,  candidates});
+
+    res.render('surveys', {title:"Surveys", surveys,  candidates, finalArray});
 
 };
 
