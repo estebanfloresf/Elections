@@ -9,7 +9,7 @@ survey[0].candidates.forEach(function (candidate) {
 
     var president = candidate.candidate.president;
     var percentage = candidate.percentage;
-    var series = survey[0].firm.slug.replace('.','').trim();
+    var series = survey[0].firm.slug.replace('.', '').trim();
 
     var newObject = {president, percentage, series};
 
@@ -17,6 +17,12 @@ survey[0].candidates.forEach(function (candidate) {
 
 
 });
+
+candidates.forEach(function (candidate) {
+    candidate['series'] = 'cne';
+});
+
+
 data.push(newArray); //fill the data with the survey results
 data.push(candidates); // fill the data with the cne results
 
@@ -34,7 +40,10 @@ var radarChartOptions = {
     maxValue: 0.4,
     levels: 5,
     roundStrokes: true,
-    color: color
+    color: color,
+    areaName: "series",
+    axisName: "president",
+    value: "percentage"
 };
 //Call function to draw the Radar chart
 
@@ -59,6 +68,10 @@ function RadarChart(id, data, options) {
         roundStrokes: false,	//If true the area and stroke will follow a round path (cardinal-closed)
         color: d3.scaleOrdinal(["#3581b8", "#EDC951"]),	//Color function
         legendPosition: {x: 20, y: 20},
+        areaName: "series",
+        axisName: "axis",
+        value: "percentage"
+
     };
 
 
@@ -71,6 +84,15 @@ function RadarChart(id, data, options) {
             }
         }//for i
     }//if
+
+    //Map the fields specified in the configuration
+    // to the axis and value variables
+    var axisName = cfg["axisName"],
+        areaName = cfg["areaName"],
+        value = cfg["value"];
+
+
+
 
     //If the supplied maxValue is smaller than the actual one, replace by the max in the data
     var maxValue = Math.max(cfg.maxValue, d3.max(data, function (i) {
@@ -90,6 +112,7 @@ function RadarChart(id, data, options) {
         radius = Math.min(cfg.w / 2, cfg.h / 2), 	//Radius of the outermost circle
         formatPercent = d3.format(".2%"),			 	//Percentage formatting
         angleSlice = Math.PI * 2 / total;		//The width in radians of each "slice"
+
 
     //Scale for the radius
     var rScale = d3.scaleLinear()
@@ -244,9 +267,13 @@ function RadarChart(id, data, options) {
     blobWrapper
         .append("path")
 
-        .attr("class", function (d) {
+        .attr("class", function (d,i) {
 
-            return "radarArea."+d[0].series;
+            if(d[0].series==='cne') d[0].series = d[0].series+'-'+survey[0].firm.slug;
+
+
+
+            return "radarArea" +" "+ d[0].series;
         })
         .attr("d", function (d, i) {
 
@@ -259,7 +286,8 @@ function RadarChart(id, data, options) {
         .on('mouseover', function (d, i) {
             //Dim all blobs
 
-            d3.selectAll(".radarArea"+d[0].series)
+
+            d3.selectAll(".radarArea"+" "+ d[0].series)
 
                 .transition().duration(200)
                 .style("fill-opacity", 0.8);
@@ -271,7 +299,8 @@ function RadarChart(id, data, options) {
         .on('mouseout', function (d) {
             //Bring back all blobs
 
-            d3.selectAll(".radarArea"+d[0].series)
+
+            d3.select(this)
                 .transition().duration(200)
                 .style("fill-opacity", cfg.opacityArea);
         });
@@ -313,7 +342,7 @@ function RadarChart(id, data, options) {
         })
         .style("fill", function (d, i) {
 
-            if (d.series !== 'cne') {
+            if (d.series.substring(0,3) !== 'cne') {
                 color = "#3581b8";
             }
             else {
@@ -414,18 +443,17 @@ function RadarChart(id, data, options) {
     }//wrap
 
 
-
-
     /////////////////////////////////////////////////////////
     /////////////////// Draw the Legend /////////////////////
     /////////////////////////////////////////////////////////
 
     svg.append("g")
         .attr("class", "legendOrdinal")
-        .attr("transform", "translate(" + cfg["legendPosition"]["x"] + "," + cfg["legendPosition"]["y"] + ")");
+        .attr("transform", "translate(" + cfg["legendPosition"]["x"] + "," + cfg["legendPosition"]["y"] + ")")
+        .style("cursor","pointer");
 
     var ordinal = d3.scaleOrdinal()
-        .domain([survey[0].firm.slug.replace('.','').trim(), "cne"])
+        .domain([survey[0].firm.slug.replace('.', '').trim(), "cne"])
         .range(["#3581b8", "#EDC951"]);
 
     var legendOrdinal = d3.legendColor()
@@ -438,8 +466,11 @@ function RadarChart(id, data, options) {
 
             return d.label
         })
+        .orient('horizontal')
+
         .scale(ordinal)
         .on("cellover", function (d) {
+
             cellover(d);
         })
         .on("cellout", function (d) {
@@ -450,9 +481,13 @@ function RadarChart(id, data, options) {
         .call(legendOrdinal);
 
 
-
     // on mouseover for the legend symbol
     function cellover(d) {
+        //Dim all blobs\
+
+
+
+        if(d==="cne") d = d+'-'+ordinal.domain()[0];
         //Dim all blobs
         d3.selectAll(".radarArea")
             .transition().duration(200)
@@ -471,7 +506,6 @@ function RadarChart(id, data, options) {
             .transition().duration(200)
             .style("fill-opacity", cfg.opacityArea);
     }
-
 
 
 }

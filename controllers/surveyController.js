@@ -33,13 +33,9 @@ exports.getSurveys = async (req,res)=>{
              finalArray.push({
                  president: candidates[i].president,
                  percentage: parseFloat(percent),
-                 series: "cne" //needed for the d3 Chart
+
              });
          }
-
-         // Por el momento llenar nulos y blancos con 0
-
-
 
 
     }
@@ -47,12 +43,12 @@ exports.getSurveys = async (req,res)=>{
     finalArray.push({
         president: "nulos",
         percentage: 0,
-        series: "cne" //needed for the d3 Chart
+        // series: "cne" //needed for the d3 Chart
     });
     finalArray.push({
         president: "blancos",
         percentage: 0,
-        series: "cne" //needed for the d3 Chart
+        // series: "cne" //needed for the d3 Chart
     });
 
 

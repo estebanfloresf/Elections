@@ -25,18 +25,7 @@ block content
 
                     .btn-group(role='group')
                         button(type='button', class='btn sort' id='percentage') Percentage
-            //.col-md-2
-            //    h4.text-center View
-            //
-            //    .btn-group.btn-group-justified(role='view')
-            //
-            //        .btn-group(role='group')
-            //            button(type='button',  class='btn view grid' id='grid')
-            //                span.glyphicon.glyphicon-th-large(aria-hidden='true')
-            //
-            //        .btn-group(role='group')
-            //            button(type='button', class='btn view media' id='list')
-            //                span.glyphicon.glyphicon-th-list(aria-hidden='true')
+
 
         .row.candidate
 
@@ -47,7 +36,7 @@ block content
                     - var lastname = candidate.president.split(' ').slice(-1).join(' ').trim();
                     - var myNumeral = h.numeral;
 
-                .row.col-md-12
+                .row.col-md-12(data-value=`${candidate.percentage}` data-name=`${candidate.president}`)
                     .containerP
                         .itemflex
                             a(href='#')
