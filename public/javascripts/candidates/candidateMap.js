@@ -1,32 +1,9 @@
-lastName = candidate[0].president.split(' ').slice(-1).join(' ').trim();
-//
-//
-//
-// var svg = d3.select("#svgEmbed-"+lastName),
-//             width = +svg.attr("width"),
-//             height = +svg.attr("height");
-//
-//
-//
-//
-//
-//
-// var g = svg.append("g")
-//         .append("image")
-//         .attr("xlink:href","../images/misc/ecuador.svg")
-//         .attr("width", width)
-//         .attr("height", height)
-//         .attr("class","map")
-//         .style("fill","red");
-//
-//
-//
-//
+
 
 var map_width = 500;
 var map_height = 500;
 
-var mapContainer = document.getElementById(lastName);
+var mapContainer = document.getElementById('map');
 var map = new Raphael(mapContainer, map_width, map_height);
 
 
@@ -94,6 +71,15 @@ for( province in provinces) {
         region.attr(style);
 
         region[0].addEventListener("mouseover", function() {
+            console.log(this.getAttribute('class'));
+
+            region.animate(hoverStyle, animationSpeed);
+        }, true);
+
+        region[0].addEventListener("click", function() {
+            console.log(region);
+
+
 
             region.animate(hoverStyle, animationSpeed);
         }, true);

@@ -10,12 +10,12 @@ block content
             p
                 | These are the candidates that postulated for the Presidential Election on Feb 29, 2017 in Ecuador.
                 | The results shown are the final results published by the
-                a.link(href="https://resultados2017.cne.gob.ec/frmResultados.aspx") National Electoral Council
+                a.link(href="https://resultados2017.cne.gob.ec/frmResultados.aspx")  National Electoral Council
 
 
 
         .row
-            .col-md-6
+            .col-md-12
                 h4.text-center Sort By
 
                 .btn-group.btn-group-justified(role='sort')
@@ -85,47 +85,5 @@ block content
                 script(src="/javascripts/candidates/candidatePie.js")
 
 
-                    //
-                    //.media(data-value=`${candidate.total}`  data-name="#{lastName}")
-                    //    .media-left
-                    //        .containerFlex
-                    //            .itemflex
-                    //                a(href='#')
-                    //                    img.media-object(src=`${candidate.photo_president}`, alt=`${candidate.president}` style='width:64px; height:64px')
-                    //
-                    //
-                    //
-                    //    .media-body
-                    //
-                    //        .containerFlex
-                    //            div.itemflex
-                    //                a.fun_hover.text-capitalize(href='#') #{candidate.president}
-                    //                p.text-capitalize
-                    //                    small.orgpol #{candidate.polorg}
-                    //                    span(type='hidden', name=`${candidate.president}`, value=`${candidate.total}`)
-                    //
-                    //            div.itemflex
-                    //                div(id=`bar-${lastname}` class="barchart")
-                    //
-                    //            div.itemflex
-                    //                div(id=`pie-${lastname}` class="piechart")
-                    //
-                    //            div.itemflex
-                    //                p Text
-                    //
 
 
-
-
-
-                            //
-                            script(type='text/javascript').
-                                var candidate = [!{JSON.stringify(candidate)}];
-
-                            script(src="/javascripts/candidates/candidateBar.js")
-                            //script(src="/javascripts/candidates/candidatePie.js")
-                            ////script(src="/javascripts/modules/raphael.min.js")
-                            ////script(src="/javascripts/candidates/candidateMap.js")
-                            ////
-                            ////
-                            ////

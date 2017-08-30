@@ -16,6 +16,9 @@ router.get('/', function(req, res, next) {
 router.get('/candidates', catchErrors( candidateController.getCandidates ));
 router.post('/addCandidate', catchErrors( candidateController.addCandidate));
 router.get('/surveys', catchErrors( surveyController.getSurveys ));
+router.get('/map', function (req,res) {
+    res.render('map',{title:'Map'});
+});
 
 
 module.exports = router;
