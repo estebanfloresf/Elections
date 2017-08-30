@@ -9,7 +9,7 @@ var map = new Raphael(mapContainer, map_width, map_height);
 
 var style = {
     fill: "#f1f1f1",
-    stroke: "#191716",
+    stroke: "#9c9c9c",
     "stroke-width": 1,
     "stroke-linejoin": "round",
     cursor: "pointer"
@@ -46,7 +46,7 @@ provinces['bolivar']=map.path("M 591.1845,627.29482 L 581.6845,624.29482 L 576.6
 for (var province in provinces) {
     provinces[province]
         .attr(style)
-        .attr('fill','pink')
+
         .attr("class",province);
 
 }
@@ -64,25 +64,60 @@ var hoverStyle = {
     fill: "#A8BED5"
 };
 
-
+var provinceSelect ="";
 for( province in provinces) {
     (function (region) {
 
         region.attr(style);
 
         region[0].addEventListener("mouseover", function() {
-            console.log(this.getAttribute('class'));
-
-            region.animate(hoverStyle, animationSpeed);
-        }, true);
-
-        region[0].addEventListener("click", function() {
-            console.log(region);
-
 
 
             region.animate(hoverStyle, animationSpeed);
         }, true);
+
+
+        $(region[0]).click(function () {
+
+            if(this.getAttribute('class').substring('pselected')){
+                $(this).removeClass('pselected');
+                this.setAttribute('style','fill:#f1f1f1');
+            }
+            else{
+                console.log('no');
+                $(this).addClass('pselected');
+                this.setAttribute('style','fill:#1d3557');
+
+
+
+
+            }
+
+
+
+        });
+
+
+
+        // region[0].addEventListener("click", function() {
+        //
+        //
+        //
+        //     var selected = document.querySelector('.'+region[0].getAttribute('class').trim());
+        //
+        //     if(selected.getAttribute('class') !== initialSelected.getAttribute('class') ){
+        //
+        //         selected.setAttribute('style','fill:#1d3557');
+        //
+        //     }
+        //
+        //
+        //
+        //     initialSelected = selected;
+        //     console.log(selected);
+        //
+        //     region.animate(hoverStyle, animationSpeed);
+        // }, true);
 
         region[0].addEventListener("mouseout", function() {
             region.animate(style, animationSpeed);
