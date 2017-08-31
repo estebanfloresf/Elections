@@ -16,7 +16,8 @@ const provinceSchema = new mongoose.Schema({
         required: 'Please enter a province name!'
     },
     photo: String,
-    flag: String
+    flag: String,
+    path: String
 });
 
 module.exports = mongoose.model('Province', provinceSchema);
