@@ -34,7 +34,7 @@ const resultsSchema = new mongoose.Schema({
     }
 });
 
-
+//This returns the  nationwide results total
 resultsSchema.statics.getNationResults = function () {
     return this.aggregate([
         {
@@ -56,14 +56,14 @@ resultsSchema.statics.getNationResults = function () {
     ])
 };
 
+//This returns the all the results of an specific candidate
 resultsSchema.statics.getCandidateResults = function (id) {
-
 
 
     return this.aggregate([
         {
-            $match :{
-                candidate : id
+            $match: {
+                province: id
             }
         },
         {
@@ -71,7 +71,6 @@ resultsSchema.statics.getCandidateResults = function (id) {
                 _id: '$candidate',
                 totalmen: {$sum: '$men'},
                 totalwomen: {$sum: '$women'},
-
 
 
             }
@@ -90,7 +89,7 @@ resultsSchema.statics.getCandidateResults = function (id) {
     ]);
 };
 
-
+//This returns the top 5 results of an specific candidate
 resultsSchema.statics.getTopProvinces = function (id) {
 
     return this.find({candidate: id})
@@ -101,5 +100,41 @@ resultsSchema.statics.getTopProvinces = function (id) {
         ;
 
 };
+
+//This returns the all the results of an specific province
+resultsSchema.statics.getProvinceResults = function (id) {
+
+    return this.aggregate([
+        {
+            $match: {province: id}
+        },
+        {
+            $group: {
+                _id: "$candidate",
+                totalmen: {$sum: '$men'},
+                totalwomen: {$sum: '$women'},
+
+
+
+            }
+
+        },
+
+        {
+            $project: {
+
+                _id: '$_id',
+                candidate : '$candidate',
+
+                totalmen: '$totalmen',
+                totalwomen: '$totalwomen',
+                total: {"$add": ["$totalmen", "$totalwomen"]}
+            }
+        }
+    ]);
+
+
+};
+
 
 module.exports = mongoose.model('Results', resultsSchema);

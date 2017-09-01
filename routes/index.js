@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const candidateController = require('../controllers/candidateController');
 const surveyController = require('../controllers/surveyController');
+const provinceController = require('../controllers/provinceController');
 
 const {catchErrors} = require('../handlers/errorHandlers');
 
@@ -16,9 +17,8 @@ router.get('/', function(req, res, next) {
 router.get('/candidates', catchErrors( candidateController.getCandidates ));
 router.post('/addCandidate', catchErrors( candidateController.addCandidate));
 router.get('/surveys', catchErrors( surveyController.getSurveys ));
-router.get('/map', function (req,res) {
-    res.render('map',{title:'Map'});
-});
+router.get('/map', catchErrors(provinceController.getProvinces));
+router.post('/provinceInfo',catchErrors(provinceController.provinceResults));
 
 
 module.exports = router;

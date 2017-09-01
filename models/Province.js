@@ -15,7 +15,7 @@ const provinceSchema = new mongoose.Schema({
         lowercase: true,
         required: 'Please enter a province name!'
     },
-    photo: String,
+
     flag: String,
     path: String
 });

@@ -8,7 +8,13 @@ block content
 
     .col-md-12
 
-        div(id=`map`)
+        .col-md-6
+            div(id=`map`)
+        .col-md-6
+            p Test
+
+        script(type='text/javascript').
+            var provinces = !{JSON.stringify(provinces)};
 
 
 
