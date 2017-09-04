@@ -63,7 +63,7 @@ resultsSchema.statics.getCandidateResults = function (id) {
     return this.aggregate([
         {
             $match: {
-                province: id
+                candidate: id
             }
         },
         {
@@ -105,25 +105,25 @@ resultsSchema.statics.getTopProvinces = function (id) {
 resultsSchema.statics.getProvinceResults = function (id) {
 
     return this.aggregate([
+
+
         {
             $match: {province: id}
         },
         {
-            $group: {
-                _id: "$candidate",
-                totalmen: {$sum: '$men'},
-                totalwomen: {$sum: '$women'},
+          $project:{
+              totalmen : {"$sum":"$men"},
+              totalwomen : {"$sum":"$women"},
+
+              candidate : '$candidate',
 
 
-
-            }
-
+          }
         },
 
         {
             $project: {
 
-                _id: '$_id',
                 candidate : '$candidate',
 
                 totalmen: '$totalmen',
@@ -131,10 +131,17 @@ resultsSchema.statics.getProvinceResults = function (id) {
                 total: {"$add": ["$totalmen", "$totalwomen"]}
             }
         }
+
+
     ]);
 
 
+
+
+
 };
+
+
 
 
 module.exports = mongoose.model('Results', resultsSchema);

@@ -3,18 +3,60 @@ extends layout
 
 block content
 
+
     .page-header
         h1= 'Votes per Province'
 
     .col-md-12
 
+        .col-md-6.text-center
+            .row
+                small Select a province to see the results
+
+            .row
+                div(id=`map`)
         .col-md-6
-            div(id=`map`)
-        .col-md-6
-            p Test
+            .row.province.text-center
+
+
+                img.svg(id="provimg" src=`../images/icons/defaultprov.svg` style="width:60px; height:40px; border: 1px solid #000")
+                h4.text-capitalize(id="provname") Ecuador
+
+
+            table.table.table-hover.table-sm.table-responsive.sortable(id='mapTable')
+                thead
+                    tr
+
+                        th Candidate
+                            //span.glyphicon
+                            //    img.svg(src=`../images/icons/sort.svg` style="width:20px; height:20px")
+                        th Total
+                            //span.glyphicon
+                            //    img.svg(src=`../images/icons/sort.svg` style="width:20px; height:20px")
+                        th Men
+                            //span.glyphicon
+                            //    img.svg(src=`../images/icons/sort.svg` style="width:20px; height:20px")
+                        th Women
+                            //span.glyphicon
+                            //    img.svg(src=`../images/icons/sort.svg` style="width:20px; height:20px")
+
+                tbody
+                    each candidate in candidates
+                        - var lastname = candidate.president.split(' ').slice(-1).join(' ').trim();
+                        tr
+                            td.text-capitalize(id=`${candidate.president}`) #{candidate.president}
+                            td(id=`${lastname}-total`)  0
+                            td(id=`${lastname}-men`)  0
+                            td(id=`${lastname}-women`)  0
+
+
+
 
         script(type='text/javascript').
             var provinces = !{JSON.stringify(provinces)};
+
+        script(src="/javascripts/modules/raphael.min.js")
+        script(src="/javascripts/candidates/candidateMap.js")
 
 
 

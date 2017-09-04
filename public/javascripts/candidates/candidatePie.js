@@ -168,7 +168,7 @@ function click(d) {
 
     var color = document.querySelector('#'+selectedLastName+'-'+d.data.province.trim().replace(/ /g, '')).getAttribute('fill');
 
-    console.log(color);
+
 
     d3.select(".title-" + selectedLastName).remove();
     d3.select(".titleP-" + selectedLastName).remove();

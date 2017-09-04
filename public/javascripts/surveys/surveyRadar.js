@@ -18,6 +18,8 @@ survey[0].candidates.forEach(function (candidate) {
 
 });
 
+
+
 candidates.forEach(function (candidate) {
     candidate['series'] = 'cne';
 });

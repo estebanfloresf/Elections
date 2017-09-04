@@ -15,9 +15,13 @@ html
 
         link(rel='stylesheet', href='../dist/style.css')
         link(rel='stylesheet', type='text/css', href='//cdn.datatables.net/1.10.15/css/jquery.dataTables.css')
+        script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js')
+        script(src='//code.jquery.com/jquery-1.11.3.min.js')
+        script(src='https://code.jquery.com/jquery-3.2.1.min.js', integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=', crossorigin='anonymous')
         script(src="https://d3js.org/d3.v4.min.js")
         script(src="https://d3js.org/d3-selection-multi.v0.4.min.js")
         script(src="https://cdnjs.cloudflare.com/ajax/libs/d3-legend/2.24.0/d3-legend.min.js")
+
 
 
 
@@ -68,7 +72,7 @@ body
                                     //    pre= h.dump(flashes[category])
 
 
-                                    .alert(class="alert alert-dismissible alert-" + `${category}` role="alert")
+                                    .alert(class="alert alert-dismissible alert-#{category}" role="alert")
                                         button.close(type="button", data-dismiss="alert", aria-label="Close" onClick="this.parentElement.remove()") &times;
 
                                         p!= message
@@ -80,21 +84,29 @@ body
 
 
 
-    script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js')
-    script(src='//code.jquery.com/jquery-1.11.3.min.js')
-    script(src='https://code.jquery.com/jquery-3.2.1.min.js', integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=', crossorigin='anonymous')
+
     script(type='text/javascript', charset='utf8', src='//cdn.datatables.net/1.10.15/js/jquery.dataTables.js')
     script(src="/dist/App.bundle.js")
     script(src="/javascripts/modules/orderBy.js")
     script(src="/javascripts/modules/sortTable.js")
     script(src='/javascripts/modules/bootstrap-sortable.js')
-    script(src="/javascripts/modules/raphael.min.js")
-    script(src="/javascripts/candidates/candidateMap.js")
+    script(type="text/javascript" charset="utf8" src="//cdn.datatables.net/1.10.16/js/jquery.dataTables.js")
+    script( type="text/javascript" src="dataTables.num-html.js")
 
-    //script.
-    //    $(document).ready(function () {
-    //        $('#surveys').DataTable();
-    //    });
+
+    script.
+        $(document).ready(function () {
+            $('#mapTable').DataTable({
+                paging: false,
+                bFilter: false, bInfo: false,
+                "columns" :[
+                    {"type": "string"},
+                    {"sType": "num-html"},
+                    null,
+                    null,
+                ]
+            });
+        });
 
 
 

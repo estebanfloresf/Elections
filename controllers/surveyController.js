@@ -28,6 +28,7 @@ exports.getSurveys = async (req,res)=>{
          const temp = await  Results.getCandidateResults(candidates[i]._id);
 
 
+
          if(temp[0]) {
              const percent =(temp[0].total / totalNation[0].total).toFixed(4);
              finalArray.push({

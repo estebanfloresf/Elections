@@ -75,8 +75,31 @@ for (province in provMap) {
                 method: "POST",
                 url: "/provinceInfo",
                 data: { province: this.getAttribute('class')},
-                success : function(d){
-                    console.log(d.info); //will alert ok
+            success : function(data){
+
+
+
+                    $('#provimg').attr("src",data.province.flag);
+                    $('#provname').html(data.province.name);
+
+                    data.results.forEach(function (province) {
+
+
+
+                        var lastname = province.president.split(' ').slice(-1).join(' ').trim();
+
+
+
+
+                        $('#'+lastname+'-total').html(parseInt(province.total,0));
+                        $('#'+lastname+'-men').html(province.totalmen);
+                        $('#'+lastname+'-women').html(province.totalwomen);
+
+
+
+                    });
+
+
                 }
             });
 

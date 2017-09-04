@@ -3,41 +3,53 @@ const Province = mongoose.model('Province');
 const Results = mongoose.model('Results');
 const Candidate = mongoose.model('Candidate');
 
-exports.getProvinces = async (req,res) =>{
+exports.getProvinces = async (req, res) => {
 
-    const provinces = await Province.find({"path":{"$ne": ""}}).select('name path -_id');
+    const provinces = await Province.find({"path": {"$ne": ""}}).select('name path -_id');
 
-    res.render('map',{title:'Map', provinces});
+    const candidates = await Candidate.find({}).select('president _id ');
+
+    res.render('map', {title: 'Map', provinces, candidates});
 
 };
 
 
-exports.provinceResults = async( req,res) =>{
+exports.provinceResults = async (req, res) => {
 
 
     const candidates = await Candidate.find({}).select('president _id ');
 
-    const provinces = await Province.find({}).select('-path -__v -flag');
+
+    const province = await Province.findOne({name: req.body.province.trim()}).select('-path -__v');
 
 
+    const results = await  Results.getProvinceResults(province._id)
 
-    const selected = provinces.filter( e => e.name === req.body.province.trim());
+        .exec(function (err, data) {
+
+            //function to map for each aggregate candidate also the name (populate)
+
+            data.forEach(function (e) {
 
 
-    console.log(selected[0]._id);
+                const presidentName = candidates.filter(candidate => candidate._id.toString() === e.candidate.toString());
 
-    const results =  await  Results.getProvinceResults(selected[0]._id);
+                e['president'] = presidentName[0].president;
 
-    console.log(results);
 
-    if(selected){
-        res.status(200).json( { info:selected });
+            });
+
+
+        });
+
+    if (results) {
+        res.status(200).json({results,province});
     }
-    else{
-        res.status(200).json( { info:'' });
+    else {
+
+        req.flashes('warning', 'Whoops we could not retrieve any information');
     }
 
-    //
-    // res.status(200).json( { title:req.body.province });
+
 };
 
