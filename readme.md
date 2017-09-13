@@ -29,8 +29,15 @@ Here is a little sneak peek:
 
 <img src="https://raw.githubusercontent.com/estebanfloresf/Elections/master/public/images/photos/elections.png" alt="elections" width="100%" height="100%"/>
 
+## Licensing
+
+[License](LICENSE.md). 
 
 
+## Contributing
+
+
+For details, check out [CONTRIBUTING.md](CONTRIBUTING.md).
 
  
 
