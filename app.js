@@ -24,11 +24,6 @@ require('./handlers/passport');
 // create our Express app
 const app = express();
 
-app.set('port', (process.env.PORT || 5000));
-app.listen(app.get('port'), function() {
-    console.log('Node app is running on port', app.get('port'));
-});
-
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views')); // this is the folder where we keep our pug files
