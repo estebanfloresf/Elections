@@ -29,10 +29,10 @@ const app = express();
 app.set('views', path.join(__dirname, 'views')); // this is the folder where we keep our pug files
 app.set('view engine', 'pug'); // we use the engine pug, mustache or EJS work great too
 
-// app.use(favicon(__dirname + '/public/images/icons/favicon.ico'));
 
 
 // serves click static files from the public folder. Anything in public/ will just be served click as the file it is
+// app.use(favicon(__dirname + '/public/images/icons/favicon.ico'));
 app.use(express.static(path.join(__dirname, 'public')));
 
 

@@ -29,15 +29,24 @@ require('./models/Firm');
 
 // Start our app!
 const app = require('./app');
-app.set('port', process.env.PORT || 7778);
 
 
 
-const server = app.listen(app.get('port'), () => {
-  console.log(`Express running → PORT ${server.address().port}`);
-  console.log(`http://localhost:${server.address().port}`)
+
+// set the port of our application
+// process.env.PORT lets the port be set by Heroku
+const port = process.env.PORT || 8080;
+
+app.listen(port, function() {
+    console.log('Our app is running on http://localhost:' + port);
 });
 
+
+// const server = app.listen(app.get('port'), () => {
+//   console.log(`Express running → PORT ${server.address().port}`);
+//   console.log(`http://localhost:${server.address().port}`)
+// });
+//
 
 /**
  * Created by esteban on 26/6/17.
