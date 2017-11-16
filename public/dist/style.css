@@ -7,7 +7,6 @@
  * animation kenburns-bottom
  * ----------------------------------------
  */
-
 @keyframes kenburns-bottom {
   0% {
     transform: scale(1) translateY(0);
@@ -15,6 +14,14 @@
   100% {
     transform: scale(1.25) translateY(15px);
     transform-origin: bottom; } }
+
+@keyframes slide-in-bottom {
+  0% {
+    transform: translateY(1000px);
+    opacity: 0; }
+  100% {
+    transform: translateY(0);
+    opacity: 1; } }
 
 html {
   position: relative;

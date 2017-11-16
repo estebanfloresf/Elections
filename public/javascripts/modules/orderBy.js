@@ -65,14 +65,24 @@ $(document).ready(function () {
             const $this = $(this);
             const newIndex = sorted.indexOf(this);
             sorted[newIndex] = $this.clone(); //copy the original item before messing with its positioning
-            $this.css("position", "absolute").css("top", positions[originalIndex].top + "px").css("left", positions[originalIndex].left + "px");
+            $this.css("position", "absolute")
+            .css("top", positions[originalIndex].top + "px")
+            .css("left", positions[originalIndex].left + "px");
 
 
             //animate to the new position
-            const promise = $this.animate({
-                left: positions[newIndex].left + "px",
-                top: positions[newIndex].top + "px"
-            }, 1000);
+            // const promise = $this.animate({
+            //     left: positions[newIndex].left + "px",
+            //     top: positions[newIndex].top + "px"
+            // }, 1000);
+
+            const promise = $this.css({
+                "-webkit-transform":"translateY(1000px)",
+                "-ms-transform":"translateY(1000px)",
+                "transform":"translateY(1000px)",
+                "opacity": "0"
+            });
+
             promises.push(promise);
         });
 
