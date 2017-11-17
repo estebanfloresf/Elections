@@ -21,13 +21,13 @@ block content
                 .btn-group.btn-group-justified(role='sort')
 
                     .btn-group(role='group')
-                        button(type='button',  class='btn sort' id='name') Name
+                        button(type='button',  class='btn sort' id='name' data-sort-value='name') Name
 
                     .btn-group(role='group')
-                        button(type='button', class='btn sort' id='percentage') Percentage
+                        button(type='button', class='btn sort' id='percentage' data-sort-value='percentage') Percentage
 
 
-        .row.candidate
+        .row.candidate(id='grid')
 
 
             each candidate in candidates
@@ -36,7 +36,7 @@ block content
                     - var lastname = candidate.president.split(' ').slice(-1).join(' ').trim();
                     - var myNumeral = h.numeral;
 
-                .row.col-md-12(data-value=`${candidate.percentage}` data-name=`${candidate.president}`)
+                .row.col-md-12.item(percentage=`${candidate.percentage}` name=`${candidate.president}`)
                     .containerP
                         .itemflex
                             a(href='#')
