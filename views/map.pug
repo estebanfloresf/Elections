@@ -15,7 +15,7 @@ block content
 
             .row
                 div(id=`map`)
-        .col-md-6
+        .col-md-6.justify-content-center
             .row.province.text-center
 
 
@@ -23,31 +23,28 @@ block content
                 h4.text-capitalize(id="provname") Ecuador
 
 
-            table.table.table-hover.table-sm.table-responsive.sortable(id='mapTable')
+            table.rwd-table
                 thead
                     tr
 
                         th Candidate
-                            //span.glyphicon
-                            //    img.svg(src=`../images/icons/sort.svg` style="width:20px; height:20px")
+                            i.fas.fa-sort.fa-fw
                         th Total
-                            //span.glyphicon
-                            //    img.svg(src=`../images/icons/sort.svg` style="width:20px; height:20px")
+                            i.fas.fa-sort.fa-fw
                         th Men
-                            //span.glyphicon
-                            //    img.svg(src=`../images/icons/sort.svg` style="width:20px; height:20px")
+                            i.fas.fa-sort.fa-fw
                         th Women
-                            //span.glyphicon
-                            //    img.svg(src=`../images/icons/sort.svg` style="width:20px; height:20px")
+                            i.fas.fa-sort.fa-fw
 
                 tbody
                     each candidate in candidates
                         - var id = String(candidate._id).slice(-5);
-                        tr
-                            td.text-capitalize(id=`${id}`) #{candidate.president}
-                            td(id=`${id}-total`)  0
-                            td(id=`${id}-men`)  0
-                            td(id=`${id}-women`)  0
+                        unless candidate.president === 'nulos' || candidate.president === 'blancos'
+                            tr
+                                td.text-capitalize.text-center(id=`${id}`)&attributes({'data-th': 'Candidate'})  #{candidate.president}
+                                td(id=`${id}-total`)&attributes({'data-th': 'Total'})  0
+                                td(id=`${id}-men`)&attributes({'data-th': 'Men'})  0
+                                td(id=`${id}-women`)&attributes({'data-th': 'Women'})  0
 
 
 

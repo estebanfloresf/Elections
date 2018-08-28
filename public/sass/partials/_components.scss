@@ -1,47 +1,32 @@
-html {
-  position: relative;
-  min-height: 100%;
-  height: 100%;
-}
-body {
-  /* Margin bottom by footer height */
-  margin-bottom: 60px;
-  height: 100%;
-}
-
-
-
-
-
 .page-header {
   border-bottom: 1px solid $color1;
   padding-bottom: 5px;
 }
 
 .footer {
-
   //position:absolute;
   bottom: 0px;
   //width: 100%;
   margin: 0;
   background-color: #000;
-  height: 100px; /* or however high you would like */
+  height: 100px;
+  /* or however high you would like */
 }
 
 .btn-group {
   margin-bottom: 30px;
   padding: 2px;
-
 }
 
-.btn-group button{
+.btn-group button {
   padding: 1px;
   border-radius: 5px;
   color: $color1;
   background-color: $color2;
 }
 
-.btn-group button:hover, .btn.active{
+.btn-group button:hover,
+.btn.active {
   padding: 1px;
   border-radius: 5px;
   border-color: $color1;
@@ -59,8 +44,6 @@ body {
   font-weight: bold;
 }
 
-
-
-.btn{
- background-color: #e82c75;
+.btn {
+  background-color: #e82c75;
 }

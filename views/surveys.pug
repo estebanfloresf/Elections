@@ -45,22 +45,22 @@ block content
 
 
                             -var surveyID = survey.firm.slug.replace('.','').trim()
-                            table.table.table-hover.table-sm.table-responsive.sortable(id=surveyID)
+                            table.rwd-table(id=surveyID)
                                 thead
                                     tr
 
                                         th Candidate
-                                            span.glyphicon
-                                                img.svg(src=`../images/icons/sort.svg` style="width:20px; height:20px")
+                                            i.fas.fa-sort.fa-fw
+                                            
                                         th Percentage
-                                            span.glyphicon
-                                                img.svg(src=`../images/icons/sort.svg` style="width:20px; height:20px")
+                                            i.fas.fa-sort.fa-fw
 
+                                            
                                 tbody
                                     each candidate in survey.candidates
                                         tr
-                                            td.text-capitalize(scope='row') #{candidate.candidate.president}
-                                            td #{(candidate.percentage * 100).toFixed(2)}
+                                            td.text-capitalize(scope='row' data-th="Candidate") #{candidate.candidate.president}
+                                            td(data-th="Percentage") #{(candidate.percentage * 100).toFixed(2)}
 
 
 

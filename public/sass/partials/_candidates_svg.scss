@@ -1,21 +1,13 @@
 @import "variables";
 
-body {
-  margin: 5px;
-
-
-}
-
-
-
 .bar {
   fill: $color1;
 }
-.background-bar{
-  fill: $color2 ;
+
+.background-bar {
+  fill: $color2;
   opacity: .4;
 }
-
 
 .axis path,
 .axis line {
@@ -24,13 +16,15 @@ body {
   stroke-width: 0.4px;
   shape-rendering: crispEdges;
 }
-.axis text{
+
+.axis text {
   background-color: black;
 }
 
 .x path {
   display: none;
 }
+
 .toolTip {
   position: absolute;
   display: none;
@@ -40,45 +34,30 @@ body {
   border: 1px solid $color2;
   padding: 14px;
   text-align: center;
-
 }
 
-
-
-
-pattern{
+pattern {
   fill: $color1;
 }
 
-
-div.media-body > svg.svgEmbed > path {
+div.media-body>svg.svgEmbed>path {
   fill: red;
-
 }
 
-
-.barchart text{
+.barchart text {
   fill: $color1;
-
   font-size: .8em;
   text-anchor: middle;
   text-align: center;
 }
 
-
-.barchart .bartext{
+.barchart .bartext {
   fill: $color1;
-
   font-size: .95em;
   text-anchor: middle;
 }
 
-.pieText{
+.pieText {
   color: #fff200;
   background-color: #fff200;
-} 
-
-
-
-
-
+}

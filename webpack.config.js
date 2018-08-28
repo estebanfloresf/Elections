@@ -44,26 +44,35 @@ const postcss = {
   }
 };
 
+const css = {
+  loader: 'css-loader',
+  options: {
+    sourceMap: true
+  }
+}
+
+const sass = {
+  loader: 'sass-loader',
+  options: {
+    sourceMap: true
+  },
+}
+
 // this is our sass/css loader. It handles files that are require('something.scss')
 const styles = {
-  test: /\.(sass)$/,
+  test: /\.(scss)$/,
+  // use: [
+  //   // devMode ? 'style-loader' : MiniCssExtractPlugin.loader,
+  //   css,
+  //   postcss,
+  //   sass
+  // ],
   use: [
-    devMode ? 'style-loader' : MiniCssExtractPlugin.loader,
-    {
-      loader: 'css-loader',
-      options: {
-        sourceMap: true
-      }
-    },
+    MiniCssExtractPlugin.loader,
+    css,
     postcss,
-    {
-      loader: 'sass-loader',
-      options: {
-        sourceMap: true
-      },
-    }
+    sass,
   ],
-
 }
 
 const svgs = {
@@ -96,7 +105,11 @@ const config = {
     // name will be `App` because that is what we used above in our entry
     filename: '[name].bundle.js'
   },
-
+  stats: {
+    // One of the two if I remember right
+    entrypoints: false,
+    children: false
+  },
   // remember we said webpack sees everthing as modules and how different loaders are responsible for different file types? Here is is where we implement them. Pass it the rules for our JS and our styles
   module: {
     rules: [javascript, styles, svgs]
@@ -109,8 +122,7 @@ const config = {
     new MiniCssExtractPlugin({
       // Options similar to the same options in webpackOptions.output
       // both options are optional
-      filename: devMode ? '[name].css' : '[name].[hash].css',
-      chunkFilename: devMode ? '[id].css' : '[id].[hash].css',
+      filename: "[name].css",
     })
 
 

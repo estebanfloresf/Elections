@@ -50,16 +50,6 @@
     transform: translateY(0);
     opacity: 1; } }
 
-html {
-  position: relative;
-  min-height: 100%;
-  height: 100%; }
-
-body {
-  /* Margin bottom by footer height */
-  margin-bottom: 60px;
-  height: 100%; }
-
 .page-header {
   border-bottom: 1px solid #3581b8;
   padding-bottom: 5px; }
@@ -81,7 +71,8 @@ body {
   color: #3581b8;
   background-color: #c4e5f5; }
 
-.btn-group button:hover, .btn.active {
+.btn-group button:hover,
+.btn.active {
   padding: 1px;
   border-radius: 5px;
   border-color: #3581b8;
@@ -100,45 +91,37 @@ body {
 .btn {
   background-color: #e82c75; }
 
-/*Here the nav section*/
-.img_nav {
-  height: 20px;
-  width: 20px; }
-
-.navbar {
-  border: 0;
-  background-color: #1d3557; }
-
-nav > .container-fluid {
-  background-color: #1d3557; }
-
-.navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form,
-.navbar-inverse .navbar-nav > li > a,
-.navbar > .container-fluid .navbar-brand {
+.my-navbar {
   background-color: #1d3557;
-  border: none;
+  border: 0;
+  border-radius: 0;
   color: white; }
-
-.navbar-inverse .navbar-nav > li > a:hover,
-.navbar-inverse .navbar-nav > li > a:focus {
-  -webkit-box-shadow: inset 0 -3px 0 #3581b8;
-          box-shadow: inset 0 -3px 0 #3581b8; }
-
-.navbar-inverse .navbar-nav > li > a.active,
-.navbar-inverse .navbar-nav > li > a.active > .svg path {
-  color: white;
-  background: #3581b8;
-  text-shadow: none; }
+  .my-navbar .navbar-brand {
+    color: white; }
+  .my-navbar .navbar-nav .active {
+    background: #ffc531;
+    color: #3581b8;
+    font-weight: bold;
+    text-shadow: none; }
+  .my-navbar .navbar-nav a {
+    text-shadow: none;
+    color: white; }
+    .my-navbar .navbar-nav a:hover, .my-navbar .navbar-nav a:focus {
+      background-color: #ffc531 !important; }
 
 body {
-  padding: 60px;
   font-family: 'Abel', sans-serif;
   font-size: 14px; }
 
 p {
   color: #1d3557; }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   color: #1d3557; }
 
 a.link {
@@ -287,9 +270,6 @@ div.map > svg {
         -ms-flex: 1;
             flex: 1; } }
 
-body {
-  margin: 5px; }
-
 .bar {
   fill: #3581b8; }
 
@@ -363,55 +343,67 @@ dl.row > dd > a {
   border-bottom: 2px solid #ffc531;
   text-decoration: none; }
 
-/* 
-Max width before this PARTICULAR table gets nasty
-This query will take effect for any screen smaller than 760px
-and also iPads specifically.
-*/
-table {
-  background-color: #bada55; }
-
-@media only screen and (max-width: 760px), (min-device-width: 768px) and (max-device-width: 1024px) {
-  /* Force table to not be like tables anymore */
-  table,
-  thead,
-  tbody,
-  th,
-  td,
-  tr {
+.rwd-table {
+  margin: 1em 0;
+  min-width: 300px; }
+  .rwd-table tr {
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd; }
+  .rwd-table th {
+    display: none;
+    cursor: pointer; }
+  .rwd-table td {
     display: block; }
-  /* Hide table headers (but not display: none;, for accessibility) */
-  thead tr {
-    position: absolute;
-    top: -9999px;
-    left: -9999px; }
-  tr {
-    border: 1px solid #ccc; }
-  td {
-    /* Behave  like a "row" */
-    border: none;
-    border-bottom: 1px solid #eee;
-    position: relative;
-    padding-left: 50%; }
-  td:before {
-    /* Now like a table header */
-    position: absolute;
-    /* Top/left values mimic padding */
-    top: 6px;
-    left: 6px;
-    width: 45%;
-    padding-right: 10px;
-    white-space: nowrap; }
-  /*
-	Label the data
-	*/
-  td:nth-of-type(1):before {
-    content: "Candidate"; }
-  td:nth-of-type(2):before {
-    content: "Total"; }
-  td:nth-of-type(3):before {
-    content: "Men"; }
-  td:nth-of-type(4):before {
-    content: "Women"; } }
+    .rwd-table td:first-child {
+      padding-top: .5em; }
+    .rwd-table td:last-child {
+      padding-bottom: .5em; }
+    .rwd-table td:before {
+      content: attr(data-th) ": ";
+      font-weight: bold;
+      width: 6.5em;
+      display: inline-block; }
+      @media (min-width: 480px) {
+        .rwd-table td:before {
+          display: none; } }
+  .rwd-table th,
+  .rwd-table td {
+    text-align: left; }
+    @media (min-width: 480px) {
+      .rwd-table th,
+      .rwd-table td {
+        display: table-cell;
+        padding: .25em .5em; }
+        .rwd-table th:first-child,
+        .rwd-table td:first-child {
+          padding-left: 0; }
+        .rwd-table th:last-child,
+        .rwd-table td:last-child {
+          padding-right: 0; } }
 
-/*# sourceMappingURL=style.css.map*/
+.rwd-table {
+  text-align: center;
+  background: #1d3557;
+  color: #fff;
+  border-radius: .4em;
+  overflow: hidden;
+  background: #1d3557;
+  color: #fff;
+  border-radius: .4em;
+  overflow: hidden;
+  min-width: 90%; }
+  .rwd-table tr {
+    border-color: #2a4c7d; }
+  .rwd-table th,
+  .rwd-table td {
+    margin: .5em 1em; }
+    @media (min-width: 480px) {
+      .rwd-table th,
+      .rwd-table td {
+        padding: 1em !important; } }
+  .rwd-table th,
+  .rwd-table td:before {
+    color: #dd5; }
+
+
+/*# sourceMappingURL=App.css.map*/
