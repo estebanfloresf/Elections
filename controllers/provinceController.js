@@ -24,38 +24,12 @@ exports.getProvinces = async (req, res) => {
 
 exports.provinceResults = async (req, res) => {
 
-
-    const candidates = await Candidate.find({}).select('president _id');
-
-
     const province = await Province.findOne({
         name: req.body.province.trim()
     }).select('-path -__v');
 
 
     const results = await Results.getProvinceResults(province._id);
-
-    // .exec(function (err, data) {
-
-    //     if (err) {
-    //         console.log(err);
-    //     }
-
-    //     //function to map for each aggregate candidate also the name (populate)
-
-
-    //     data.forEach(function (e) {
-
-
-    //         const presidentName = candidates.filter(candidate => candidate._id.toString() === e.candidate.toString());
-
-    //         e['president'] = presidentName[0].president;
-
-
-    //     });
-
-
-    // });
 
     if (results) {
         res.status(200).json({
