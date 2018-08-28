@@ -1,7 +1,0 @@
-{
-"version": 3,
-"mappings": "AAEA,IAAK;EACH,IAAI,ECQG,OAAqB;;ADL9B,UAAW;EACT,IAAI,ECOG,OAAiB;;ADJ1B,aAAc;EACZ,OAAO,EAAE,IAAI",
-"sources": ["candidates_svg.scss","_variables.scss"],
-"names": [],
-"file": "candidates_svg.css"
-}

@@ -6,10 +6,10 @@ const path = require('path');
 const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const autoprefixer = require('autoprefixer');
-var dotenv = require('dotenv').config({
-  path: __dirname + '/variables.env'
-});
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
+const devMode = process.env.NODE_ENV !== 'production'
 
 /*
   webpack sees every file as a module.
@@ -35,6 +35,7 @@ const javascript = {
 const postcss = {
   loader: 'postcss-loader',
   options: {
+    sourceMap: true,
     plugins() {
       return [autoprefixer({
         browsers: 'last 3 versions'
@@ -45,12 +46,25 @@ const postcss = {
 
 // this is our sass/css loader. It handles files that are require('something.scss')
 const styles = {
-  test: /\.(scss)$/,
-  // here we pass the options as query params b/c it's short.
-  // remember above we used an object for each loader instead of just a string?
-  // We don't just pass an array of loaders, we run them through the extract plugin so they can be outputted to their own .css file
-  use: ExtractTextPlugin.extract(['css-loader?sourceMap', postcss, 'sass-loader?sourceMap'])
-};
+  test: /\.(sass)$/,
+  use: [
+    devMode ? 'style-loader' : MiniCssExtractPlugin.loader,
+    {
+      loader: 'css-loader',
+      options: {
+        sourceMap: true
+      }
+    },
+    postcss,
+    {
+      loader: 'sass-loader',
+      options: {
+        sourceMap: true
+      },
+    }
+  ],
+
+}
 
 const svgs = {
   test: /\.svg$/,
@@ -59,11 +73,11 @@ const svgs = {
 };
 
 // We can also use plugins - this one will compress the crap out of our JS
-const uglify = new webpack.optimize.UglifyJsPlugin({ // eslint-disable-line
-  compress: {
-    warnings: false
-  }
-});
+// const uglify = new webpack.optimize.UglifyJsPlugin({ // eslint-disable-line
+//   compress: {
+//     warnings: false
+//   }
+// });
 
 // OK - now it's time to put it all together
 const config = {
@@ -92,14 +106,24 @@ const config = {
   plugins: [
     // here is where we tell it to output our css to a separate file
     new ExtractTextPlugin('style.css'),
-    new webpack.DefinePlugin({
-      'NODE_ENV': JSON.stringify(process.env.NODE_ENV)
-    }),
-    new webpack.DefinePlugin({
-      "process.env": dotenv.parsed
-    }),
+    new MiniCssExtractPlugin({
+      // Options similar to the same options in webpackOptions.output
+      // both options are optional
+      filename: devMode ? '[name].css' : '[name].[hash].css',
+      chunkFilename: devMode ? '[id].css' : '[id].[hash].css',
+    })
 
-  ]
+
+  ],
+  optimization: {
+    minimizer: [
+      new UglifyJsPlugin({
+        cache: true,
+        parallel: true,
+        sourceMap: true
+      })
+    ]
+  }
 };
 // webpack is cranky about some packages using a soon to be deprecated API. shhhhhhh
 process.noDeprecation = true;
