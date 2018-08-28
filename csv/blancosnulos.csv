@@ -1,0 +1,109 @@
+﻿candidate,men,women,province
+voters,227.994,264.133,azuay
+absenteeism,85.264,69.208,azuay
+blanks,4.701,6.973,azuay
+nulls,13.51,18.031,azuay
+voters,67.708,71.216,bolivar
+absenteeism,14.144,12.334,bolivar
+blanks,2.618,3.469,bolivar
+nulls,6.426,8.275,bolivar
+voters,68.06,81.913,canar
+absenteeism,42.868,33.008,canar
+blanks,2.017,2.991,canar
+nulls,4.765,7.068,canar
+voters,60.408,61.946,carchi
+absenteeism,12.059,9.584,carchi
+blanks,1.34,1.322,carchi
+nulls,3.373,3.406,carchi
+voters,147.192,160.913,cotopaxi
+absenteeism,25.178,20.167,cotopaxi
+blanks,4.321,6.744,cotopaxi
+nulls,11.899,16.049,cotopaxi
+voters,155.58,174.734,chimborazo
+absenteeism,42.433,37.04,chimborazo
+blanks,4.263,8.152,chimborazo
+nulls,11.663,18.158,chimborazo
+voters,219.428,219.558,el oro
+absenteeism,47.004,35.752,el oro
+blanks,4.667,3.792,el oro
+nulls,12.16,14.286,el oro
+voters,153.921,158.529,esmeraldas
+absenteeism,46.89,32.072,esmeraldas
+blanks,7.209,6.185,esmeraldas
+nulls,16.632,17.461,esmeraldas
+voters,1.250.846,1.299.110,guayas
+absenteeism,280.455,248.626,guayas
+blanks,35.731,27.902,guayas
+nulls,78.945,91.714,guayas
+voters,145.654,156.918,imbabura
+absenteeism,31.184,26.394,imbabura
+blanks,4.014,4.379,imbabura
+nulls,10.563,12.216,imbabura
+voters,151.298,159.467,loja
+absenteeism,44.535,37.402,loja
+blanks,4.305,3.982,loja
+nulls,7.731,8.591,loja
+voters,281.97,278.009,los rios
+absenteeism,44.832,31.996,los rios
+blanks,15.427,11.019,los rios
+nulls,25.708,27.042,los rios
+voters,517.173,511.71,manabi
+absenteeism,90.498,73.872,manabi
+blanks,27.995,21.458,manabi
+nulls,45.642,46.411,manabi
+voters,46.367,47.775,morona santiago
+absenteeism,17.363,11.99,morona santiago
+blanks,1.21,1.851,morona santiago
+nulls,3.088,4.097,morona santiago
+voters,36.014,35.882,napo
+absenteeism,5.944,4.276,napo
+blanks,484,544,napo
+nulls,2.135,2.742,napo
+voters,28.3,28.843,pastaza
+absenteeism,7.375,5.184,pastaza
+blanks,524,556,pastaza
+nulls,1.727,2.046,pastaza
+voters,904.974,973.768,pichincha
+absenteeism,198.972,178.035,pichincha
+blanks,9.425,10.307,pichincha
+nulls,42.015,47.077,pichincha
+voters,180.463,195.074,tungurahua
+absenteeism,39.464,34.582,tungurahua
+blanks,2.967,4.356,tungurahua
+nulls,10.339,13.766,tungurahua
+voters,32.744,31.462,zamora chinchipe
+absenteeism,9.079,6.163,zamora chinchipe
+blanks,732,669,zamora chinchipe
+nulls,1.349,1.512,zamora chinchipe
+voters,8.153,7.496,galapagos
+absenteeism,2.513,2.044,galapagos
+blanks,88,60,galapagos
+nulls,295,383,galapagos
+voters,60.479,54.3,sucumbios
+absenteeism,14.44,8.28,sucumbios
+blanks,1.843,1.657,sucumbios
+nulls,4.711,5.068,sucumbios
+voters,49.746,44.233,orellana
+absenteeism,9.413,5.55,orellana
+blanks,1.381,1.439,orellana
+nulls,3.954,4.444,orellana
+voters,150.486,154.416,sto dom tsachilas
+absenteeism,32.894,24.155,sto dom tsachilas
+blanks,4.169,3.756,sto dom tsachilas
+nulls,11.003,11.928,sto dom tsachilas
+voters,110.03,110.755,sta elena
+absenteeism,11.208,7.435,sta elena
+blanks,3.247,3.414,sta elena
+nulls,6.411,7.826,sta elena
+voters,37.421,50.891,europa asia oceania
+absenteeism,67.191,81.166,europa asia oceania
+blanks,1.453,2.059,europa asia oceania
+nulls,3.488,5.222,europa asia oceania
+voters,17.454,13.518,eeuu canada
+absenteeism,45.175,34.377,eeuu canada
+blanks,255,218,eeuu canada
+nulls,773,692,eeuu canada
+voters,6.393,7.349,america latina caribe africa
+absenteeism,8.654,8.703,america latina caribe africa
+blanks,180,249,america latina caribe africa
+nulls,425,502,america latina caribe africa

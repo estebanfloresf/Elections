@@ -1,0 +1,84 @@
+@import "variables";
+
+body {
+  margin: 5px;
+
+
+}
+
+
+
+.bar {
+  fill: $color1;
+}
+.background-bar{
+  fill: $color2 ;
+  opacity: .4;
+}
+
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: $color3;
+  stroke-width: 0.4px;
+  shape-rendering: crispEdges;
+}
+.axis text{
+  background-color: black;
+}
+
+.x path {
+  display: none;
+}
+.toolTip {
+  position: absolute;
+  display: none;
+  min-width: 80px;
+  height: auto;
+  background: none repeat scroll 0 0 #ffffff;
+  border: 1px solid $color2;
+  padding: 14px;
+  text-align: center;
+
+}
+
+
+
+
+pattern{
+  fill: $color1;
+}
+
+
+div.media-body > svg.svgEmbed > path {
+  fill: red;
+
+}
+
+
+.barchart text{
+  fill: $color1;
+
+  font-size: .8em;
+  text-anchor: middle;
+  text-align: center;
+}
+
+
+.barchart .bartext{
+  fill: $color1;
+
+  font-size: .95em;
+  text-anchor: middle;
+}
+
+.pieText{
+  color: #fff200;
+  background-color: #fff200;
+} 
+
+
+
+
+

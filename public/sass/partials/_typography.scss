@@ -1,0 +1,25 @@
+body {
+  padding: 60px;
+  font-family: 'Abel', sans-serif;
+  font-size: 14px;
+}
+
+
+
+p {
+  color: $color3;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: $color3;
+}
+
+
+
+a.link{
+  color: #000;
+  background-color: white;
+  border-bottom: 2px solid $color4  ;
+  text-decoration: none;
+}
+

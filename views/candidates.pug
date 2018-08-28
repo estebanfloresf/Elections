@@ -1,0 +1,91 @@
+extends layout
+
+
+block content
+
+    .page-header
+        h1= title
+    .container-fluid
+        .row
+            p
+                | These are the candidates that postulated for the Presidential Election on Feb 29, 2017 in Ecuador.
+                | The results shown are the final results published by the
+                a.link(href="https://resultados2017.cne.gob.ec/frmResultados.aspx")  National Electoral Council
+
+
+
+        .row
+            .col-md-12
+                h4.text-center Sort By
+
+                .btn-group.btn-group-justified(role='sort')
+
+                    .btn-group(role='group')
+                        button(type='button',  class='btn sort' id='name' data-sort-value='name') Name
+
+                    .btn-group(role='group')
+                        button(type='button', class='btn sort' id='percentage' data-sort-value='percentage') Percentage
+
+
+        .row.candidate(id='grid')
+
+
+            each candidate in candidates
+
+                if candidate.president !== "null"
+                    - var lastname = candidate.president.split(' ').slice(-1).join(' ').trim();
+                    - var myNumeral = h.numeral;
+
+                .row.col-md-12.item(percentage=`${candidate.percentage}` name=`${candidate.president}`)
+                    .containerP
+                        .itemflex
+                            a(href='#')
+                                img.img-circle(src=`${candidate.photo_president}`, alt=`${candidate.president}`)
+
+                            a.fun_hover.text-capitalize(href='#')
+                                    h4  #{candidate.president}
+                            p.text-capitalize
+                                    small.orgpol #{candidate.polorg}
+                                    span(type='hidden', name=`${candidate.president}`, value=`${candidate.total}`)
+                        .itemflex
+                            div(id=`bar-${lastname}` class="barchart")
+                        .itemflex
+                            small Top 5 Provinces
+                            div(id=`pie-${lastname}` class="piechart")
+
+                        .itemflex
+                            .results
+                                h4 #{h.numeral(candidate.total).format('0,0')} votes
+                                .resultsSplit
+                                    .resultsSplitItem.women
+                                        div
+                                            span.glyphicon
+                                                img.svg(src=`../images/icons/women.svg` style="width:20px; height:20px")
+                                        div Women
+
+                                        div #{h.numeral(candidate.totalwomen).format('0,0')} votes
+
+
+                                    .resultsSplitItem.men
+                                        div
+                                            span.glyphicon
+                                                img.svg(src=`../images/icons/men.svg` style="width:20px; height:20px")
+                                        div Men
+
+                                        div #{h.numeral(candidate.totalmen).format('0,0')} votes
+
+
+
+
+                script(type='text/javascript').
+                    var candidate = [!{JSON.stringify(candidate)}]; //BarChart
+
+
+
+                script(src="/javascripts/candidates/candidateBar.js")
+
+                script(src="/javascripts/candidates/candidatePie.js")
+
+
+
+
