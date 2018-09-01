@@ -5,9 +5,9 @@ var $grid = $('#grid').isotope({
     itemSelector: '.item',
     sortAscending: {
         name: true,
-        
+
         percentage: false
-      },
+    },
     getSortData: {
         name: '[name]',
         percentage: '[percentage]'
@@ -25,14 +25,11 @@ $(".btn.sort").click(function () {
     $(this).addClass("active");
 
     var sortValue = $(this).attr('data-sort-value');
-    
-    console.log(sortValue);
+
+
 
     $grid.isotope({
         sortBy: sortValue
-    });   
+    });
 
 });
-
-
-

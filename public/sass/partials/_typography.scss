@@ -1,6 +1,6 @@
 body {
-  font-family: 'Abel', sans-serif;
-  font-size: 14px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 12px;
 }
 
 p {
@@ -14,11 +14,4 @@ h4,
 h5,
 h6 {
   color: $color3;
-}
-
-a.link {
-  color: #000;
-  background-color: white;
-  border-bottom: 2px solid $color4;
-  text-decoration: none;
 }

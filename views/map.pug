@@ -9,21 +9,21 @@ block content
 
     .col-md-12
 
-        .col-md-6.text-center
+        .col-sm-12.col-md-6.col-lg-6.text-center
             .row
                 small Select a province to see the results
 
             .row
                 div(id=`map`)
-        .col-md-6.justify-content-center
+        .col-sm-12.col-md-6.col-lg-6
             .row.province.text-center
 
 
-                img.svg(id="provimg" src=`../images/icons/defaultprov.svg` style="width:60px; height:40px; border: 1px solid #000")
+                img(id="provimg" src=`../images/icons/defaultprov.svg` )
                 h4.text-capitalize(id="provname") Ecuador
 
 
-            table.rwd-table
+            table.rwd-table(id="table_results")
                 thead
                     tr
 
@@ -37,23 +37,21 @@ block content
                             i.fas.fa-sort.fa-fw
 
                 tbody
-                    each candidate in candidates
-                        - var id = String(candidate._id).slice(-5);
-                        unless candidate.president === 'nulos' || candidate.president === 'blancos'
-                            tr
-                                td.text-capitalize.text-center(id=`${id}`)&attributes({'data-th': 'Candidate'})  #{candidate.president}
-                                td(id=`${id}-total`)&attributes({'data-th': 'Total'})  0
-                                td(id=`${id}-men`)&attributes({'data-th': 'Men'})  0
-                                td(id=`${id}-women`)&attributes({'data-th': 'Women'})  0
+                    tr 
+                        td(id="noprov") No Province selected yet
+                 
+                    //-         tr
+                    //-             td.text-capitalize.text-center(id=`${id}`)&attributes({'data-th': 'Candidate'})  #{candidate.president}
+                    //-             td(id=`${id}-total`)&attributes({'data-th': 'Total'})  0
+                    //-             td(id=`${id}-men`)&attributes({'data-th': 'Men'})  0
+                    //-             td(id=`${id}-women`)&attributes({'data-th': 'Women'})  0
 
 
 
 
-        script(type='text/javascript').
-            var provinces = !{JSON.stringify(provinces)};
-
-        script(src="/javascripts/modules/raphael.min.js")
-        script(src="/javascripts/candidates/candidateMap.js")
+            script(src="/javascripts/modules/raphael.min.js")
+        
+    
 
 
 

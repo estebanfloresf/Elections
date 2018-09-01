@@ -9,21 +9,60 @@
   }
 
   .navbar-nav {
-    .active {
-      background: $color4;
-      color: $color1;
-      font-weight: bold;
-      text-shadow: none;
-    }
+    text-shadow: none !important;
 
-    a {
-      text-shadow: none;
-      color: white;
+    li {
+      a {
+        text-shadow: none;
+        color: white;
+        border-bottom: 3px solid transparent;
 
-      &:hover,
-      &:focus {
-        background-color: $color4 !important;
+        &.active {
+          background: $color4;
+          color: $color1;
+          font-weight: bold;
+          text-shadow: none;
+
+          .svg {
+            width: 15px;
+            height: 15px;
+            margin-right: 3px;
+
+            path {
+              fill: $color1 !important;
+            }
+          }
+        }
+
+        .svg {
+          width: 15px;
+          height: 15px;
+          margin-right: 3px;
+          vertical-align: top;
+
+          path {
+            fill: white !important;
+          }
+        }
+
+        &:hover,
+        &:focus {
+          .svg path {
+            fill: $color4 !important;
+          }
+
+          background-color: $color3;
+          color: $color4;
+        }
       }
+    }
+  }
+
+  .navbar-toggle {
+    background-color: $color4;
+
+    .icon-bar {
+      border: 1px solid white;
     }
   }
 }

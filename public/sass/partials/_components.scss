@@ -47,3 +47,9 @@
 .btn {
   background-color: #e82c75;
 }
+
+@media(max-width: 767px) {
+  .container {
+    width: auto;
+  }
+}

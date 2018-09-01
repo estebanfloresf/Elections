@@ -21,8 +21,16 @@ router.get('/', function (req, res, next) {
 router.get('/candidates', catchErrors(candidateController.getCandidates));
 router.post('/addCandidate', catchErrors(candidateController.addCandidate));
 router.get('/surveys', catchErrors(surveyController.getSurveys));
-router.get('/map', catchErrors(provinceController.getProvinces));
+// renders map view
+router.get('/map', function (req, res, next) {
+  res.render('map', {
+    title: 'Map'
+  })
+});
+// returns map info
+router.get('/api/map', catchErrors(provinceController.getMapInfo));
 router.post('/provinceInfo', catchErrors(provinceController.provinceResults));
+
 
 
 module.exports = router;

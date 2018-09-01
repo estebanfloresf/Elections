@@ -92,7 +92,7 @@ const svgs = {
 const config = {
   entry: {
     // we only have 1 entry, but I've set it click for multiple in the future
-    App: './public/javascripts/delicious-app.js'
+    App: './public/javascripts/my-js.js'
   },
   // we're using sourcemaps and here is where we specify which kind of sourcemap to use
   devtool: 'source-map',
@@ -113,6 +113,23 @@ const config = {
   // remember we said webpack sees everthing as modules and how different loaders are responsible for different file types? Here is is where we implement them. Pass it the rules for our JS and our styles
   module: {
     rules: [javascript, styles, svgs]
+  },
+
+  devServer: {
+    contentBase: path.join(__dirname, '/public'), // serve your static files from here
+    watchContentBase: true, // initiate a page refresh if static content changes
+    proxy: [ // allows redirect of requests to webpack-dev-server to another destination
+      {
+        context: ['/api', '/auth'], // can have multiple
+        target: 'http://localhost:8080', // server and port to redirect to
+        secure: false,
+      },
+    ],
+    port: 3030, // port webpack-dev-server listens to, defaults to 8080
+    overlay: { // Shows a full-screen overlay in the browser when there are compiler errors or warnings
+      warnings: false, // defaults to false
+      errors: false, // defaults to false
+    },
   },
   // finally we pass it an array of our plugins - uncomment if you want to uglify
   // plugins: [uglify]

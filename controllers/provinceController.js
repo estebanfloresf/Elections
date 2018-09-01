@@ -3,7 +3,7 @@ const Province = mongoose.model('Province');
 const Results = mongoose.model('Results');
 const Candidate = mongoose.model('Candidate');
 
-exports.getProvinces = async (req, res) => {
+exports.getMapInfo = async (req, res) => {
 
     const provinces = await Province.find({
         "path": {
@@ -13,8 +13,8 @@ exports.getProvinces = async (req, res) => {
 
     const candidates = await Candidate.find({}).select('president _id ');
 
-    res.render('map', {
-        title: 'Map',
+    res.status(200).json({
+
         provinces,
         candidates
     });
@@ -27,14 +27,15 @@ exports.provinceResults = async (req, res) => {
     const province = await Province.findOne({
         name: req.body.province.trim()
     }).select('-path -__v');
-
+    const candidates = await Candidate.find({}).select('president _id ');
 
     const results = await Results.getProvinceResults(province._id);
 
     if (results) {
         res.status(200).json({
             results,
-            province
+            province,
+            candidates
         });
     } else {
 

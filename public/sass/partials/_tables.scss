@@ -59,7 +59,8 @@ $breakpoint-alpha: 480px; // adjust to your needs
 }
 
 .rwd-table {
-    text-align: center;
+    margin: 0 auto;
+    /* or margin: 0 auto 0 auto */
     background: $color3;
     color: #fff;
     border-radius: .4em;
@@ -85,6 +86,6 @@ $breakpoint-alpha: 480px; // adjust to your needs
 
     th,
     td:before {
-        color: #dd5;
+        color: $color4;
     }
 }

@@ -4,12 +4,16 @@
 // Works in Chrome, Firefox, Opera AND IE(8)
 // Only uses JQuery
 // Does alpha and numeric sorting - ascending and descending
+
+
+
+
 $('th').click(function () {
     var table = $(this).parents('table').eq(0);
 
     var rows = table.find('tr:gt(0)').toArray().sort(comparer($(this).index()));
     this.asc = !this.asc;
-    if (!this.asc) {
+    if (this.asc) {
         rows = rows.reverse()
     }
     for (var i = 0; i < rows.length; i++) {
@@ -19,7 +23,8 @@ $('th').click(function () {
 
 function comparer(index) {
     return function (a, b) {
-        var valA = getCellValue(a, index), valB = getCellValue(b, index)
+        var valA = getCellValue(a, index),
+            valB = getCellValue(b, index)
         return $.isNumeric(valA) && $.isNumeric(valB) ? valA - valB : valA.localeCompare(valB)
     }
 }

@@ -1,0 +1,17 @@
+.province {
+    fill: '#f1f1f1';
+    stroke: '#9c9c9c';
+    stroke-width: 1;
+    stroke-linejoin: 'round';
+    cursor: 'pointer';
+}
+
+.province_active {
+    fill: $color3;
+}
+
+#provimg {
+    height: 40px;
+    width: 60px;
+    border: 2px solid $color3;
+}
