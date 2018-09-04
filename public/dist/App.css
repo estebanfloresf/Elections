@@ -234,8 +234,9 @@ div.map > svg {
           flex: 1; }
 
 .barchart {
+  width: 100%;
   height: 120px;
-  padding-top: 20px; }
+  min-height: 120px; }
 
 .results {
   display: -webkit-box;
@@ -297,11 +298,10 @@ div.map > svg {
   padding-bottom: 5px; }
 
 .bar {
-  fill: #3581b8; }
+  fill: url() #3581b8; }
 
 .background-bar {
-  fill: #c4e5f5;
-  opacity: .4; }
+  fill: #c4e5f5; }
 
 .axis path,
 .axis line {
@@ -339,13 +339,17 @@ div.media-body > svg.svgEmbed > path {
   text-align: center; }
 
 .barchart .bartext {
-  fill: #3581b8;
+  color: #c4e5f5;
   font-size: .95em;
   text-anchor: middle; }
 
 .pieText {
   color: #fff200;
   background-color: #fff200; }
+
+.diagonal-stripe-2 {
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScxMCcgaGVpZ2h0PScxMCc+CiAgPHJlY3Qgd2lkdGg9JzEwJyBoZWlnaHQ9JzEwJyBmaWxsPSd3aGl0ZScvPgogIDxwYXRoIGQ9J00tMSwxIGwyLC0yCiAgICAgICAgICAgTTAsMTAgbDEwLC0xMAogICAgICAgICAgIE05LDExIGwyLC0yJyBzdHJva2U9J2JsYWNrJyBzdHJva2Utd2lkdGg9JzInLz4KPC9zdmc+");
+  background-repeat: repeat; }
 
 .table > thead > tr > th {
   cursor: pointer;
