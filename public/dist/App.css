@@ -107,7 +107,13 @@
     .my-navbar .navbar-nav li a {
       text-shadow: none;
       color: white;
-      border-bottom: 3px solid transparent; }
+      border-bottom: 3px solid transparent;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center; }
       .my-navbar .navbar-nav li a.active {
         background: #ffc531;
         color: #3581b8;
@@ -150,6 +156,24 @@ h4,
 h5,
 h6 {
   color: #1d3557; }
+
+.top5 {
+  margin-top: 5px; }
+
+.top7 {
+  margin-top: 7px; }
+
+.top10 {
+  margin-top: 10px; }
+
+.top15 {
+  margin-top: 15px; }
+
+.top17 {
+  margin-top: 17px; }
+
+.top30 {
+  margin-top: 30px; }
 
 .fun_hover {
   font-size: 2rem;

@@ -8,24 +8,16 @@ block content
     .container-fluid
 
 
-        .col-md-12
-
-
-            //.btn-group.btn-group-justified(role='sort')
-            //
-            //    .btn-group(role='group')
-            //        button(type='button',  class='btn sort' id='1round') 1st Round
-            //
-            //    .btn-group(role='group')
-            //        button(type='button', class='btn sort' id='2round') 2nd Round
+       
 
             each survey in surveys
 
                 if(survey.number === 1)
-                    .col-md-12
+                    .col-sm-12.col-md-12.col-lg-12
 
                         h2.text-capitalize.surveyTitle  #{survey.firm.name}
-                        dl.row
+                        .row.top-5
+                          dl
                             dt.col-sm-3 Date
                             dd.col-sm-9 #{h.moment(survey.date).format('DD/MM/YYYY')}
                             dt.col-sm-3 Error Range
@@ -37,12 +29,8 @@ block content
                             dt.col-sm-3 Source
                             dd.col-sm-9
                                 a(href=`${survey.source}`) Click Here
-
-
-
-                        .col-md-6
-
-
+                        .row.top-5
+                          .col-sm-12.col-md-12.col-lg-6
 
                             -var surveyID = survey.firm.slug.replace('.','').trim()
                             table.rwd-table(id=surveyID)
@@ -61,10 +49,7 @@ block content
                                         tr
                                             td.text-capitalize(scope='row' data-th="Candidate") #{candidate.candidate.president}
                                             td(data-th="Percentage") #{(candidate.percentage * 100).toFixed(2)}
-
-
-
-                        .col-md-6
+                          .col-sm-12.col-md-12.col-lg-6
                             div(id=`radar-${surveyID}`)
 
                             script(type='text/javascript').

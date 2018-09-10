@@ -16,6 +16,8 @@
         text-shadow: none;
         color: white;
         border-bottom: 3px solid transparent;
+        display: flex;
+        align-items: center;
 
         &.active {
           background: $color4;
