@@ -316,15 +316,18 @@ div.map > svg {
 .x path {
   display: none; }
 
-.toolTip {
+div.tooltip {
   position: absolute;
-  display: none;
-  min-width: 80px;
+  text-align: center;
+  width: 120px;
   height: auto;
-  background: none repeat scroll 0 0 #ffffff;
-  border: 1px solid #c4e5f5;
-  padding: 14px;
-  text-align: center; }
+  padding: 2px;
+  text-transform: capitalize;
+  color: whitesmoke;
+  background: #14131C;
+  border: 0px;
+  border-radius: 8px;
+  pointer-events: none; }
 
 pattern {
   fill: #3581b8; }

@@ -25,15 +25,19 @@
   display: none;
 }
 
-.toolTip {
-  position: absolute;
-  display: none;
-  min-width: 80px;
-  height: auto;
-  background: none repeat scroll 0 0 #ffffff;
-  border: 1px solid $color2;
-  padding: 14px;
-  text-align: center;
+div.tooltip {
+  position: absolute;			
+    text-align: center;			
+    width: 120px;					
+    height: auto;					
+    padding: 2px;				
+    text-transform: capitalize;
+    color: whitesmoke;
+    background: $purple-dark;	
+    border: 0px;		
+    border-radius: 8px;			
+    pointer-events: none;			
+ 
 }
 
 pattern {

@@ -10,7 +10,6 @@ function inlinesvg(e) {
     jQuery(e).each(function () {
 
         const $img = jQuery(this);
-
         const imgID = $img.attr('id');
         const imgClass = $img.attr('class');
         const imgURL = $img.attr('src');

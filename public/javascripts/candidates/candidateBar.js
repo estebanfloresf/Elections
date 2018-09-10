@@ -4,7 +4,7 @@ import textures from 'textures';
 
 
 
-function barTest(candidate) {
+function drawBar(candidate) {
 
 
   var p = Math.max(0, d3.precisionFixed(0.05));
@@ -19,7 +19,8 @@ function barTest(candidate) {
     width = parseInt(d3.select(".barchart").style("width")) - margin.left - margin.right,
     height = parseInt(d3.select(".barchart").style("height")) - margin.bottom - margin.top;
 
-  var tooltip = d3.select("body").append("div").attr("class", "toolTip");
+  var tooltip = d3.select("body").append("div").attr("class", "tooltip").style("opacity", 0);
+
   const texture =
     textures.lines()
     .size(4)
@@ -105,21 +106,26 @@ function barTest(candidate) {
   g
     .data([candidate])
     .on("mousemove", function (d) {
-
-      tooltip
-
-        .style("left", d3.event.pageX - 50 + "px")
-        .style("top", d3.event.pageY - 70 + "px")
-        .style("display", "inline-block")
-        .style("text-transform", "capitalize")
-        .html((d.president) + "<br>" + formatPercent(d.percentage));
+      if(d3.select(this).style("opacity") != 0){
+      tooltip.transition()
+        .duration(200)
+        .style("opacity", .9);		
+      tooltip.html((d.president) + "<br>" + formatPercent(d.percentage))
+        .style("left", (d3.event.pageX) + "px")
+        .style("top", (d3.event.pageY - 28) + "px");
+      }
     })
-    .on("mouseout", function (d) {
-      tooltip.style("display", "none");
-    });
+    .on("mouseout", function () {
+      tooltip.transition()   
+        .duration(200)      
+        .style("opacity", 0)
+        .style("left", 0)
+        .style("top", 0);
+    }
+    );
 }
 
-export function makeBarChart() {
+export function BarChart() {
 
   fetch('/api/candidates', {
       method: 'GET',
@@ -133,7 +139,7 @@ export function makeBarChart() {
 
       data.candidates.map((candidate) => {
         // createBarChart(candidate);
-        barTest(candidate);
+        drawBar(candidate);
       });
 
     })

@@ -4,7 +4,7 @@
 const mongoose = require('mongoose');
 const Candidate = mongoose.model('Candidate');
 const Results = mongoose.model('Results');
-const Province = mongoose.model('Province');
+// const Province = mongoose.model('Province');
 
 exports.getCandidates = async (req, res) => {
 
@@ -98,12 +98,8 @@ exports.getCandidatesInfo = async (req, res) => {
     return 0;
   }
 
-
   const totalvotes = await Results.getNationResults();
-
-  const candidates = await Candidate.getNationResults();
-
-
+  var candidates = await Candidate.getNationResults();
 
   // 1) Loop throught the array of candidates
   // 2) get the top provinces votes from each provinceand save it into an array
@@ -136,14 +132,13 @@ exports.getCandidatesInfo = async (req, res) => {
   }
 
 
-  candidates.forEach(function (candidate) {
-
-    candidate["percentage"] = ((candidate["total"] / totalvotes[0].total)).toFixed(4);
-    candidate["menPerc"] = ((candidate["totalmen"] / candidate['total'])).toFixed(4);
-    candidate["womenPerc"] = ((candidate["totalwomen"] / candidate['total'])).toFixed(4);
-
-  });
-
+  candidates = candidates.map((candidate)=>{
+    candidate['percentage'] =((candidate.total / totalvotes[0].total)).toFixed(4);
+    candidate['menPerc'] =((candidate.totalmen / totalvotes[0].total)).toFixed(4);
+    candidate['womenPerc'] =((candidate.totalwomen / totalvotes[0].total)).toFixed(4);
+    return candidate
+  })
+  
   candidates.sort(order);
 
 
@@ -153,3 +148,4 @@ exports.getCandidatesInfo = async (req, res) => {
   });
 
 };
+
