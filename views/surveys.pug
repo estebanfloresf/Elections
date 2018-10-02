@@ -7,29 +7,36 @@ block content
 
     .container-fluid
 
-
-       
-
             each survey in surveys
 
                 if(survey.number === 1)
-                    .col-sm-12.col-md-12.col-lg-12
+                    
+                      
+                      .col-sm-12.col-md-12.col-lg-12.survey-container
 
-                        h2.text-capitalize.surveyTitle  #{survey.firm.name}
-                        .row.top-5
-                          dl
-                            dt.col-sm-3 Date
-                            dd.col-sm-9 #{h.moment(survey.date).format('DD/MM/YYYY')}
-                            dt.col-sm-3 Error Range
-                            dd.col-sm-9
-                                | &plusmn;
-                                | #{survey.margin}
-                            dt.col-sm-3 Cities
-                            dd.col-sm-9.text-capitalize #{ survey.cities ? survey.cities : 'No results'}
-                            dt.col-sm-3 Source
-                            dd.col-sm-9
+                        h2.text-capitalize.survey-title  #{survey.firm.name}
+                        .row.top-15
+                          .col-sm-12.col-md-12.col-lg-12.survey-info
+                            .survey-info-item
+                              .title 
+                                h4 Date
+                              .description #{h.moment(survey.date).format('DD/MM/YYYY')}
+                            .survey-info-item
+                              .title
+                                h4 Error Range
+                              .description #{survey.margin}
+                            .survey-info-item
+                              .title
+                                h4  Cities
+                              .description #{ survey.cities ? survey.cities : 'No results'}
+                            .survey-info-item
+                              .title
+                                h4  Source
+                              .description 
                                 a(href=`${survey.source}`) Click Here
-                        .row.top-5
+                    
+                                  
+                        .row.top-15
                           .col-sm-12.col-md-12.col-lg-6
 
                             -var surveyID = survey.firm.slug.replace('.','').trim()
@@ -50,27 +57,9 @@ block content
                                             td.text-capitalize(scope='row' data-th="Candidate") #{candidate.candidate.president}
                                             td(data-th="Percentage") #{(candidate.percentage * 100).toFixed(2)}
                           .col-sm-12.col-md-12.col-lg-6
-                            div(id=`radar-${surveyID}`)
+                            div(id=`radar-${surveyID}` class="radar")
 
                             script(type='text/javascript').
                                 var survey = [!{JSON.stringify(survey)}];
                                 var candidates = !{JSON.stringify(finalArray)};
                             script(src="./javascripts/surveys/surveyRadar.js")
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
