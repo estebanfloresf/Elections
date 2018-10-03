@@ -52,6 +52,10 @@ fetch('/api/map', {
       });
 
       $(path[0]).click(function () {
+        var x = document.getElementById("spinner");
+        if (x.style.display === "none") {
+          x.style.display = "block";
+        }
         $('#noprov').remove();
         // On click of any province we perform the fetch of the data regarding that province
         fetch('/provinceInfo', {
@@ -65,7 +69,7 @@ fetch('/api/map', {
           })
           .then((response) => response.json())
           .then((data) => {
-
+            x.style.display = "none";
             // On click I add the image and the name of the province
             $('#provimg').attr('src', data.province.flag);
             $('#provname').html(data.province.name);

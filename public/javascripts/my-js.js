@@ -11,6 +11,7 @@ import {BarChart} from './candidates/candidateBar';
 import { PieChart} from './candidates/candidatePie';
 
 $(document).ready(function () {
+  
   inlinesvg($('img.svg'));
   BarChart();
   PieChart();

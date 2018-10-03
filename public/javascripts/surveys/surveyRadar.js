@@ -213,7 +213,7 @@ function RadarChart(id, data, options) {
     .attr("y", function (d) {
       return -d * radius / cfg.levels;
     })
-    .attr("dy", "0.4em")
+    .attr("dy", "-0.6em")
     .text(function (d, i) {
       return formatPercent(maxValue * d / cfg.levels);
     });
@@ -432,6 +432,7 @@ function RadarChart(id, data, options) {
       tooltip
         .attr('x', newX)
         .attr('y', newY)
+        .attr("class","radar-tooltip")
         .text(formatPercent(d.percentage))
         .transition()
         .duration(200)
