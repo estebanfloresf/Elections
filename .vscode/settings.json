@@ -1,6 +1,6 @@
 {
 
-    "[javascript]": {
+    "[javascript,scss,html]": {
         "editor.formatOnSave": true
     },
 }

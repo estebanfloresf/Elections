@@ -33,48 +33,45 @@ block content
             each candidate in candidates
 
                 if candidate.president !== "null"
-                    - var lastname = candidate.president.split(' ').slice(-1).join(' ').trim();
+                    - var id = String(candidate._id).slice(-5);
                     - var myNumeral = h.numeral;
 
-                .row.col-md-12.item(percentage=`${candidate.percentage}` name=`${candidate.president}`)
-                    .containerP
-                        .itemflex
-                            a(href='#')
-                                img.img-circle(src=`${candidate.photo_president}`, alt=`${candidate.president}`)
+          
+                .col-sm-12.col-md-12.col-lg-12.item.text-center.text-sm-center.text-md-center(percentage=`${candidate.percentage}` name=`${candidate.president}`)
+                  .col-sm-12.col-md-4.col-lg-3
+                    a(href='#')
+                      img.img-circle(src=`${candidate.photo_president}`, alt=`${candidate.president}`)
+                    a.text-capitalize(href='#')
+                      h4  #{candidate.president}
+                    p.text-capitalize
+                      small.orgpol #{candidate.polorg}
+                      span(type='hidden', name=`${candidate.president}`, value=`${candidate.total}`)
+                  .col-sm-12.col-md-4.col-lg-3
+                    div(id=`bar-${id}` class="barchart")
+                  .col-sm-12.col-md-4.col-lg-3
+                    small Top 5 Provinces
+                    div(id=`pie-${id}` class="piechart")
+                  .col-sm-12.col-md-12.col-lg-3
+                     .results
+                        h4 #{h.numeral(candidate.total).format('0,0')} votes
+                        .resultsSplit
+                            .resultsSplitItem.women
+                                div
+                                    span.glyphicon
+                                        img.svg(src=`../images/icons/women.svg` style="width:20px; height:20px")
+                                div Women
 
-                            a.fun_hover.text-capitalize(href='#')
-                                    h4  #{candidate.president}
-                            p.text-capitalize
-                                    small.orgpol #{candidate.polorg}
-                                    span(type='hidden', name=`${candidate.president}`, value=`${candidate.total}`)
-                        .itemflex
-                            div(id=`bar-${lastname}` class="barchart")
-                        .itemflex
-                            small Top 5 Provinces
-                            div(id=`pie-${lastname}` class="piechart")
-
-                        .itemflex
-                            .results
-                                h4 #{h.numeral(candidate.total).format('0,0')} votes
-                                .resultsSplit
-                                    .resultsSplitItem.women
-                                        div
-                                            span.glyphicon
-                                                img.svg(src=`../images/icons/women.svg` style="width:20px; height:20px")
-                                        div Women
-
-                                        div #{h.numeral(candidate.totalwomen).format('0,0')} votes
+                                div #{h.numeral(candidate.totalwomen).format('0,0')} votes
 
 
-                                    .resultsSplitItem.men
-                                        div
-                                            span.glyphicon
-                                                img.svg(src=`../images/icons/men.svg` style="width:20px; height:20px")
-                                        div Men
+                            .resultsSplitItem.men
+                                div
+                                    span.glyphicon
+                                        img.svg(src=`../images/icons/men.svg` style="width:20px; height:20px")
+                                div Men
 
-                                        div #{h.numeral(candidate.totalmen).format('0,0')} votes
-
-
+                                div #{h.numeral(candidate.totalmen).format('0,0')} votes
+                  
 
 
                 script(type='text/javascript').
@@ -82,10 +79,8 @@ block content
 
 
 
-                script(src="/javascripts/candidates/candidateBar.js")
+                //- script(src="/javascripts/candidates/candidateBar.js")
 
-                script(src="/javascripts/candidates/candidatePie.js")
+                //- script(src="/javascripts/candidates/candidatePie.js")
 
-
-
-
+        

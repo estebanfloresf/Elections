@@ -14,8 +14,12 @@ block content
                 small Select a province to see the results
 
             .row
+                .fa-3x(id='spinner' style="display:none")
+                  i.fas.fa-spinner.fa-spin
+
                 div(id=`map`)
         .col-sm-12.col-md-6.col-lg-6
+            
             .row.province.text-center
 
 
@@ -40,16 +44,9 @@ block content
                     tr 
                         td(id="noprov") No Province selected yet
                  
-                    //-         tr
-                    //-             td.text-capitalize.text-center(id=`${id}`)&attributes({'data-th': 'Candidate'})  #{candidate.president}
-                    //-             td(id=`${id}-total`)&attributes({'data-th': 'Total'})  0
-                    //-             td(id=`${id}-men`)&attributes({'data-th': 'Men'})  0
-                    //-             td(id=`${id}-women`)&attributes({'data-th': 'Women'})  0
-
-
-
 
             script(src="/javascripts/modules/raphael.min.js")
+            script(src="/javascripts/candidates/candidateMap.js")
         
     
 

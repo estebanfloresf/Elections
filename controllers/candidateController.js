@@ -4,98 +4,148 @@
 const mongoose = require('mongoose');
 const Candidate = mongoose.model('Candidate');
 const Results = mongoose.model('Results');
-const Province = mongoose.model('Province');
+// const Province = mongoose.model('Province');
 
-exports.getCandidates = async (req, res) =>{
+exports.getCandidates = async (req, res) => {
 
-   //Order the candidates by their total votes
-    function order(a,b) {
+  //Order the candidates by their total votes
+  function order(a, b) {
 
 
-        if(a.total < b.total) {
-            return -1;
-        }
-        if(a.total > b.total) {
-            return 1;
-        }
-        return 0;
+    if (a.total < b.total) {
+      return -1;
     }
-
-
-    const totalvotes = await Results.getNationResults();
-
-    const candidates =  await Candidate.getNationResults();
-
-
-
-    // 1) Loop throught the array of candidates
-    // 2) get the top provinces votes from each provinceand save it into an array
-    //3) save that array as part of the candidate value
-
-    for(let i=0; i<candidates.length; i++){
-
-        const topProvinces = await Results.getTopProvinces( candidates[i]._id);
-
-        var totalPercentage = 0;
-
-        topProvinces.forEach(function (elem) {
-
-            totalPercentage += elem.men+ elem.women;
-
-        });
-
-
-        candidates[i]['topProvinces'] = [];
-        topProvinces.forEach(function (elem) {
-
-
-            candidates[i]['topProvinces'].push({
-                province : elem.province.name,
-                percentage: ((elem.men+elem.women)/ totalPercentage).toFixed(4),
-
-            });
-        });
-
-
-
-
+    if (a.total > b.total) {
+      return 1;
     }
+    return 0;
+  }
+
+
+  const totalvotes = await Results.getNationResults();
+
+  const candidates = await Candidate.getNationResults();
 
 
 
-    candidates.forEach(function (candidate) {
+  // 1) Loop throught the array of candidates
+  // 2) get the top provinces votes from each provinceand save it into an array
+  //3) save that array as part of the candidate value
 
+  for (let i = 0; i < candidates.length; i++) {
 
+    const topProvinces = await Results.getTopProvinces(candidates[i]._id);
 
-        candidate["percentage"] = ((candidate["total"] / totalvotes[0].total) ).toFixed(4);
-        candidate["menPerc"] = ((candidate["totalmen"] / candidate['total']) ).toFixed(4);
-        candidate["womenPerc"] = ((candidate["totalwomen"] / candidate['total']) ).toFixed(4);
+    var totalPercentage = 0;
 
+    topProvinces.forEach(function (elem) {
+
+      totalPercentage += elem.men + elem.women;
 
     });
 
-    candidates.sort(order);
+
+    candidates[i]['topProvinces'] = [];
+    topProvinces.forEach(function (elem) {
 
 
-    res.render('candidates', {title: "Candidates",  candidates});
+      candidates[i]['topProvinces'].push({
+        province: elem.province.name,
+        percentage: ((elem.men + elem.women) / totalPercentage).toFixed(4),
+
+      });
+    });
+
+
+
+
+  }
+
+
+
+  candidates.forEach(function (candidate) {
+
+
+
+    candidate["percentage"] = ((candidate["total"] / totalvotes[0].total)).toFixed(4);
+    candidate["menPerc"] = ((candidate["totalmen"] / candidate['total'])).toFixed(4);
+    candidate["womenPerc"] = ((candidate["totalwomen"] / candidate['total'])).toFixed(4);
+
+
+  });
+
+  candidates.sort(order);
+
+
+  res.render('candidates', {
+    title: "Candidates",
+    candidates
+  });
 
 };
+exports.getCandidatesInfo = async (req, res) => {
+
+  //Order the candidates by their total votes
+  function order(a, b) {
 
 
-exports.editCandidate = (req,res) =>{
-  res.render('editCandidate', {title:'Edit Candidate'});
-};
-
-exports.addCandidate = async (req,res) =>{
-    // res.json(req.body);
-    const candidate = await (new Candidate(req.body)).save();
-
-
-    if (!candidate){
-        req.flash('error','Whoops something went wrong');
+    if (a.total < b.total) {
+      return -1;
     }
+    if (a.total > b.total) {
+      return 1;
+    }
+    return 0;
+  }
 
-    req.flash('success', `Succesfully created ${candidate.name}`);
-    res.redirect('/');
+  const totalvotes = await Results.getNationResults();
+  var candidates = await Candidate.getNationResults();
+
+  // 1) Loop throught the array of candidates
+  // 2) get the top provinces votes from each provinceand save it into an array
+  //3) save that array as part of the candidate value
+
+  for (let i = 0; i < candidates.length; i++) {
+
+    const topProvinces = await Results.getTopProvinces(candidates[i]._id);
+
+    var totalPercentage = 0;
+
+    topProvinces.forEach(function (elem) {
+
+      totalPercentage += elem.men + elem.women;
+
+    });
+
+
+    candidates[i]['topProvinces'] = [];
+    topProvinces.forEach(function (elem) {
+
+
+      candidates[i]['topProvinces'].push({
+        province: elem.province.name,
+        percentage: ((elem.men + elem.women) / totalPercentage).toFixed(4),
+
+      });
+    });
+
+  }
+
+
+  candidates = candidates.map((candidate)=>{
+    candidate['percentage'] =((candidate.total / totalvotes[0].total)).toFixed(4);
+    candidate['menPerc'] =((candidate.totalmen / totalvotes[0].total)).toFixed(4);
+    candidate['womenPerc'] =((candidate.totalwomen / totalvotes[0].total)).toFixed(4);
+    return candidate
+  })
+  
+  candidates.sort(order);
+
+
+  res.status(200).json({
+
+    candidates
+  });
 
 };
+

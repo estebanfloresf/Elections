@@ -1,30 +1,105 @@
+.survey-container {
+  // // min-height: 300px;
+  // min-height: 100px;
 
-.table>thead>tr>th {
-  cursor: pointer;
-  border-bottom: 1px solid $color3;
-  color: $color1;
+  border: 1px solid $grey;
+  // z-index: -2;
+  border-radius: 2px;
+  margin: 15px auto;
+  position: relative;
+
+
+  .survey-title {
+    position: absolute;
+    top: -40px;
+    background-color: $color3;
+    padding: 5px;
+    font-size: 22px;
+    color: #fff;
+    z-index: 2;
+    &::after{
+    
+        content: " ";
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        background: $color3;
+        transform-origin: bottom left;
+        -ms-transform: skew(-30deg, 0deg);
+        -webkit-transform: skew(-30deg, 0deg);
+        transform: skew(-30deg, 0deg);
+    
+    }
+  }
 }
 
-.table>thead>tr>th > span > img.svg {
-  padding-bottom: 2px;
+// surveys info
 
+.survey-info{
+  display: flex;
+  justify-content: space-evenly;
+  align-content: center;
+  margin: 10px 5px ;
+  text-align: center;
+}
+.survey-info-item{
+  display: flex;
+  flex-direction: column;
+  .title{
+    h4{
+      color: $color3;
+      border-bottom: 1px solid $grey;
+    }
+  }
+  .description{
+    text-transform: capitalize;
+  }
 }
 
 
-.surveyTitle{
-  padding-left: 20px;
-  border-bottom: 1px solid $color3;
+
+// SVG RADAR CSS D3
+
+.radar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+
+  svg {
+    margin: 0 auto;
+    display: block;
+    background-color: $shad;
+    border-radius: 3px;
+  }
 }
 
-dl.row {
-
-  margin: 5px;
-  margin-top: 15px;
+.radar-text,
+.radar-axisLabel {
+  text-transform: capitalize;
+  fill: $black;
+  font-size: 8px;
 }
 
-dl.row > dd> a {
-  color: #000;
-  background-color: white;
-  border-bottom: 2px solid $color4  ;
-  text-decoration: none;
+
+.label {
+  fill: $black;
+  font-size: 8px;
+}
+
+.radar-tooltip{
+  position: absolute;			
+    text-align: center;			
+    width: 60px;					
+    height: 28px;					
+    padding: 2px;				
+    font: 12px sans-serif;		
+    background: lightsteelblue;	
+    border: 0px;		
+    border-radius: 8px;			
+    pointer-events: none;			
 }

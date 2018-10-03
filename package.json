@@ -48,6 +48,7 @@
     "pug": "2.0.0-rc.4",
     "slugs": "0.1.3",
     "style-loader": "^0.23.0",
+    "textures": "^1.2.0",
     "topojson": "^3.0.0",
     "util.promisify": "^1.0.0",
     "uuid": "3.2.1",
