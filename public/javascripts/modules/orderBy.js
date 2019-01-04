@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 8d124a91603859c16671a3116591e96a149e60b5
 $("#percentage").first().addClass("active");
 
 // Isotope https://isotope.metafizzy.co/sorting.html
@@ -7,9 +10,15 @@ var $grid = $('#grid').isotope({
     itemSelector: '.item',
     sortAscending: {
         name: true,
+<<<<<<< HEAD
         
         percentage: false
       },
+=======
+
+        percentage: false
+    },
+>>>>>>> 8d124a91603859c16671a3116591e96a149e60b5
     getSortData: {
         name: '[name]',
         percentage: '[percentage]'
@@ -19,6 +28,7 @@ var $grid = $('#grid').isotope({
 });
 
 
+<<<<<<< HEAD
 // This function is for sorting the candidates 
 $(".btn.sort").click(function () {
     $(".btn.sort").removeClass("active");
@@ -128,3 +138,21 @@ jQuery(function ($) {
   }
 });
 
+=======
+
+// This function is for sorting the candidates 
+$(".btn.sort").click(function () {
+
+    $(".btn.sort").removeClass("active");
+    $(this).addClass("active");
+
+    var sortValue = $(this).attr('data-sort-value');
+
+
+
+    $grid.isotope({
+        sortBy: sortValue
+    });
+
+});
+>>>>>>> 8d124a91603859c16671a3116591e96a149e60b5

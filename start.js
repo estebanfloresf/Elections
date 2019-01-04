@@ -42,6 +42,7 @@ app.listen(port, function() {
 });
 
 
+<<<<<<< HEAD
 // const server = app.listen(app.get('port'), () => {
 //   console.log(`Express running → PORT ${server.address().port}`);
 //   console.log(`http://localhost:${server.address().port}`)
@@ -51,3 +52,5 @@ app.listen(port, function() {
 /**
  * Created by esteban on 26/6/17.
  */
+=======
+>>>>>>> 8d124a91603859c16671a3116591e96a149e60b5

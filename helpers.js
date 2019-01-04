@@ -23,7 +23,11 @@ exports.staticMap = ([lng, lat]) => `https://maps.googleapis.com/maps/api/static
 exports.icon = (name) => fs.readFileSync(`./public/images/icons/${name}.svg`);
 
 // Some details about the site
+<<<<<<< HEAD
 exports.siteName = 'Elections 2017';
+=======
+exports.siteName = `Elections 2017`;
+>>>>>>> 8d124a91603859c16671a3116591e96a149e60b5
 
 exports.menu = [
     // { slug: '/dashboard', title: 'Dashboard', icon: 'dashboard', },

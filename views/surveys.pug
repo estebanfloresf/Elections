@@ -7,6 +7,7 @@ block content
 
     .container-fluid
 
+<<<<<<< HEAD
 
         .col-md-12
 
@@ -46,10 +47,47 @@ block content
 
                             -var surveyID = survey.firm.slug.replace('.','').trim()
                             table.table.table-hover.table-sm.table-responsive.sortable(id=surveyID)
+=======
+            each survey in surveys
+
+                if(survey.number === 1)
+                    
+                      
+                      .col-sm-12.col-md-12.col-lg-12.survey-container
+
+                        h2.text-capitalize.survey-title  #{survey.firm.name}
+                        .row.top-15
+                          .col-sm-12.col-md-12.col-lg-12.survey-info
+                            .survey-info-item
+                              .title 
+                                h4 Date
+                              .description #{h.moment(survey.date).format('DD/MM/YYYY')}
+                            .survey-info-item
+                              .title
+                                h4 Error Range
+                              .description #{survey.margin}
+                            .survey-info-item
+                              .title
+                                h4  Cities
+                              .description #{ survey.cities ? survey.cities : 'No results'}
+                            .survey-info-item
+                              .title
+                                h4  Source
+                              .description 
+                                a(href=`${survey.source}`) Click Here
+                    
+                                  
+                        .row.top-15
+                          .col-sm-12.col-md-12.col-lg-6
+
+                            -var surveyID = survey.firm.slug.replace('.','').trim()
+                            table.rwd-table(id=surveyID)
+>>>>>>> 8d124a91603859c16671a3116591e96a149e60b5
                                 thead
                                     tr
 
                                         th Candidate
+<<<<<<< HEAD
                                             span.glyphicon
                                                 img.svg(src=`../images/icons/sort.svg` style="width:20px; height:20px")
                                         th Percentage
@@ -66,10 +104,26 @@ block content
 
                         .col-md-6
                             div(id=`radar-${surveyID}`)
+=======
+                                            i.fas.fa-sort.fa-fw
+                                            
+                                        th Percentage
+                                            i.fas.fa-sort.fa-fw
+
+                                            
+                                tbody
+                                    each candidate in survey.candidates
+                                        tr
+                                            td.text-capitalize(scope='row' data-th="Candidate") #{candidate.candidate.president}
+                                            td(data-th="Percentage") #{(candidate.percentage * 100).toFixed(2)}
+                          .col-sm-12.col-md-12.col-lg-6
+                            div(id=`radar-${surveyID}` class="radar")
+>>>>>>> 8d124a91603859c16671a3116591e96a149e60b5
 
                             script(type='text/javascript').
                                 var survey = [!{JSON.stringify(survey)}];
                                 var candidates = !{JSON.stringify(finalArray)};
+<<<<<<< HEAD
                             script(src="./javascripts/surveys/surveyRadar.js")
 
 
@@ -89,3 +143,6 @@ block content
 
 
 
+=======
+                            script(src="./javascripts/surveys/surveyRadar.js")
+>>>>>>> 8d124a91603859c16671a3116591e96a149e60b5

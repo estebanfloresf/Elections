@@ -1,0 +1,70 @@
+.my-navbar {
+  background-color: $color3;
+  border: 0;
+  border-radius: 0;
+  color: white;
+
+  .navbar-brand {
+    color: white;
+  }
+ 
+  .navbar-nav {
+    text-shadow: none !important;
+
+    li {
+      a {
+        text-shadow: none;
+        color: white;
+        border-bottom: 3px solid transparent;
+        display: flex;
+        align-items: center;
+
+        &.active {
+          background: $color4;
+          color: $color1;
+          font-weight: bold;
+          text-shadow: none;
+
+          .svg {
+            width: 15px;
+            height: 15px;
+            margin-right: 3px;
+
+            path {
+              fill: $color1 !important;
+            }
+          }
+        }
+
+        .svg {
+          width: 15px;
+          height: 15px;
+          margin-right: 3px;
+          vertical-align: top;
+
+          path {
+            fill: white !important;
+          }
+        }
+
+        &:hover,
+        &:focus {
+          .svg path {
+            fill: $color4 !important;
+          }
+
+          background-color: $color3;
+          color: $color4;
+        }
+      }
+    }
+  }
+
+  .navbar-toggle {
+    background-color: $color4;
+
+    .icon-bar {
+      border: 1px solid white;
+    }
+  }
+}
