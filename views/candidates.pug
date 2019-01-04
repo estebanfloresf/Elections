@@ -26,36 +26,48 @@ block content
                     .btn-group(role='group')
                         button(type='button', class='btn sort' id='percentage' data-sort-value='percentage') Percentage
 
+        .row
+            ul.flex-container
+                li.flex-item 
+                    h4 Candidate
+                li.flex-item 
+                    h4 Percentage
+                li.flex-item 
+                    h4 Top Provinces
+                li.flex-item 
+                    h4 Votes
 
+     
         .row.candidate(id='grid')
-
-
+            
             each candidate in candidates
 
                 if candidate.president !== "null"
                     - var lastname = candidate.president.split(' ').slice(-1).join(' ').trim();
-                    - var myNumeral = h.numeral;
-
+                    
+                
                 .row.col-md-12.item(percentage=`${candidate.percentage}` name=`${candidate.president}`)
                     .containerP
                         .itemflex
-                            a(href='#')
-                                img.img-circle(src=`${candidate.photo_president}`, alt=`${candidate.president}`)
+                            a()
+                                img.img-thumbnail(src=`${candidate.photo_president}`, alt=`${candidate.president}`)
 
-                            a.fun_hover.text-capitalize(href='#')
-                                    h4  #{candidate.president}
+                            a.fun_hover.text-capitalize()
+                                    h5  #{candidate.president}
                             p.text-capitalize
                                     small.orgpol #{candidate.polorg}
-                                    span(type='hidden', name=`${candidate.president}`, value=`${candidate.total}`)
+                                    
                         .itemflex
                             div(id=`bar-${lastname}` class="barchart")
                         .itemflex
-                            small Top 5 Provinces
+                            
                             div(id=`pie-${lastname}` class="piechart")
 
                         .itemflex
                             .results
-                                h4 #{h.numeral(candidate.total).format('0,0')} votes
+                                
+                                h4.timer.count-title.count-number(data-to=`${candidate.total}`, data-speed='1500') 
+                                    
                                 .resultsSplit
                                     .resultsSplitItem.women
                                         div
@@ -63,7 +75,7 @@ block content
                                                 img.svg(src=`../images/icons/women.svg` style="width:20px; height:20px")
                                         div Women
 
-                                        div #{h.numeral(candidate.totalwomen).format('0,0')} votes
+                                        div.timer.count-title.count-number(data-to=`${candidate.totalwomen}`, data-speed='1500') 
 
 
                                     .resultsSplitItem.men
@@ -72,7 +84,7 @@ block content
                                                 img.svg(src=`../images/icons/men.svg` style="width:20px; height:20px")
                                         div Men
 
-                                        div #{h.numeral(candidate.totalmen).format('0,0')} votes
+                                        div.timer.count-title.count-number(data-to=`${candidate.totalmen}`, data-speed='1500') div #{h.numeral(candidate.totalmen).format('0,0')} votes
 
 
 

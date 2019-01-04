@@ -7,10 +7,26 @@ var formatPercent = d3.format("." + p + "%");
 
 
 var svg = d3.select("#bar-" + last).append('svg:svg'),
-    margin = {top: 5, right: 10, bottom: 1, left: 6},
+    margin = {
+        top: 5,
+        right: 5,
+        bottom: 1,
+        left: 6
+    },
     width = +300 - margin.left - margin.right - 20,
-    height = +80 -  margin.bottom - 20;
+    height = +80 - margin.bottom - 20;
 
+
+
+// var aspect = width / height,
+//     chart = d3.select("#bar-" + last);
+// d3.select(window)
+//     .on("resize", function () {
+//         console.log("entro");
+//         var targetWidth = chart.node().getBoundingClientRect().width;
+//         chart.attr("width", targetWidth);
+//         chart.attr("height", targetWidth / aspect);
+//     });
 
 var tooltip = d3.select("body").append("div").attr("class", "toolTip");
 
@@ -53,41 +69,52 @@ g.selectAll(".background-bar")
     .data(data)
     .enter()
     .append("rect")
-        .attr("class", "background-bar")
-        .attr("y", function (d) {
+    .attr("class", "background-bar")
+    .attr("y", function (d) {
 
-            return y(d.candidate);
-        })
-        .attr("width", function (d) {
-            return x(1 - d.percentage);
-        })
-        .attr("x", function (d) {
-            return x(d.percentage);
-        })
-        .attr("height", y.bandwidth());
+        return y(d.candidate);
+    })
+    .attr("width", function (d) {
+        return x(1 - d.percentage);
+    })
+    .attr("x", function (d) {
+        return x(d.percentage);
+    })
+    .attr("height", y.bandwidth());
 
 
 g.append("text")
-        .text(function (d) {
+    .text(function (d) {
 
-            return formatPercent( data[0].percentage);
-        })
-        .attr("x", function (d) {
+        return formatPercent(data[0].percentage);
+    })
+    .attr("x", function (d) {
 
-            return x(data[0].percentage)+20;
-        })
-        .attr("class", "bartext")
+        return x(data[0].percentage) + 20;
+    })
+    .attr("class", "bartext")
 
-        .attr("y", function (d) {
+    .attr("y", function (d) {
 
-            return  y(data[0].candidate)+28;
-        });
+        return y(data[0].candidate) + 28;
+    });
 
 var pattern = g.append("pattern")
-    .attrs({id: "hash4_4", width: "8", height: "2", patternUnits: "userSpaceOnUse", patternTransform: "rotate(0)"})
+    .attrs({
+        id: "hash4_4",
+        width: "8",
+        height: "2",
+        patternUnits: "userSpaceOnUse",
+        patternTransform: "rotate(0)"
+    })
     .append("rect")
 
-    .attrs({width: "4", height: "8", transform: "translate(0,0)", id: "pattern"});
+    .attrs({
+        width: "4",
+        height: "8",
+        transform: "translate(0,0)",
+        id: "pattern"
+    });
 
 var graph = g.selectAll(".bar")
     .data(data)
@@ -133,22 +160,14 @@ graph.transition()
 
 graph.on("mousemove", function (d) {
 
-    tooltip
+        tooltip
 
-        .style("left", d3.event.pageX - 50 + "px")
-        .style("top", d3.event.pageY - 70 + "px")
-        .style("display", "inline-block")
-        .style("text-transform", "capitalize")
-        .html((d.president) + "<br>" + formatPercent(d.percentage));
-})
+            .style("left", d3.event.pageX - 50 + "px")
+            .style("top", d3.event.pageY - 70 + "px")
+            .style("display", "inline-block")
+            .style("text-transform", "capitalize")
+            .html((d.president) + "<br>" + formatPercent(d.percentage));
+    })
     .on("mouseout", function (d) {
         tooltip.style("display", "none");
     });
-
-
-
-
-
-
-
-

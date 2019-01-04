@@ -63,7 +63,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/ 	return __webpack_require__(__webpack_require__.s = 5);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -152,19 +152,21 @@ function inlinesvg(e) {
 exports.default = inlinesvg;
 
 /***/ }),
-/* 2 */
+/* 2 */,
+/* 3 */,
+/* 4 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 3 */
+/* 5 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(2);
+__webpack_require__(4);
 
 var _bling = __webpack_require__(0);
 
@@ -173,6 +175,10 @@ var _inline_svg = __webpack_require__(1);
 var _inline_svg2 = _interopRequireDefault(_inline_svg);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+// import orderBy from './modules/orderBy';
+
+// import resize from './modules/resizeCharts';
 
 (0, _inline_svg2.default)((0, _bling.$$)('.svgEmbed'));
 

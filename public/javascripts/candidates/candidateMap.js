@@ -4,120 +4,76 @@ var map_height = 500;
 var mapContainer = document.getElementById('map');
 var map = new Raphael(mapContainer, map_width, map_height);
 
-
-
 var style = {
-    fill: "#f1f1f1",
-    stroke: "#9c9c9c",
-    "stroke-width": 1,
-    "stroke-linejoin": "round",
-    cursor: "pointer"
+	fill: '#f1f1f1',
+	stroke: '#9c9c9c',
+	'stroke-width': 1,
+	'stroke-linejoin': 'round',
+	cursor: 'pointer'
 };
-
 
 var provMap = {};
 
-provinces.map(function (obj) {
-
-        provMap[obj.name] = map.path( obj.path);
-        // return newprov;
-
+provinces.map(function(obj) {
+	provMap[obj.name] = map.path(obj.path);
+	// return newprov;
 });
 
-
-
-
 for (var province in provMap) {
-    provMap[province]
-        .attr(style)
-
-        .attr("class", province);
-
+	provMap[province].attr(style).attr('class', province);
 }
-
 
 map.setViewBox(0, 5, 1800, 1800);
 
 // Setting preserveAspectRatio to 'none' lets you stretch the SVG
 map.canvas.setAttribute('preserveAspectRatio', 'none');
 
-
 var animationSpeed = 300;
 var hoverStyle = {
-    fill: "#3581b8"
+	fill: '#3581b8'
 };
 
-var provinceSelect = "";
+var provinceSelect = '';
 for (province in provMap) {
-    (function (region) {
+	(function(region) {
+		region.attr(style);
 
-        region.attr(style);
+		$(region[0]).mouseover(function() {
+			region.animate(hoverStyle, animationSpeed);
+		});
 
+		$(region[0]).click(function() {
+			var a = document.querySelectorAll('.pselected');
+			a.map((e) => {
+				$(e).removeClass('pselected');
+				e.setAttribute('style', 'fill:#f1f1f1');
+			});
 
+			$.ajax({
+				method: 'POST',
+				url: '/provinceInfo',
+				data: { province: this.getAttribute('class') },
+				success: function(data) {
+					$('#provimg').attr('src', data.province.flag);
+					$('#provname').html(data.province.name);
 
-        $(region[0]).mouseover(function () {
+					data.results.forEach(function(province) {
+						var lastname = province.president.split(' ').slice(-1).join(' ').trim();
 
-            region.animate(hoverStyle, animationSpeed);
-        });
+						$('#' + lastname + '-total').html(parseInt(province.total, 0));
+						$('#' + lastname + '-men').html(province.totalmen);
+						$('#' + lastname + '-women').html(province.totalwomen);
+					});
+				}
+			});
 
-        $(region[0]).click(function () {
+			$(this).addClass('pselected');
 
+			this.setAttribute('style', 'fill:#1d3557');
+		});
 
-
-
-            var a = document.querySelectorAll('.pselected');
-            a.map(e => {
-                $(e).removeClass('pselected');
-                e.setAttribute('style','fill:#f1f1f1')
-            });
-
-            $.ajax({
-                method: "POST",
-                url: "/provinceInfo",
-                data: { province: this.getAttribute('class')},
-            success : function(data){
-
-
-
-                    $('#provimg').attr("src",data.province.flag);
-                    $('#provname').html(data.province.name);
-
-                    data.results.forEach(function (province) {
-
-
-
-                        var lastname = province.president.split(' ').slice(-1).join(' ').trim();
-
-
-
-
-                        $('#'+lastname+'-total').html(parseInt(province.total,0));
-                        $('#'+lastname+'-men').html(province.totalmen);
-                        $('#'+lastname+'-women').html(province.totalwomen);
-
-
-
-                    });
-
-
-                }
-            });
-
-            $(this).addClass('pselected');
-
-            this.setAttribute('style', 'fill:#1d3557');
-
-
-
-        });
-
-
-
-        $(region[0]).mouseleave(function () {
-            region.animate(style, animationSpeed);
-        });
-
-
-    })(provMap[province]);
+		$(region[0]).mouseleave(function() {
+			region.animate(style, animationSpeed);
+		});
+	})(provMap[province]);
 }
-

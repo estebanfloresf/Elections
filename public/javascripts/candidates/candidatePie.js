@@ -44,13 +44,11 @@ var vis = d3.select("#pie-" + last)
     .attr("width", width)
     .attr("height", height)
     .append("svg:g")
-
     .attr("transform", "translate(" + outerRadius + "," + outerRadius + ")")
 ;
 
 var arc = d3.arc()
     .outerRadius(outerRadius).innerRadius(innerRadius);
-
 
 // for animation
 var arcFinal = d3.arc().innerRadius(innerRadiusFinal).outerRadius(outerRadius);
@@ -107,7 +105,7 @@ arcs.filter(function (d) {
 // Pie chart Province - Initial State
 vis.append("svg:text")
     .attr("dy", "0.1em")
-    .style("font-size", "10px")
+    .style("font-size", "12px")
     .style("font-weight", "bold")
     .style("fill", function (d) {
         return color(0);
@@ -123,8 +121,8 @@ vis.append("svg:text")
 // Pie chart Province Percentage - Initial State
 vis.append("svg:text")
     .attr("dy", "1.3em")
-    .style("font-size", "10px")
-    .style("font-weight", "bold")
+    .style("font-size", "12px")
+    // .style("font-weight", "bold")
     .style("fill", function (d, i) {
         return color(0);
     })
@@ -162,25 +160,27 @@ function mouseout() {
 
 function click(d) {
 
+    d3.select(this).select("path").transition()
+    
+    .attr("d", arcFinal3);
+
     var selectedLastName = d3.select(this).attr("class").split('-').slice(1, 2).join(' ');
     var colorShown = d3.select(".titleP-" + selectedLastName).attr('style').split(';').slice(2,3)[0];
     colorShown = colorShown.replace('fill:','').trim();
 
     var color = document.querySelector('#'+selectedLastName+'-'+d.data.province.trim().replace(/ /g, '')).getAttribute('fill');
 
-
-
     d3.select(".title-" + selectedLastName).remove();
     d3.select(".titleP-" + selectedLastName).remove();
 
     province = d.data.province;
     value = formatPercent(d.data.percentage);
-
+    
     // Pie chart title
     d3.select(this).append("svg:text")
         .attr("dy", "0.1em")
-        .style("font-size", "10px")
-        .style("font-weight", "bold")
+        .style("font-size", "12px")
+        // .style("font-weight", "bold")
         .style("text-transform", "capitalize")
         .style("fill", color)
         .attr("text-anchor", "middle")
@@ -189,16 +189,12 @@ function click(d) {
 
     d3.select(this).append("svg:text")
         .attr("dy", "1.3em")
-        .style("font-size", "10px")
-        .style("font-weight", "bold")
-
+        .style("font-size", "12px")
+        // .style("font-weight", "bold")
         .style("fill", color)
         .attr("text-anchor", "middle")
         .text(value)
         .attr("class", "titleP-" + selectedLastName);
-
-
-
 
 }
 

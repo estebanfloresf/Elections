@@ -42,7 +42,9 @@ block content
 
                 tbody
                     each candidate in candidates
-                        - var lastname = candidate.president.split(' ').slice(-1).join(' ').trim();
+                        - var lastname = candidate._id
+                        
+                        
                         tr
                             td.text-capitalize(id=`${candidate.president}`) #{candidate.president}
                             td(id=`${lastname}-total`)  0
