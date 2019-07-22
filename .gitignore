@@ -4,13 +4,8 @@
 
 # IntelliJ project files
 .idea
-<<<<<<< HEAD
-node_modules
-variables.env
-=======
 *.iml
 out
 gen
 node_modules
 variables.env
->>>>>>> 8d124a91603859c16671a3116591e96a149e60b5

@@ -26,69 +26,6 @@ block content
                     .btn-group(role='group')
                         button(type='button', class='btn sort' id='percentage' data-sort-value='percentage') Percentage
 
-<<<<<<< HEAD
-        .row
-            ul.flex-container
-                li.flex-item 
-                    h4 Candidate
-                li.flex-item 
-                    h4 Percentage
-                li.flex-item 
-                    h4 Top Provinces
-                li.flex-item 
-                    h4 Votes
-
-     
-        .row.candidate(id='grid')
-            
-            each candidate in candidates
-
-                if candidate.president !== "null"
-                    - var lastname = candidate.president.split(' ').slice(-1).join(' ').trim();
-                    
-                
-                .row.col-md-12.item(percentage=`${candidate.percentage}` name=`${candidate.president}`)
-                    .containerP
-                        .itemflex
-                            a()
-                                img.img-thumbnail(src=`${candidate.photo_president}`, alt=`${candidate.president}`)
-
-                            a.fun_hover.text-capitalize()
-                                    h5  #{candidate.president}
-                            p.text-capitalize
-                                    small.orgpol #{candidate.polorg}
-                                    
-                        .itemflex
-                            div(id=`bar-${lastname}` class="barchart")
-                        .itemflex
-                            
-                            div(id=`pie-${lastname}` class="piechart")
-
-                        .itemflex
-                            .results
-                                
-                                h4.timer.count-title.count-number(data-to=`${candidate.total}`, data-speed='1500') 
-                                    
-                                .resultsSplit
-                                    .resultsSplitItem.women
-                                        div
-                                            span.glyphicon
-                                                img.svg(src=`../images/icons/women.svg` style="width:20px; height:20px")
-                                        div Women
-
-                                        div.timer.count-title.count-number(data-to=`${candidate.totalwomen}`, data-speed='1500') 
-
-
-                                    .resultsSplitItem.men
-                                        div
-                                            span.glyphicon
-                                                img.svg(src=`../images/icons/men.svg` style="width:20px; height:20px")
-                                        div Men
-
-                                        div.timer.count-title.count-number(data-to=`${candidate.totalmen}`, data-speed='1500') div #{h.numeral(candidate.totalmen).format('0,0')} votes
-
-
-=======
 
         .row.candidate(id='grid')
 
@@ -135,7 +72,6 @@ block content
 
                                 div #{h.numeral(candidate.totalmen).format('0,0')} votes
                   
->>>>>>> 8d124a91603859c16671a3116591e96a149e60b5
 
 
                 script(type='text/javascript').
@@ -143,18 +79,8 @@ block content
 
 
 
-<<<<<<< HEAD
-                script(src="/javascripts/candidates/candidateBar.js")
-
-                script(src="/javascripts/candidates/candidatePie.js")
-
-
-
-
-=======
                 //- script(src="/javascripts/candidates/candidateBar.js")
 
                 //- script(src="/javascripts/candidates/candidatePie.js")
 
         
->>>>>>> 8d124a91603859c16671a3116591e96a149e60b5

@@ -6,41 +6,6 @@ html
     head
 
         title= `${title} | ${h.siteName}`
-<<<<<<< HEAD
-        
-
-        
-        link(rel='stylesheet', href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" , integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" , crossorigin="anonymous")
-        link(rel='stylesheet', href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" , integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" , crossorigin="anonymous")
-        link(rel='stylesheet', href="https://fonts.googleapis.com/css?family=Lato")
-
-        link(rel='stylesheet', href='../dist/style.css')
-        link(rel='stylesheet', type='text/css', href='//cdn.datatables.net/1.10.15/css/jquery.dataTables.css')
-        script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js')
-        script(src='//code.jquery.com/jquery-1.11.3.min.js')
-        script(src='https://code.jquery.com/jquery-3.2.1.min.js', integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=', crossorigin='anonymous')
-        script(src="https://d3js.org/d3.v4.min.js")
-        script(src="https://d3js.org/d3-selection-multi.v0.4.min.js")
-        script(src="https://cdnjs.cloudflare.com/ajax/libs/d3-legend/2.24.0/d3-legend.min.js")
-        script(src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js")
-
-body
-    nav.navbar.navbar-inverse.navbar-fixed-top
-        .container-fluid
-            .navbar-header
-                button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#navbar', aria-expanded='false', aria-controls='navbar')
-                    span.sr-only Toggle navigation
-                    span.icon-bar
-                    span.icon-bar
-                    span.icon-bar
-
-                a.navbar-brand(href='/')
-                    span
-                        img(alt='Brand', src='../images/photos/favicon.png' width="20px" height="20px")
-                    |  #{h.siteName}
-            #navbar.navbar-collapse.collapse
-                ul.nav.navbar-nav.navbar-right
-=======
 
 
 
@@ -75,23 +40,10 @@ body
         #navbar.navbar-collapse.collapse
                 ul.nav.navbar-nav.navbar-right
                     
->>>>>>> 8d124a91603859c16671a3116591e96a149e60b5
                     each item in h.menu
                         li
                             a(href=item.slug, class=(currentPath.startsWith(item.slug) ? 'active' : ''))
 
-<<<<<<< HEAD
-                                .menu   
-                                    span
-                                        img.svg(src=`../images/icons/${item.icon}.svg` style="width:30px; height:15px")
-                                    span #{item.title}
-
-
-                //form.navbar-form.navbar-right
-                //    input.form-control(type='text', placeholder='Search...')
-
-
-=======
                                 
                                 img.svg(src=`../images/icons/${item.icon}.svg` style="width:30px; height:15px")
 
@@ -99,7 +51,6 @@ body
             
 
   
->>>>>>> 8d124a91603859c16671a3116591e96a149e60b5
     div.container
         div.starter-template
 
@@ -128,18 +79,6 @@ body
 
 
 
-<<<<<<< HEAD
-
-    
-    script(src="/dist/App.bundle.js")
-    script(src="/javascripts/modules/orderBy.js")
-    script(src="/javascripts/modules/sortTable.js")
-    script(type="text/javascript" charset="utf8" src="//cdn.datatables.net/1.10.16/js/jquery.dataTables.js")
-    script(src="https://code.jquery.com/jquery-2.1.3.min.js")
-    script(src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js")
-    
-
-=======
     script(src='https://code.jquery.com/jquery-3.3.1.min.js', integrity='sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=', crossorigin='anonymous')
     //- script(src='https://code.jquery.com/jquery-3.3.1.slim.min.js', integrity='sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo', crossorigin='anonymous')
     script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js', integrity='sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ', crossorigin='anonymous')
@@ -149,7 +88,6 @@ body
  
 
             
->>>>>>> 8d124a91603859c16671a3116591e96a149e60b5
 
 
 
