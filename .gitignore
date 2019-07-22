@@ -8,4 +8,4 @@
 out
 gen
 node_modules
-variables.env
+*.env
