@@ -3,8 +3,8 @@
  */
 
 const mongoose = require("mongoose");
-const Survey = mongoose.model("Survey");
-const Results = mongoose.model("Results");
+// const Survey = mongoose.model("Survey");
+// const Results = mongoose.model("Results");
 const Candidate = mongoose.model("Candidate");
 
 exports.getSurveys = async (req, res) => {

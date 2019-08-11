@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
-const Province = mongoose.model("Province");
-const Results = mongoose.model("Results");
+// const Province = mongoose.model("Province");
+// const Results = mongoose.model("Results");
 const Candidate = mongoose.model("Candidate");
 
 exports.getMapInfo = async (req, res) => {

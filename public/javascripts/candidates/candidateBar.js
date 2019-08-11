@@ -143,7 +143,6 @@ export function BarChart() {
     .then(response => response.json())
     .then(data => {
       data.candidates.map(candidate => {
-        // createBarChart(candidate);
         drawBar(candidate);
       });
     })

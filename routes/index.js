@@ -13,14 +13,13 @@ router.get("/", function(req, res, next) {
   });
 });
 
-// candidateController.editCandidate for edit
+// candidateController
 router.get("/candidates", catchErrors(candidateController.getCandidates));
 router.get(
   "/api/candidates",
   catchErrors(candidateController.getCandidatesInfo)
 );
 
-router.post("/addCandidate", catchErrors(candidateController.addCandidate));
 router.get("/surveys", catchErrors(surveyController.getSurveys));
 // renders map view
 router.get("/map", function(req, res, next) {
