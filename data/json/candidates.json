@@ -1,75 +1,62 @@
-[
-  {
-     "photo_president": "http://www.eleccionesenecuador.com/fotos/candidatos-presidenciales/imagen-guillermo-lasso.jpg",
-     "vicepresident": "andres paez",
-     "polorg": "creo – suma ",
-     "president": "guillermo lasso",
-     "photo_vicepresident": "http://www.eleccionesenecuador.com/fotos/candidatos-vicepresidencia/imagen-Andres-Paez.jpg"
-  },
-  {
-     "photo_president": "http://www.eleccionesenecuador.com/fotos/candidatos-presidenciales/imagen-Paco-Moncayo.jpg",
-     "vicepresident": "monserrat bustamante",
-     "polorg": "acuerdo por el cambio(up, id, pachakutik)",
-     "president": "paco moncayo",
-     "photo_vicepresident": "http://www.eleccionesenecuador.com/fotos/candidatos-vicepresidencia/imagen-Monserratt-Bustamante.jpg"
-  },
-  {
-     "photo_president": "http://www.eleccionesenecuador.com/fotos/candidatos-presidenciales/imagen-Dalo-Bucaram.jpg",
-     "vicepresident": "ramiro aguilar",
-     "polorg": "partido fuerza ecuador ",
-     "president": "dalo bucaram",
-     "photo_vicepresident": "http://www.eleccionesenecuador.com/fotos/candidatos-vicepresidencia/imagen-Ramiro-Aguilar.jpg"
-  },
-  {
-     "photo_president": "http://www.eleccionesenecuador.com/fotos/candidatos-presidenciales/imagen-cynthia-viteri.jpg",
-     "vicepresident": "mauricio pozo",
-     "polorg": "partido social cristiano",
-     "president": "cynthia viteri",
-     "photo_vicepresident": "http://www.eleccionesenecuador.com/fotos/candidatos-vicepresidencia/imagen-Mauricio-Pozo.jpg"
-  },
-  {
-     "photo_president": "http://www.eleccionesenecuador.com/fotos/candidatos-presidenciales/imagen-Lenin-Moreno.jpg",
-     "vicepresident": "jorge glas",
-     "polorg": "movimiento alianza pais ",
-     "president": "lenin moreno",
-     "photo_vicepresident": "http://www.eleccionesenecuador.com/fotos/candidatos-vicepresidencia/imagen-Jorge-Glas.jpg"
-  },
-  {
-     "photo_president": "http://www.eleccionesenecuador.com/fotos/candidatos-presidenciales/imagen-Washington-Pesantez.jpg",
-     "vicepresident": "alex alcivar",
-     "polorg": "movimiento union ecuatoriana ",
-     "president": "washington pesantez",
-     "photo_vicepresident": "http://www.eleccionesenecuador.com/fotos/candidatos-vicepresidencia/imagen-Alex-Alcivar.jpg"
-  },
-  {
-     "photo_president": "http://www.eleccionesenecuador.com/fotos/candidatos-presidenciales/imagen-ivan-espinel.jpg",
-     "vicepresident": "doris quiroz",
-     "polorg": "movimiento fuerza compromiso social ",
-     "president": "ivan espinel",
-     "photo_vicepresident": "http://www.eleccionesenecuador.com/fotos/candidatos-vicepresidencia/imagen-Doris-Quiroz.jpg"
+[{
+      "photo_president": "http://www.eleccionesenecuador.com/fotos/candidatos-presidenciales/imagen-guillermo-lasso.jpg",
+      "vicepresident": "andres paez",
+      "polorg": "creo – suma ",
+      "president": "guillermo lasso",
+      "photo_vicepresident": "http://www.eleccionesenecuador.com/fotos/candidatos-vicepresidencia/imagen-Andres-Paez.jpg"
+   },
+   {
+      "photo_president": "http://www.eleccionesenecuador.com/fotos/candidatos-presidenciales/imagen-Paco-Moncayo.jpg",
+      "vicepresident": "monserrat bustamante",
+      "polorg": "acuerdo por el cambio(up, id, pachakutik)",
+      "president": "paco moncayo",
+      "photo_vicepresident": "http://www.eleccionesenecuador.com/fotos/candidatos-vicepresidencia/imagen-Monserratt-Bustamante.jpg"
+   },
+   {
+      "photo_president": "http://www.eleccionesenecuador.com/fotos/candidatos-presidenciales/imagen-Dalo-Bucaram.jpg",
+      "vicepresident": "ramiro aguilar",
+      "polorg": "partido fuerza ecuador ",
+      "president": "abdala bucaram",
+      "photo_vicepresident": "http://www.eleccionesenecuador.com/fotos/candidatos-vicepresidencia/imagen-Ramiro-Aguilar.jpg"
+   },
+   {
+      "photo_president": "http://www.eleccionesenecuador.com/fotos/candidatos-presidenciales/imagen-cynthia-viteri.jpg",
+      "vicepresident": "mauricio pozo",
+      "polorg": "partido social cristiano",
+      "president": "cynthia viteri",
+      "photo_vicepresident": "http://www.eleccionesenecuador.com/fotos/candidatos-vicepresidencia/imagen-Mauricio-Pozo.jpg"
+   },
+   {
+      "photo_president": "http://www.eleccionesenecuador.com/fotos/candidatos-presidenciales/imagen-Lenin-Moreno.jpg",
+      "vicepresident": "jorge glas",
+      "polorg": "movimiento alianza pais ",
+      "president": "lenin moreno",
+      "photo_vicepresident": "http://www.eleccionesenecuador.com/fotos/candidatos-vicepresidencia/imagen-Jorge-Glas.jpg"
+   },
+   {
+      "photo_president": "http://www.eleccionesenecuador.com/fotos/candidatos-presidenciales/imagen-Washington-Pesantez.jpg",
+      "vicepresident": "alex alcivar",
+      "polorg": "movimiento union ecuatoriana ",
+      "president": "washington pesantez",
+      "photo_vicepresident": "http://www.eleccionesenecuador.com/fotos/candidatos-vicepresidencia/imagen-Alex-Alcivar.jpg"
+   },
+   {
+      "photo_president": "http://www.eleccionesenecuador.com/fotos/candidatos-presidenciales/imagen-ivan-espinel.jpg",
+      "vicepresident": "doris quiroz",
+      "polorg": "movimiento fuerza compromiso social ",
+      "president": "ivan espinel",
+      "photo_vicepresident": "http://www.eleccionesenecuador.com/fotos/candidatos-vicepresidencia/imagen-Doris-Quiroz.jpg"
 
-  },
-  {
-     "photo_president": "http://www.eleccionesenecuador.com/fotos/candidatos-presidenciales/imagen-Patricio-Zuquilanda.jpg",
-     "vicepresident": "johnnie jorgge",
-     "polorg": "partido sociedad patriotica ",
-     "president": "patricio zuquilanda",
-     "photo_vicepresident": "http://www.eleccionesenecuador.com/fotos/candidatos-vicepresidencia/imagen-Johnnie-Jorgge.jpg"
+   },
+   {
+      "photo_president": "http://www.eleccionesenecuador.com/fotos/candidatos-presidenciales/imagen-Patricio-Zuquilanda.jpg",
+      "vicepresident": "johnnie jorgge",
+      "polorg": "partido sociedad patriotica ",
+      "president": "patricio zuquilanda",
+      "photo_vicepresident": "http://www.eleccionesenecuador.com/fotos/candidatos-vicepresidencia/imagen-Johnnie-Jorgge.jpg"
 
-  },
-  {
-     "photo_president": "",
-     "vicepresident": "blancos",
-     "polorg": "blancos",
-     "president": "blancos",
-     "photo_vicepresident": ""
-  },
+   }
 
-  {
-     "photo_president": "",
-     "vicepresident": "nulos",
-     "polorg": "nulos",
-     "president": "nulos",
-     "photo_vicepresident": ""
-  }
+
+
 ]

@@ -1,11 +1,9 @@
-_id,photo_president,vicepresident,polorg,president,photo_vicepresident
-ObjectId("5bf21385dcccede32bfd9474"),http://www.eleccionesenecuador.com/fotos/candidatos-presidenciales/imagen-Dalo-Bucaram.jpg,ramiro aguilar,partido fuerza ecuador ,dalo bucaram,http://www.eleccionesenecuador.com/fotos/candidatos-vicepresidencia/imagen-Ramiro-Aguilar.jpg
-ObjectId("5bf21385dcccede32bfd9473"),http://www.eleccionesenecuador.com/fotos/candidatos-presidenciales/imagen-guillermo-lasso.jpg,andres paez,creo – suma ,guillermo lasso,http://www.eleccionesenecuador.com/fotos/candidatos-vicepresidencia/imagen-Andres-Paez.jpg
-ObjectId("5bf21385dcccede32bfd9475"),http://www.eleccionesenecuador.com/fotos/candidatos-presidenciales/imagen-cynthia-viteri.jpg,mauricio pozo,partido social cristiano,cynthia viteri,http://www.eleccionesenecuador.com/fotos/candidatos-vicepresidencia/imagen-Mauricio-Pozo.jpg
-ObjectId("5bf21385dcccede32bfd947b"),http://www.eleccionesenecuador.com/fotos/candidatos-presidenciales/imagen-Patricio-Zuquilanda.jpg,johnnie jorgge,partido sociedad patriotica ,patricio zuquilanda,http://www.eleccionesenecuador.com/fotos/candidatos-vicepresidencia/imagen-Johnnie-Jorgge.jpg
-ObjectId("5bf21385dcccede32bfd9479"),http://www.eleccionesenecuador.com/fotos/candidatos-presidenciales/imagen-Paco-Moncayo.jpg,monserrat bustamante,acuerdo por el cambio(up, id, pachakutik),paco moncayo,http://www.eleccionesenecuador.com/fotos/candidatos-vicepresidencia/imagen-Monserratt-Bustamante.jpg
-ObjectId("5bf21385dcccede32bfd947a"),,blancos,blancos,blancos,
-ObjectId("5bf21385dcccede32bfd9478"),http://www.eleccionesenecuador.com/fotos/candidatos-presidenciales/imagen-ivan-espinel.jpg,doris quiroz,movimiento fuerza compromiso social ,ivan espinel,http://www.eleccionesenecuador.com/fotos/candidatos-vicepresidencia/imagen-Doris-Quiroz.jpg
-ObjectId("5bf21385dcccede32bfd9476"),http://www.eleccionesenecuador.com/fotos/candidatos-presidenciales/imagen-Lenin-Moreno.jpg,jorge glas,movimiento alianza pais ,lenin moreno,http://www.eleccionesenecuador.com/fotos/candidatos-vicepresidencia/imagen-Jorge-Glas.jpg
-ObjectId("5bf21385dcccede32bfd9477"),http://www.eleccionesenecuador.com/fotos/candidatos-presidenciales/imagen-Washington-Pesantez.jpg,alex alcivar,movimiento union ecuatoriana ,washington pesantez,http://www.eleccionesenecuador.com/fotos/candidatos-vicepresidencia/imagen-Alex-Alcivar.jpg
-ObjectId("5bf21385dcccede32bfd947c"),,nulos,nulos,nulos,
+_id,image,organization,candidate
+ObjectId("5d521bab2e2e325ded0b8cb7"),http://www.eleccionesenecuador.com/fotos/candidatos-presidenciales/imagen-guillermo-lasso.jpg,creo – suma ,guillermo lasso
+ObjectId("5d521bab2e2e325ded0b8cb8"),http://www.eleccionesenecuador.com/fotos/candidatos-presidenciales/imagen-Paco-Moncayo.jpg,"acuerdo por el cambio(up, id
+ObjectId("5d521bab2e2e325ded0b8cb9"),http://www.eleccionesenecuador.com/fotos/candidatos-presidenciales/imagen-Dalo-Bucaram.jpg,partido fuerza ecuador ,abdala bucaram
+ObjectId("5d521bab2e2e325ded0b8cba"),http://www.eleccionesenecuador.com/fotos/candidatos-presidenciales/imagen-cynthia-viteri.jpg,partido social cristiano,cynthia viteri
+ObjectId("5d521bab2e2e325ded0b8cbb"),http://www.eleccionesenecuador.com/fotos/candidatos-presidenciales/imagen-Lenin-Moreno.jpg,movimiento alianza pais ,lenin moreno
+ObjectId("5d521bab2e2e325ded0b8cbc"),http://www.eleccionesenecuador.com/fotos/candidatos-presidenciales/imagen-Washington-Pesantez.jpg,movimiento union ecuatoriana ,washington pesantez
+ObjectId("5d521bab2e2e325ded0b8cbd"),http://www.eleccionesenecuador.com/fotos/candidatos-presidenciales/imagen-ivan-espinel.jpg,movimiento fuerza compromiso social ,ivan espinel
+ObjectId("5d521bab2e2e325ded0b8cbe"),http://www.eleccionesenecuador.com/fotos/candidatos-presidenciales/imagen-Patricio-Zuquilanda.jpg,partido sociedad patriotica ,patricio zuquilanda
