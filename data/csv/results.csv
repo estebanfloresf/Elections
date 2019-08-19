@@ -1,193 +1,193 @@
-province,candidate,total,province_id,candidate_id
-azuay,patricio zuquilanda,3092,"ObjectId(""5d47a7965d872caaa9adbb4a"")","ObjectId(""5d50c9e64272c203bb2a586a"")"
-bolivar,patricio zuquilanda,2082,"ObjectId(""5d47a7965d872caaa9adbb4b"")","ObjectId(""5d50c9e64272c203bb2a586a"")"
-canar,patricio zuquilanda,1251,"ObjectId(""5d47a7965d872caaa9adbb4c"")","ObjectId(""5d50c9e64272c203bb2a586a"")"
-carchi,patricio zuquilanda,623,"ObjectId(""5d47a7965d872caaa9adbb4d"")","ObjectId(""5d50c9e64272c203bb2a586a"")"
-chimborazo,patricio zuquilanda,3427,"ObjectId(""5d47a7965d872caaa9adbb4e"")","ObjectId(""5d50c9e64272c203bb2a586a"")"
-cotopaxi,patricio zuquilanda,3061,"ObjectId(""5d47a7965d872caaa9adbb4f"")","ObjectId(""5d50c9e64272c203bb2a586a"")"
-el oro,patricio zuquilanda,1427,"ObjectId(""5d47a7965d872caaa9adbb50"")","ObjectId(""5d50c9e64272c203bb2a586a"")"
-esmeraldas,patricio zuquilanda,1426,"ObjectId(""5d47a7965d872caaa9adbb51"")","ObjectId(""5d50c9e64272c203bb2a586a"")"
-galapagos,patricio zuquilanda,46,"ObjectId(""5d47a7965d872caaa9adbb52"")","ObjectId(""5d50c9e64272c203bb2a586a"")"
-guayas,patricio zuquilanda,14077,"ObjectId(""5d47a7965d872caaa9adbb53"")","ObjectId(""5d50c9e64272c203bb2a586a"")"
-imbabura,patricio zuquilanda,1723,"ObjectId(""5d47a7965d872caaa9adbb54"")","ObjectId(""5d50c9e64272c203bb2a586a"")"
-loja,patricio zuquilanda,2257,"ObjectId(""5d47a7965d872caaa9adbb55"")","ObjectId(""5d50c9e64272c203bb2a586a"")"
-los rios,patricio zuquilanda,5438,"ObjectId(""5d47a7975d872caaa9adbb56"")","ObjectId(""5d50c9e64272c203bb2a586a"")"
-manabi,patricio zuquilanda,5152,"ObjectId(""5d47a7975d872caaa9adbb57"")","ObjectId(""5d50c9e64272c203bb2a586a"")"
-morona santiago,patricio zuquilanda,823,"ObjectId(""5d47a7975d872caaa9adbb58"")","ObjectId(""5d50c9e64272c203bb2a586a"")"
-napo,patricio zuquilanda,2708,"ObjectId(""5d47a7975d872caaa9adbb59"")","ObjectId(""5d50c9e64272c203bb2a586a"")"
-orellana,patricio zuquilanda,1146,"ObjectId(""5d47a7975d872caaa9adbb5a"")","ObjectId(""5d50c9e64272c203bb2a586a"")"
-pastaza,patricio zuquilanda,411,"ObjectId(""5d47a7975d872caaa9adbb5b"")","ObjectId(""5d50c9e64272c203bb2a586a"")"
-pichincha,patricio zuquilanda,10793,"ObjectId(""5d47a7975d872caaa9adbb5c"")","ObjectId(""5d50c9e64272c203bb2a586a"")"
-santa elena,patricio zuquilanda,914,,"ObjectId(""5d50c9e64272c203bb2a586a"")"
-sto dgo tsachilas,patricio zuquilanda,2015,,"ObjectId(""5d50c9e64272c203bb2a586a"")"
-sucumbios,patricio zuquilanda,4195,"ObjectId(""5d47a7975d872caaa9adbb5d"")","ObjectId(""5d50c9e64272c203bb2a586a"")"
-tungurahua,patricio zuquilanda,3214,"ObjectId(""5d47a7975d872caaa9adbb5e"")","ObjectId(""5d50c9e64272c203bb2a586a"")"
-zamora chinchipe,patricio zuquilanda,363,"ObjectId(""5d47a7985d872caaa9adbb5f"")","ObjectId(""5d50c9e64272c203bb2a586a"")"
-azuay,ivan espinel,16867,"ObjectId(""5d47a7965d872caaa9adbb4a"")","ObjectId(""5d50c9e64272c203bb2a586b"")"
-bolivar,ivan espinel,2739,"ObjectId(""5d47a7965d872caaa9adbb4b"")","ObjectId(""5d50c9e64272c203bb2a586b"")"
-canar,ivan espinel,3789,"ObjectId(""5d47a7965d872caaa9adbb4c"")","ObjectId(""5d50c9e64272c203bb2a586b"")"
-carchi,ivan espinel,3398,"ObjectId(""5d47a7965d872caaa9adbb4d"")","ObjectId(""5d50c9e64272c203bb2a586b"")"
-chimborazo,ivan espinel,7987,"ObjectId(""5d47a7965d872caaa9adbb4e"")","ObjectId(""5d50c9e64272c203bb2a586b"")"
-cotopaxi,ivan espinel,8166,"ObjectId(""5d47a7965d872caaa9adbb4f"")","ObjectId(""5d50c9e64272c203bb2a586b"")"
-el oro,ivan espinel,10728,"ObjectId(""5d47a7965d872caaa9adbb50"")","ObjectId(""5d50c9e64272c203bb2a586b"")"
-esmeraldas,ivan espinel,4021,"ObjectId(""5d47a7965d872caaa9adbb51"")","ObjectId(""5d50c9e64272c203bb2a586b"")"
-galapagos,ivan espinel,330,"ObjectId(""5d47a7965d872caaa9adbb52"")","ObjectId(""5d50c9e64272c203bb2a586b"")"
-guayas,ivan espinel,63272,"ObjectId(""5d47a7965d872caaa9adbb53"")","ObjectId(""5d50c9e64272c203bb2a586b"")"
-imbabura,ivan espinel,11037,"ObjectId(""5d47a7965d872caaa9adbb54"")","ObjectId(""5d50c9e64272c203bb2a586b"")"
-loja,ivan espinel,6178,"ObjectId(""5d47a7965d872caaa9adbb55"")","ObjectId(""5d50c9e64272c203bb2a586b"")"
-los rios,ivan espinel,12209,"ObjectId(""5d47a7975d872caaa9adbb56"")","ObjectId(""5d50c9e64272c203bb2a586b"")"
-manabi,ivan espinel,40473,"ObjectId(""5d47a7975d872caaa9adbb57"")","ObjectId(""5d50c9e64272c203bb2a586b"")"
-morona santiago,ivan espinel,1043,"ObjectId(""5d47a7975d872caaa9adbb58"")","ObjectId(""5d50c9e64272c203bb2a586b"")"
-napo,ivan espinel,802,"ObjectId(""5d47a7975d872caaa9adbb59"")","ObjectId(""5d50c9e64272c203bb2a586b"")"
-orellana,ivan espinel,1196,"ObjectId(""5d47a7975d872caaa9adbb5a"")","ObjectId(""5d50c9e64272c203bb2a586b"")"
-pastaza,ivan espinel,1176,"ObjectId(""5d47a7975d872caaa9adbb5b"")","ObjectId(""5d50c9e64272c203bb2a586b"")"
-pichincha,ivan espinel,66618,"ObjectId(""5d47a7975d872caaa9adbb5c"")","ObjectId(""5d50c9e64272c203bb2a586b"")"
-santa elena,ivan espinel,7874,,"ObjectId(""5d50c9e64272c203bb2a586b"")"
-sto dgo tsachilas,ivan espinel,12091,,"ObjectId(""5d50c9e64272c203bb2a586b"")"
-sucumbios,ivan espinel,2116,"ObjectId(""5d47a7975d872caaa9adbb5d"")","ObjectId(""5d50c9e64272c203bb2a586b"")"
-tungurahua,ivan espinel,12634,"ObjectId(""5d47a7975d872caaa9adbb5e"")","ObjectId(""5d50c9e64272c203bb2a586b"")"
-zamora chinchipe,ivan espinel,689,"ObjectId(""5d47a7985d872caaa9adbb5f"")","ObjectId(""5d50c9e64272c203bb2a586b"")"
-azuay,cynthia viteri,3183,"ObjectId(""5d47a7965d872caaa9adbb4a"")","ObjectId(""5d50c9e64272c203bb2a5869"")"
-bolivar,cynthia viteri,17148,"ObjectId(""5d47a7965d872caaa9adbb4b"")","ObjectId(""5d50c9e64272c203bb2a5869"")"
-canar,cynthia viteri,23677,"ObjectId(""5d47a7965d872caaa9adbb4c"")","ObjectId(""5d50c9e64272c203bb2a5869"")"
-carchi,cynthia viteri,2223,"ObjectId(""5d47a7965d872caaa9adbb4d"")","ObjectId(""5d50c9e64272c203bb2a5869"")"
-chimborazo,cynthia viteri,36824,"ObjectId(""5d47a7965d872caaa9adbb4e"")","ObjectId(""5d50c9e64272c203bb2a5869"")"
-cotopaxi,cynthia viteri,27291,"ObjectId(""5d47a7965d872caaa9adbb4f"")","ObjectId(""5d50c9e64272c203bb2a5869"")"
-el oro,cynthia viteri,77833,"ObjectId(""5d47a7965d872caaa9adbb50"")","ObjectId(""5d50c9e64272c203bb2a5869"")"
-esmeraldas,cynthia viteri,44602,"ObjectId(""5d47a7965d872caaa9adbb51"")","ObjectId(""5d50c9e64272c203bb2a5869"")"
-galapagos,cynthia viteri,2036,"ObjectId(""5d47a7965d872caaa9adbb52"")","ObjectId(""5d50c9e64272c203bb2a5869"")"
-guayas,cynthia viteri,604607,"ObjectId(""5d47a7965d872caaa9adbb53"")","ObjectId(""5d50c9e64272c203bb2a5869"")"
-imbabura,cynthia viteri,36233,"ObjectId(""5d47a7965d872caaa9adbb54"")","ObjectId(""5d50c9e64272c203bb2a5869"")"
-loja,cynthia viteri,30403,"ObjectId(""5d47a7965d872caaa9adbb55"")","ObjectId(""5d50c9e64272c203bb2a5869"")"
-los rios,cynthia viteri,100352,"ObjectId(""5d47a7975d872caaa9adbb56"")","ObjectId(""5d50c9e64272c203bb2a5869"")"
-manabi,cynthia viteri,91124,"ObjectId(""5d47a7975d872caaa9adbb57"")","ObjectId(""5d50c9e64272c203bb2a5869"")"
-morona santiago,cynthia viteri,4843,"ObjectId(""5d47a7975d872caaa9adbb58"")","ObjectId(""5d50c9e64272c203bb2a5869"")"
-napo,cynthia viteri,4265,"ObjectId(""5d47a7975d872caaa9adbb59"")","ObjectId(""5d50c9e64272c203bb2a5869"")"
-orellana,cynthia viteri,6854,"ObjectId(""5d47a7975d872caaa9adbb5a"")","ObjectId(""5d50c9e64272c203bb2a5869"")"
-pastaza,cynthia viteri,5934,"ObjectId(""5d47a7975d872caaa9adbb5b"")","ObjectId(""5d50c9e64272c203bb2a5869"")"
-pichincha,cynthia viteri,221844,"ObjectId(""5d47a7975d872caaa9adbb5c"")","ObjectId(""5d50c9e64272c203bb2a5869"")"
-santa elena,cynthia viteri,19544,,"ObjectId(""5d50c9e64272c203bb2a5869"")"
-sto dgo tsachilas,cynthia viteri,35923,,"ObjectId(""5d50c9e64272c203bb2a5869"")"
-sucumbios,cynthia viteri,16175,"ObjectId(""5d47a7975d872caaa9adbb5d"")","ObjectId(""5d50c9e64272c203bb2a5869"")"
-tungurahua,cynthia viteri,47835,"ObjectId(""5d47a7975d872caaa9adbb5e"")","ObjectId(""5d50c9e64272c203bb2a5869"")"
-zamora chinchipe,cynthia viteri,7079,"ObjectId(""5d47a7985d872caaa9adbb5f"")","ObjectId(""5d50c9e64272c203bb2a5869"")"
-azuay,abdala bucaram,8397,"ObjectId(""5d47a7965d872caaa9adbb4a"")",
-bolivar,abdala bucaram,2242,"ObjectId(""5d47a7965d872caaa9adbb4b"")",
-canar,abdala bucaram,3983,"ObjectId(""5d47a7965d872caaa9adbb4c"")",
-carchi,abdala bucaram,2169,"ObjectId(""5d47a7965d872caaa9adbb4d"")",
-chimborazo,abdala bucaram,5514,"ObjectId(""5d47a7965d872caaa9adbb4e"")",
-cotopaxi,abdala bucaram,5009,"ObjectId(""5d47a7965d872caaa9adbb4f"")",
-el oro,abdala bucaram,25007,"ObjectId(""5d47a7965d872caaa9adbb50"")",
-esmeraldas,abdala bucaram,14739,"ObjectId(""5d47a7965d872caaa9adbb51"")",
-galapagos,abdala bucaram,344,"ObjectId(""5d47a7965d872caaa9adbb52"")",
-guayas,abdala bucaram,187796,"ObjectId(""5d47a7965d872caaa9adbb53"")",
-imbabura,abdala bucaram,4809,"ObjectId(""5d47a7965d872caaa9adbb54"")",
-loja,abdala bucaram,5384,"ObjectId(""5d47a7965d872caaa9adbb55"")",
-los rios,abdala bucaram,40674,"ObjectId(""5d47a7975d872caaa9adbb56"")",
-manabi,abdala bucaram,67576,"ObjectId(""5d47a7975d872caaa9adbb57"")",
-morona santiago,abdala bucaram,767,"ObjectId(""5d47a7975d872caaa9adbb58"")",
-napo,abdala bucaram,753,"ObjectId(""5d47a7975d872caaa9adbb59"")",
-orellana,abdala bucaram,2135,"ObjectId(""5d47a7975d872caaa9adbb5a"")",
-pastaza,abdala bucaram,728,"ObjectId(""5d47a7975d872caaa9adbb5b"")",
-pichincha,abdala bucaram,27993,"ObjectId(""5d47a7975d872caaa9adbb5c"")",
-santa elena,abdala bucaram,14484,,
-sto dgo tsachilas,abdala bucaram,16755,,
-sucumbios,abdala bucaram,2292,"ObjectId(""5d47a7975d872caaa9adbb5d"")",
-tungurahua,abdala bucaram,9229,"ObjectId(""5d47a7975d872caaa9adbb5e"")",
-zamora chinchipe,abdala bucaram,604,"ObjectId(""5d47a7985d872caaa9adbb5f"")",
-azuay,paco moncayo,43562,"ObjectId(""5d47a7965d872caaa9adbb4a"")",
-bolivar,paco moncayo,10573,"ObjectId(""5d47a7965d872caaa9adbb4b"")",
-canar,paco moncayo,14309,"ObjectId(""5d47a7965d872caaa9adbb4c"")",
-carchi,paco moncayo,11147,"ObjectId(""5d47a7965d872caaa9adbb4d"")",
-chimborazo,paco moncayo,24883,"ObjectId(""5d47a7965d872caaa9adbb4e"")",
-cotopaxi,paco moncayo,52421,"ObjectId(""5d47a7965d872caaa9adbb4f"")",
-el oro,paco moncayo,11546,"ObjectId(""5d47a7965d872caaa9adbb50"")",
-esmeraldas,paco moncayo,16896,"ObjectId(""5d47a7965d872caaa9adbb51"")",
-galapagos,paco moncayo,520,"ObjectId(""5d47a7965d872caaa9adbb52"")",
-guayas,paco moncayo,47972,"ObjectId(""5d47a7965d872caaa9adbb53"")",
-imbabura,paco moncayo,28962,"ObjectId(""5d47a7965d872caaa9adbb54"")",
-loja,paco moncayo,25559,"ObjectId(""5d47a7965d872caaa9adbb55"")",
-los rios,paco moncayo,11367,"ObjectId(""5d47a7975d872caaa9adbb56"")",
-manabi,paco moncayo,38108,"ObjectId(""5d47a7975d872caaa9adbb57"")",
-morona santiago,paco moncayo,6596,"ObjectId(""5d47a7975d872caaa9adbb58"")",
-napo,paco moncayo,3912,"ObjectId(""5d47a7975d872caaa9adbb59"")",
-orellana,paco moncayo,9949,"ObjectId(""5d47a7975d872caaa9adbb5a"")",
-pastaza,paco moncayo,4956,"ObjectId(""5d47a7975d872caaa9adbb5b"")",
-pichincha,paco moncayo,193415,"ObjectId(""5d47a7975d872caaa9adbb5c"")",
-santa elena,paco moncayo,4139,,
-sto dgo tsachilas,paco moncayo,11694,,
-sucumbios,paco moncayo,8475,"ObjectId(""5d47a7975d872caaa9adbb5d"")",
-tungurahua,paco moncayo,38273,"ObjectId(""5d47a7975d872caaa9adbb5e"")",
-zamora chinchipe,paco moncayo,5327,"ObjectId(""5d47a7985d872caaa9adbb5f"")",
-azuay,washington pesantez,3014,"ObjectId(""5d47a7965d872caaa9adbb4a"")","ObjectId(""5d50c9e64272c203bb2a586d"")"
-bolivar,washington pesantez,1441,"ObjectId(""5d47a7965d872caaa9adbb4b"")","ObjectId(""5d50c9e64272c203bb2a586d"")"
-canar,washington pesantez,826,"ObjectId(""5d47a7965d872caaa9adbb4c"")","ObjectId(""5d50c9e64272c203bb2a586d"")"
-carchi,washington pesantez,729,"ObjectId(""5d47a7965d872caaa9adbb4d"")","ObjectId(""5d50c9e64272c203bb2a586d"")"
-chimborazo,washington pesantez,8445,"ObjectId(""5d47a7965d872caaa9adbb4e"")","ObjectId(""5d50c9e64272c203bb2a586d"")"
-cotopaxi,washington pesantez,3007,"ObjectId(""5d47a7965d872caaa9adbb4f"")","ObjectId(""5d50c9e64272c203bb2a586d"")"
-el oro,washington pesantez,1583,"ObjectId(""5d47a7965d872caaa9adbb50"")","ObjectId(""5d50c9e64272c203bb2a586d"")"
-esmeraldas,washington pesantez,1416,"ObjectId(""5d47a7965d872caaa9adbb51"")","ObjectId(""5d50c9e64272c203bb2a586d"")"
-galapagos,washington pesantez,62,"ObjectId(""5d47a7965d872caaa9adbb52"")","ObjectId(""5d50c9e64272c203bb2a586d"")"
-guayas,washington pesantez,10175,"ObjectId(""5d47a7965d872caaa9adbb53"")","ObjectId(""5d50c9e64272c203bb2a586d"")"
-imbabura,washington pesantez,1892,"ObjectId(""5d47a7965d872caaa9adbb54"")","ObjectId(""5d50c9e64272c203bb2a586d"")"
-loja,washington pesantez,164,"ObjectId(""5d47a7965d872caaa9adbb55"")","ObjectId(""5d50c9e64272c203bb2a586d"")"
-los rios,washington pesantez,2662,"ObjectId(""5d47a7975d872caaa9adbb56"")","ObjectId(""5d50c9e64272c203bb2a586d"")"
-manabi,washington pesantez,4878,"ObjectId(""5d47a7975d872caaa9adbb57"")","ObjectId(""5d50c9e64272c203bb2a586d"")"
-morona santiago,washington pesantez,367,"ObjectId(""5d47a7975d872caaa9adbb58"")","ObjectId(""5d50c9e64272c203bb2a586d"")"
-napo,washington pesantez,284,"ObjectId(""5d47a7975d872caaa9adbb59"")","ObjectId(""5d50c9e64272c203bb2a586d"")"
-orellana,washington pesantez,382,"ObjectId(""5d47a7975d872caaa9adbb5a"")","ObjectId(""5d50c9e64272c203bb2a586d"")"
-pastaza,washington pesantez,268,"ObjectId(""5d47a7975d872caaa9adbb5b"")","ObjectId(""5d50c9e64272c203bb2a586d"")"
-pichincha,washington pesantez,19063,"ObjectId(""5d47a7975d872caaa9adbb5c"")","ObjectId(""5d50c9e64272c203bb2a586d"")"
-santa elena,washington pesantez,12,,"ObjectId(""5d50c9e64272c203bb2a586d"")"
-sto dgo tsachilas,washington pesantez,1825,,"ObjectId(""5d50c9e64272c203bb2a586d"")"
-sucumbios,washington pesantez,539,"ObjectId(""5d47a7975d872caaa9adbb5d"")","ObjectId(""5d50c9e64272c203bb2a586d"")"
-tungurahua,washington pesantez,4081,"ObjectId(""5d47a7975d872caaa9adbb5e"")","ObjectId(""5d50c9e64272c203bb2a586d"")"
-zamora chinchipe,washington pesantez,245,"ObjectId(""5d47a7985d872caaa9adbb5f"")","ObjectId(""5d50c9e64272c203bb2a586d"")"
-azuay,guillermo lasso,144769,"ObjectId(""5d47a7965d872caaa9adbb4a"")","ObjectId(""5d50c9e64272c203bb2a5868"")"
-bolivar,guillermo lasso,52249,"ObjectId(""5d47a7965d872caaa9adbb4b"")","ObjectId(""5d50c9e64272c203bb2a5868"")"
-canar,guillermo lasso,39018,"ObjectId(""5d47a7965d872caaa9adbb4c"")","ObjectId(""5d50c9e64272c203bb2a5868"")"
-carchi,guillermo lasso,28767,"ObjectId(""5d47a7965d872caaa9adbb4d"")","ObjectId(""5d50c9e64272c203bb2a5868"")"
-chimborazo,guillermo lasso,121256,"ObjectId(""5d47a7965d872caaa9adbb4e"")","ObjectId(""5d50c9e64272c203bb2a5868"")"
-cotopaxi,guillermo lasso,87709,"ObjectId(""5d47a7965d872caaa9adbb4f"")","ObjectId(""5d50c9e64272c203bb2a5868"")"
-el oro,guillermo lasso,106731,"ObjectId(""5d47a7965d872caaa9adbb50"")","ObjectId(""5d50c9e64272c203bb2a5868"")"
-esmeraldas,guillermo lasso,74317,"ObjectId(""5d47a7965d872caaa9adbb51"")","ObjectId(""5d50c9e64272c203bb2a5868"")"
-galapagos,guillermo lasso,6665,"ObjectId(""5d47a7965d872caaa9adbb52"")","ObjectId(""5d50c9e64272c203bb2a5868"")"
-guayas,guillermo lasso,489536,"ObjectId(""5d47a7965d872caaa9adbb53"")","ObjectId(""5d50c9e64272c203bb2a5868"")"
-imbabura,guillermo lasso,69663,"ObjectId(""5d47a7965d872caaa9adbb54"")","ObjectId(""5d50c9e64272c203bb2a5868"")"
-loja,guillermo lasso,120117,"ObjectId(""5d47a7965d872caaa9adbb55"")","ObjectId(""5d50c9e64272c203bb2a5868"")"
-los rios,guillermo lasso,95676,"ObjectId(""5d47a7975d872caaa9adbb56"")","ObjectId(""5d50c9e64272c203bb2a5868"")"
-manabi,guillermo lasso,160792,"ObjectId(""5d47a7975d872caaa9adbb57"")","ObjectId(""5d50c9e64272c203bb2a5868"")"
-morona santiago,guillermo lasso,45059,"ObjectId(""5d47a7975d872caaa9adbb58"")","ObjectId(""5d50c9e64272c203bb2a5868"")"
-napo,guillermo lasso,3679,"ObjectId(""5d47a7975d872caaa9adbb59"")","ObjectId(""5d50c9e64272c203bb2a5868"")"
-orellana,guillermo lasso,31269,"ObjectId(""5d47a7975d872caaa9adbb5a"")","ObjectId(""5d50c9e64272c203bb2a5868"")"
-pastaza,guillermo lasso,24958,"ObjectId(""5d47a7975d872caaa9adbb5b"")","ObjectId(""5d50c9e64272c203bb2a5868"")"
-pichincha,guillermo lasso,569527,"ObjectId(""5d47a7975d872caaa9adbb5c"")","ObjectId(""5d50c9e64272c203bb2a5868"")"
-santa elena,guillermo lasso,55866,,"ObjectId(""5d50c9e64272c203bb2a5868"")"
-sto dgo tsachilas,guillermo lasso,81922,,"ObjectId(""5d50c9e64272c203bb2a5868"")"
-sucumbios,guillermo lasso,27621,"ObjectId(""5d47a7975d872caaa9adbb5d"")","ObjectId(""5d50c9e64272c203bb2a5868"")"
-tungurahua,guillermo lasso,12997,"ObjectId(""5d47a7975d872caaa9adbb5e"")","ObjectId(""5d50c9e64272c203bb2a5868"")"
-zamora chinchipe,guillermo lasso,27816,"ObjectId(""5d47a7985d872caaa9adbb5f"")","ObjectId(""5d50c9e64272c203bb2a5868"")"
-azuay,lenin moreno,197081,"ObjectId(""5d47a7965d872caaa9adbb4a"")","ObjectId(""5d50c9e64272c203bb2a586c"")"
-bolivar,lenin moreno,29614,"ObjectId(""5d47a7965d872caaa9adbb4b"")","ObjectId(""5d50c9e64272c203bb2a586c"")"
-canar,lenin moreno,46211,"ObjectId(""5d47a7965d872caaa9adbb4c"")","ObjectId(""5d50c9e64272c203bb2a586c"")"
-carchi,lenin moreno,43798,"ObjectId(""5d47a7965d872caaa9adbb4d"")","ObjectId(""5d50c9e64272c203bb2a586c"")"
-chimborazo,lenin moreno,79603,"ObjectId(""5d47a7965d872caaa9adbb4e"")","ObjectId(""5d50c9e64272c203bb2a586c"")"
-cotopaxi,lenin moreno,82152,"ObjectId(""5d47a7965d872caaa9adbb4f"")","ObjectId(""5d50c9e64272c203bb2a586c"")"
-el oro,lenin moreno,169052,"ObjectId(""5d47a7965d872caaa9adbb50"")","ObjectId(""5d50c9e64272c203bb2a586c"")"
-esmeraldas,lenin moreno,107462,"ObjectId(""5d47a7965d872caaa9adbb51"")","ObjectId(""5d50c9e64272c203bb2a586c"")"
-galapagos,lenin moreno,4813,"ObjectId(""5d47a7965d872caaa9adbb52"")","ObjectId(""5d50c9e64272c203bb2a586c"")"
-guayas,lenin moreno,897359,"ObjectId(""5d47a7965d872caaa9adbb53"")","ObjectId(""5d50c9e64272c203bb2a586c"")"
-imbabura,lenin moreno,11693,"ObjectId(""5d47a7965d872caaa9adbb54"")","ObjectId(""5d50c9e64272c203bb2a586c"")"
-loja,lenin moreno,94428,"ObjectId(""5d47a7965d872caaa9adbb55"")","ObjectId(""5d50c9e64272c203bb2a586c"")"
-los rios,lenin moreno,212165,"ObjectId(""5d47a7975d872caaa9adbb56"")","ObjectId(""5d50c9e64272c203bb2a586c"")"
-manabi,lenin moreno,47895,"ObjectId(""5d47a7975d872caaa9adbb57"")","ObjectId(""5d50c9e64272c203bb2a586c"")"
-morona santiago,lenin moreno,24312,"ObjectId(""5d47a7975d872caaa9adbb58"")","ObjectId(""5d50c9e64272c203bb2a586c"")"
-napo,lenin moreno,16457,"ObjectId(""5d47a7975d872caaa9adbb59"")","ObjectId(""5d50c9e64272c203bb2a586c"")"
-orellana,lenin moreno,29793,"ObjectId(""5d47a7975d872caaa9adbb5a"")","ObjectId(""5d50c9e64272c203bb2a586c"")"
-pastaza,lenin moreno,13815,"ObjectId(""5d47a7975d872caaa9adbb5b"")","ObjectId(""5d50c9e64272c203bb2a586c"")"
-pichincha,lenin moreno,659479,"ObjectId(""5d47a7975d872caaa9adbb5c"")","ObjectId(""5d50c9e64272c203bb2a586c"")"
-santa elena,lenin moreno,95768,,"ObjectId(""5d50c9e64272c203bb2a586c"")"
-sto dgo tsachilas,lenin moreno,111665,,"ObjectId(""5d50c9e64272c203bb2a586c"")"
-sucumbios,lenin moreno,40036,"ObjectId(""5d47a7975d872caaa9adbb5d"")","ObjectId(""5d50c9e64272c203bb2a586c"")"
-tungurahua,lenin moreno,98719,"ObjectId(""5d47a7975d872caaa9adbb5e"")","ObjectId(""5d50c9e64272c203bb2a586c"")"
-zamora chinchipe,lenin moreno,17785,"ObjectId(""5d47a7985d872caaa9adbb5f"")","ObjectId(""5d50c9e64272c203bb2a586c"")"
+total,province,candidate
+3092,5d5208e04272c203bb2a5a23,5d55f0ee240f0f01f917025f
+2082,5d5208e04272c203bb2a5a24,5d55f0ee240f0f01f917025f
+1251,5d5208e04272c203bb2a5a25,5d55f0ee240f0f01f917025f
+623,5d5208e04272c203bb2a5a26,5d55f0ee240f0f01f917025f
+3427,5d5208e04272c203bb2a5a27,5d55f0ee240f0f01f917025f
+3061,5d5208e04272c203bb2a5a28,5d55f0ee240f0f01f917025f
+1427,5d5208e04272c203bb2a5a29,5d55f0ee240f0f01f917025f
+1426,5d5208e04272c203bb2a5a2a,5d55f0ee240f0f01f917025f
+46,5d5208e04272c203bb2a5a2b,5d55f0ee240f0f01f917025f
+14077,5d5208e04272c203bb2a5a2c,5d55f0ee240f0f01f917025f
+1723,5d5208e04272c203bb2a5a2d,5d55f0ee240f0f01f917025f
+2257,5d5208e04272c203bb2a5a2e,5d55f0ee240f0f01f917025f
+5438,5d5208e14272c203bb2a5a2f,5d55f0ee240f0f01f917025f
+5152,5d5208e14272c203bb2a5a30,5d55f0ee240f0f01f917025f
+823,5d5208e14272c203bb2a5a31,5d55f0ee240f0f01f917025f
+2708,5d5208e14272c203bb2a5a32,5d55f0ee240f0f01f917025f
+1146,5d5208e14272c203bb2a5a33,5d55f0ee240f0f01f917025f
+411,5d5208e14272c203bb2a5a34,5d55f0ee240f0f01f917025f
+10793,5d5208e14272c203bb2a5a35,5d55f0ee240f0f01f917025f
+914,5d5208e14272c203bb2a5a36,5d55f0ee240f0f01f917025f
+2015,5d5208e14272c203bb2a5a37,5d55f0ee240f0f01f917025f
+4195,5d5208e14272c203bb2a5a38,5d55f0ee240f0f01f917025f
+3214,5d5208e14272c203bb2a5a39,5d55f0ee240f0f01f917025f
+363,5d5208e14272c203bb2a5a3a,5d55f0ee240f0f01f917025f
+16867,5d5208e04272c203bb2a5a23,5d55f0ee240f0f01f917025e
+2739,5d5208e04272c203bb2a5a24,5d55f0ee240f0f01f917025e
+3789,5d5208e04272c203bb2a5a25,5d55f0ee240f0f01f917025e
+3398,5d5208e04272c203bb2a5a26,5d55f0ee240f0f01f917025e
+7987,5d5208e04272c203bb2a5a27,5d55f0ee240f0f01f917025e
+8166,5d5208e04272c203bb2a5a28,5d55f0ee240f0f01f917025e
+10728,5d5208e04272c203bb2a5a29,5d55f0ee240f0f01f917025e
+4021,5d5208e04272c203bb2a5a2a,5d55f0ee240f0f01f917025e
+330,5d5208e04272c203bb2a5a2b,5d55f0ee240f0f01f917025e
+63272,5d5208e04272c203bb2a5a2c,5d55f0ee240f0f01f917025e
+11037,5d5208e04272c203bb2a5a2d,5d55f0ee240f0f01f917025e
+6178,5d5208e04272c203bb2a5a2e,5d55f0ee240f0f01f917025e
+12209,5d5208e14272c203bb2a5a2f,5d55f0ee240f0f01f917025e
+40473,5d5208e14272c203bb2a5a30,5d55f0ee240f0f01f917025e
+1043,5d5208e14272c203bb2a5a31,5d55f0ee240f0f01f917025e
+802,5d5208e14272c203bb2a5a32,5d55f0ee240f0f01f917025e
+1196,5d5208e14272c203bb2a5a33,5d55f0ee240f0f01f917025e
+1176,5d5208e14272c203bb2a5a34,5d55f0ee240f0f01f917025e
+66618,5d5208e14272c203bb2a5a35,5d55f0ee240f0f01f917025e
+7874,5d5208e14272c203bb2a5a36,5d55f0ee240f0f01f917025e
+12091,5d5208e14272c203bb2a5a37,5d55f0ee240f0f01f917025e
+2116,5d5208e14272c203bb2a5a38,5d55f0ee240f0f01f917025e
+12634,5d5208e14272c203bb2a5a39,5d55f0ee240f0f01f917025e
+689,5d5208e14272c203bb2a5a3a,5d55f0ee240f0f01f917025e
+3183,5d5208e04272c203bb2a5a23,5d55f0ee240f0f01f917025b
+17148,5d5208e04272c203bb2a5a24,5d55f0ee240f0f01f917025b
+23677,5d5208e04272c203bb2a5a25,5d55f0ee240f0f01f917025b
+2223,5d5208e04272c203bb2a5a26,5d55f0ee240f0f01f917025b
+36824,5d5208e04272c203bb2a5a27,5d55f0ee240f0f01f917025b
+27291,5d5208e04272c203bb2a5a28,5d55f0ee240f0f01f917025b
+77833,5d5208e04272c203bb2a5a29,5d55f0ee240f0f01f917025b
+44602,5d5208e04272c203bb2a5a2a,5d55f0ee240f0f01f917025b
+2036,5d5208e04272c203bb2a5a2b,5d55f0ee240f0f01f917025b
+604607,5d5208e04272c203bb2a5a2c,5d55f0ee240f0f01f917025b
+36233,5d5208e04272c203bb2a5a2d,5d55f0ee240f0f01f917025b
+30403,5d5208e04272c203bb2a5a2e,5d55f0ee240f0f01f917025b
+100352,5d5208e14272c203bb2a5a2f,5d55f0ee240f0f01f917025b
+91124,5d5208e14272c203bb2a5a30,5d55f0ee240f0f01f917025b
+4843,5d5208e14272c203bb2a5a31,5d55f0ee240f0f01f917025b
+4265,5d5208e14272c203bb2a5a32,5d55f0ee240f0f01f917025b
+6854,5d5208e14272c203bb2a5a33,5d55f0ee240f0f01f917025b
+5934,5d5208e14272c203bb2a5a34,5d55f0ee240f0f01f917025b
+221844,5d5208e14272c203bb2a5a35,5d55f0ee240f0f01f917025b
+19544,5d5208e14272c203bb2a5a36,5d55f0ee240f0f01f917025b
+35923,5d5208e14272c203bb2a5a37,5d55f0ee240f0f01f917025b
+16175,5d5208e14272c203bb2a5a38,5d55f0ee240f0f01f917025b
+47835,5d5208e14272c203bb2a5a39,5d55f0ee240f0f01f917025b
+7079,5d5208e14272c203bb2a5a3a,5d55f0ee240f0f01f917025b
+8397,5d5208e04272c203bb2a5a23,5d55f0ee240f0f01f917025a
+2242,5d5208e04272c203bb2a5a24,5d55f0ee240f0f01f917025a
+3983,5d5208e04272c203bb2a5a25,5d55f0ee240f0f01f917025a
+2169,5d5208e04272c203bb2a5a26,5d55f0ee240f0f01f917025a
+5514,5d5208e04272c203bb2a5a27,5d55f0ee240f0f01f917025a
+5009,5d5208e04272c203bb2a5a28,5d55f0ee240f0f01f917025a
+25007,5d5208e04272c203bb2a5a29,5d55f0ee240f0f01f917025a
+14739,5d5208e04272c203bb2a5a2a,5d55f0ee240f0f01f917025a
+344,5d5208e04272c203bb2a5a2b,5d55f0ee240f0f01f917025a
+187796,5d5208e04272c203bb2a5a2c,5d55f0ee240f0f01f917025a
+4809,5d5208e04272c203bb2a5a2d,5d55f0ee240f0f01f917025a
+5384,5d5208e04272c203bb2a5a2e,5d55f0ee240f0f01f917025a
+40674,5d5208e14272c203bb2a5a2f,5d55f0ee240f0f01f917025a
+67576,5d5208e14272c203bb2a5a30,5d55f0ee240f0f01f917025a
+767,5d5208e14272c203bb2a5a31,5d55f0ee240f0f01f917025a
+753,5d5208e14272c203bb2a5a32,5d55f0ee240f0f01f917025a
+2135,5d5208e14272c203bb2a5a33,5d55f0ee240f0f01f917025a
+728,5d5208e14272c203bb2a5a34,5d55f0ee240f0f01f917025a
+27993,5d5208e14272c203bb2a5a35,5d55f0ee240f0f01f917025a
+14484,5d5208e14272c203bb2a5a36,5d55f0ee240f0f01f917025a
+16755,5d5208e14272c203bb2a5a37,5d55f0ee240f0f01f917025a
+2292,5d5208e14272c203bb2a5a38,5d55f0ee240f0f01f917025a
+9229,5d5208e14272c203bb2a5a39,5d55f0ee240f0f01f917025a
+604,5d5208e14272c203bb2a5a3a,5d55f0ee240f0f01f917025a
+43562,5d5208e04272c203bb2a5a23,5d55f0ee240f0f01f9170259
+10573,5d5208e04272c203bb2a5a24,5d55f0ee240f0f01f9170259
+14309,5d5208e04272c203bb2a5a25,5d55f0ee240f0f01f9170259
+11147,5d5208e04272c203bb2a5a26,5d55f0ee240f0f01f9170259
+24883,5d5208e04272c203bb2a5a27,5d55f0ee240f0f01f9170259
+52421,5d5208e04272c203bb2a5a28,5d55f0ee240f0f01f9170259
+11546,5d5208e04272c203bb2a5a29,5d55f0ee240f0f01f9170259
+16896,5d5208e04272c203bb2a5a2a,5d55f0ee240f0f01f9170259
+520,5d5208e04272c203bb2a5a2b,5d55f0ee240f0f01f9170259
+47972,5d5208e04272c203bb2a5a2c,5d55f0ee240f0f01f9170259
+28962,5d5208e04272c203bb2a5a2d,5d55f0ee240f0f01f9170259
+25559,5d5208e04272c203bb2a5a2e,5d55f0ee240f0f01f9170259
+11367,5d5208e14272c203bb2a5a2f,5d55f0ee240f0f01f9170259
+38108,5d5208e14272c203bb2a5a30,5d55f0ee240f0f01f9170259
+6596,5d5208e14272c203bb2a5a31,5d55f0ee240f0f01f9170259
+3912,5d5208e14272c203bb2a5a32,5d55f0ee240f0f01f9170259
+9949,5d5208e14272c203bb2a5a33,5d55f0ee240f0f01f9170259
+4956,5d5208e14272c203bb2a5a34,5d55f0ee240f0f01f9170259
+193415,5d5208e14272c203bb2a5a35,5d55f0ee240f0f01f9170259
+4139,5d5208e14272c203bb2a5a36,5d55f0ee240f0f01f9170259
+11694,5d5208e14272c203bb2a5a37,5d55f0ee240f0f01f9170259
+8475,5d5208e14272c203bb2a5a38,5d55f0ee240f0f01f9170259
+38273,5d5208e14272c203bb2a5a39,5d55f0ee240f0f01f9170259
+5327,5d5208e14272c203bb2a5a3a,5d55f0ee240f0f01f9170259
+3014,5d5208e04272c203bb2a5a23,5d55f0ee240f0f01f917025d
+1441,5d5208e04272c203bb2a5a24,5d55f0ee240f0f01f917025d
+826,5d5208e04272c203bb2a5a25,5d55f0ee240f0f01f917025d
+729,5d5208e04272c203bb2a5a26,5d55f0ee240f0f01f917025d
+8445,5d5208e04272c203bb2a5a27,5d55f0ee240f0f01f917025d
+3007,5d5208e04272c203bb2a5a28,5d55f0ee240f0f01f917025d
+1583,5d5208e04272c203bb2a5a29,5d55f0ee240f0f01f917025d
+1416,5d5208e04272c203bb2a5a2a,5d55f0ee240f0f01f917025d
+62,5d5208e04272c203bb2a5a2b,5d55f0ee240f0f01f917025d
+10175,5d5208e04272c203bb2a5a2c,5d55f0ee240f0f01f917025d
+1892,5d5208e04272c203bb2a5a2d,5d55f0ee240f0f01f917025d
+164,5d5208e04272c203bb2a5a2e,5d55f0ee240f0f01f917025d
+2662,5d5208e14272c203bb2a5a2f,5d55f0ee240f0f01f917025d
+4878,5d5208e14272c203bb2a5a30,5d55f0ee240f0f01f917025d
+367,5d5208e14272c203bb2a5a31,5d55f0ee240f0f01f917025d
+284,5d5208e14272c203bb2a5a32,5d55f0ee240f0f01f917025d
+382,5d5208e14272c203bb2a5a33,5d55f0ee240f0f01f917025d
+268,5d5208e14272c203bb2a5a34,5d55f0ee240f0f01f917025d
+19063,5d5208e14272c203bb2a5a35,5d55f0ee240f0f01f917025d
+12,5d5208e14272c203bb2a5a36,5d55f0ee240f0f01f917025d
+1825,5d5208e14272c203bb2a5a37,5d55f0ee240f0f01f917025d
+539,5d5208e14272c203bb2a5a38,5d55f0ee240f0f01f917025d
+4081,5d5208e14272c203bb2a5a39,5d55f0ee240f0f01f917025d
+245,5d5208e14272c203bb2a5a3a,5d55f0ee240f0f01f917025d
+144769,5d5208e04272c203bb2a5a23,5d55f0ee240f0f01f9170258
+52249,5d5208e04272c203bb2a5a24,5d55f0ee240f0f01f9170258
+39018,5d5208e04272c203bb2a5a25,5d55f0ee240f0f01f9170258
+28767,5d5208e04272c203bb2a5a26,5d55f0ee240f0f01f9170258
+121256,5d5208e04272c203bb2a5a27,5d55f0ee240f0f01f9170258
+87709,5d5208e04272c203bb2a5a28,5d55f0ee240f0f01f9170258
+106731,5d5208e04272c203bb2a5a29,5d55f0ee240f0f01f9170258
+74317,5d5208e04272c203bb2a5a2a,5d55f0ee240f0f01f9170258
+6665,5d5208e04272c203bb2a5a2b,5d55f0ee240f0f01f9170258
+489536,5d5208e04272c203bb2a5a2c,5d55f0ee240f0f01f9170258
+69663,5d5208e04272c203bb2a5a2d,5d55f0ee240f0f01f9170258
+120117,5d5208e04272c203bb2a5a2e,5d55f0ee240f0f01f9170258
+95676,5d5208e14272c203bb2a5a2f,5d55f0ee240f0f01f9170258
+160792,5d5208e14272c203bb2a5a30,5d55f0ee240f0f01f9170258
+45059,5d5208e14272c203bb2a5a31,5d55f0ee240f0f01f9170258
+3679,5d5208e14272c203bb2a5a32,5d55f0ee240f0f01f9170258
+31269,5d5208e14272c203bb2a5a33,5d55f0ee240f0f01f9170258
+24958,5d5208e14272c203bb2a5a34,5d55f0ee240f0f01f9170258
+569527,5d5208e14272c203bb2a5a35,5d55f0ee240f0f01f9170258
+55866,5d5208e14272c203bb2a5a36,5d55f0ee240f0f01f9170258
+81922,5d5208e14272c203bb2a5a37,5d55f0ee240f0f01f9170258
+27621,5d5208e14272c203bb2a5a38,5d55f0ee240f0f01f9170258
+12997,5d5208e14272c203bb2a5a39,5d55f0ee240f0f01f9170258
+27816,5d5208e14272c203bb2a5a3a,5d55f0ee240f0f01f9170258
+197081,5d5208e04272c203bb2a5a23,5d55f0ee240f0f01f917025c
+29614,5d5208e04272c203bb2a5a24,5d55f0ee240f0f01f917025c
+46211,5d5208e04272c203bb2a5a25,5d55f0ee240f0f01f917025c
+43798,5d5208e04272c203bb2a5a26,5d55f0ee240f0f01f917025c
+79603,5d5208e04272c203bb2a5a27,5d55f0ee240f0f01f917025c
+82152,5d5208e04272c203bb2a5a28,5d55f0ee240f0f01f917025c
+169052,5d5208e04272c203bb2a5a29,5d55f0ee240f0f01f917025c
+107462,5d5208e04272c203bb2a5a2a,5d55f0ee240f0f01f917025c
+4813,5d5208e04272c203bb2a5a2b,5d55f0ee240f0f01f917025c
+897359,5d5208e04272c203bb2a5a2c,5d55f0ee240f0f01f917025c
+11693,5d5208e04272c203bb2a5a2d,5d55f0ee240f0f01f917025c
+94428,5d5208e04272c203bb2a5a2e,5d55f0ee240f0f01f917025c
+212165,5d5208e14272c203bb2a5a2f,5d55f0ee240f0f01f917025c
+47895,5d5208e14272c203bb2a5a30,5d55f0ee240f0f01f917025c
+24312,5d5208e14272c203bb2a5a31,5d55f0ee240f0f01f917025c
+16457,5d5208e14272c203bb2a5a32,5d55f0ee240f0f01f917025c
+29793,5d5208e14272c203bb2a5a33,5d55f0ee240f0f01f917025c
+13815,5d5208e14272c203bb2a5a34,5d55f0ee240f0f01f917025c
+659479,5d5208e14272c203bb2a5a35,5d55f0ee240f0f01f917025c
+95768,5d5208e14272c203bb2a5a36,5d55f0ee240f0f01f917025c
+111665,5d5208e14272c203bb2a5a37,5d55f0ee240f0f01f917025c
+40036,5d5208e14272c203bb2a5a38,5d55f0ee240f0f01f917025c
+98719,5d5208e14272c203bb2a5a39,5d55f0ee240f0f01f917025c
+17785,5d5208e14272c203bb2a5a3a,5d55f0ee240f0f01f917025c

@@ -4,24 +4,23 @@
 
 "use strict";
 const mongoose = require("mongoose");
+const Schema = mongoose.Schema;
 mongoose.Promise = global.Promise;
 
 const resultsSchema = new mongoose.Schema(
   {
     province: {
-      type: mongoose.Schema.ObjectId,
+      type: Schema.Types.ObjectId,
       ref: "Province",
       required: "You must supply a province"
     },
 
     candidate: {
-      type: mongoose.Schema.ObjectId,
+      type: Schema.Types.ObjectId,
       ref: "Candidate",
       required: "You must supply a candidate"
     },
-    round: Number,
-    men: Number,
-    women: Number
+    total: Number
   },
   {
     toObject: {
