@@ -31,7 +31,7 @@ block content
 
 
             each candidate in candidates
-
+                - h.dump(candidate)
                 if candidate.president !== "null"
                     - var id = String(candidate._id).slice(-5);
                     - var myNumeral = h.numeral;
@@ -40,12 +40,12 @@ block content
                 .col-sm-12.col-md-12.col-lg-12.item.text-center.text-sm-center.text-md-center(percentage=`${candidate.percentage}` name=`${candidate.president}`)
                   .col-sm-12.col-md-4.col-lg-3
                     a(href='#')
-                      img.img-circle(src=`${candidate.photo_president}`, alt=`${candidate.president}`)
+                      img.img-circle(src=`../images/candidates/${candidate.image}`, alt=`${candidate.candidate}`)
                     a.text-capitalize(href='#')
-                      h4  #{candidate.president}
+                      h4  #{candidate.candidate}
                     p.text-capitalize
-                      small.orgpol #{candidate.polorg}
-                      span(type='hidden', name=`${candidate.president}`, value=`${candidate.total}`)
+                      small.orgpol #{candidate.organization}
+                    //-   span(type='hidden', name=`${candidate.candi}`, value=`${candidate.total}`)
                   .col-sm-12.col-md-4.col-lg-3
                     div(id=`bar-${id}` class="barchart")
                   .col-sm-12.col-md-4.col-lg-3

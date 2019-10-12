@@ -41,6 +41,7 @@ exports.getSurveys = async (req, res) => {
     percentage: 0
     // series: "cne" //needed for the d3 Chart
   });
+  console.log(surveys);
 
   res.render("surveys", { title: "Surveys", surveys, candidates, finalArray });
 };

@@ -3,7 +3,7 @@
 
   With async/await, you need some way to catch errors
   Instead of using try{} catch(e) {} in each controller, we wrap the function in
-  catchErrors(), catch and errors they throw, and pass it along to our express middleware with next()
+  catchErrors(), catch any errors they throw, and pass it along to our express middleware with next()
 */
 
 exports.catchErrors = fn => {
@@ -19,7 +19,6 @@ exports.catchErrors = fn => {
 */
 exports.notFound = (req, res, next) => {
   const err = new Error("Not Found");
-
   err.status = 404;
   next(err);
 };
@@ -34,12 +33,12 @@ exports.flashValidationErrors = (err, req, res, next) => {
   if (!err.errors) return next(err);
   // validation errors look like
   const errorKeys = Object.keys(err.errors);
-  errorKeys.forEach(key => req.flash("danger", err.errors[key].message));
+  errorKeys.forEach(key => req.flash("error", err.errors[key].message));
   res.redirect("back");
 };
 
 /*
-  Development Error Hanlder
+  Development Error Handler
 
   In development we show good error messages so if we hit a syntax error or any other previously un-handled error, we can show good info on what happened
 */
@@ -64,7 +63,7 @@ exports.developmentErrors = (err, req, res, next) => {
 };
 
 /*
-  Production Error Hanlder
+  Production Error Handler
 
   No stacktraces are leaked to user
 */

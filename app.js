@@ -12,12 +12,13 @@ const expressValidator = require("express-validator");
 const routes = require("./routes/index");
 const helpers = require("./helpers");
 const errorHandlers = require("./handlers/errorHandlers");
-// const favicon = require('express-favicon');
+const cors = require("cors");
 
 require("./handlers/passport");
 
 // create our Express app
 const app = express();
+app.use(cors());
 
 // view engine setup
 app.set("views", path.join(__dirname, "views")); // this is the folder where we keep our pug files

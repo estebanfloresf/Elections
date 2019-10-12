@@ -3,4 +3,16 @@
     "[javascript,scss,html]": {
         "editor.formatOnSave": true
     },
+    "spellright.language": [
+        "en"
+    ],
+    "spellright.documentTypes": [
+        "markdown",
+        "latex",
+        "plaintext"
+    ],
+    "files.associations": {
+        "*.js": "javascriptreact"
+    },
+    "workbench.settings.useSplitJSON": true,
 }
