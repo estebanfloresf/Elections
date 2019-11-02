@@ -17,6 +17,7 @@ To get started:
 
 - Download or Clone this repository
   - `npm install`
+  - `nvm use 8`
   - `npm start`
 
 I decided to make this project basically because there was no good information related
