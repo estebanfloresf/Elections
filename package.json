@@ -76,6 +76,7 @@
     "now": "^10.1.4",
     "numeral": "^2.0.6",
     "postcss-loader": "2.1.1",
+    "prettier": "1.18.2",
     "sass-loader": "6.0.7",
     "svg-inline-loader": "^0.8.0"
   }

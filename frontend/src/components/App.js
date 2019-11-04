@@ -29,7 +29,7 @@ function App() {
         </h1>
         <input type="checkbox" id="nav-toggle" className="nav-toggle" />
         <nav>
-          <ul className="">
+          <ul>
             {menu.map((item, i) => (
               <li
                 key={i}
