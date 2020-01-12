@@ -2,8 +2,8 @@
  * Created by esteban on 11/6/17.
  */
 
-const passport  = require('passport');
-const mongoose = require('mongoose');
+const passport = require("passport");
+const mongoose = require("mongoose");
 
 // const User = mongoose.model('User');
 //

@@ -78,9 +78,7 @@ fetch("/api/map", {
                 candidate._id === province.candidate ? candidate.president : ""
               );
 
-              content += `<td class='text-capitalize text-center' data-th='Candidate' id='${id}'>${
-                candidate[0].president
-              }</td>`;
+              content += `<td class='text-capitalize text-center' data-th='Candidate' id='${id}'>${candidate[0].president}</td>`;
               content += `<td id='${id}-total' data-th='Total' >${parseInt(
                 province.total,
                 0

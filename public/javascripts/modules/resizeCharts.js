@@ -1,4 +1,4 @@
-import {$,$$} from './bling';
+import { $, $$ } from "./bling";
 
 // d3.select("#bar-" + last)
 // .append("div")
@@ -10,9 +10,9 @@ import {$,$$} from './bling';
 // //class to make it responsive
 // .attr("class","svg-content-responsive");
 
-function resize(){
-    var a  = $$('barchart');
-    console.log(a);
+function resize() {
+  var a = $$("barchart");
+  console.log(a);
 }
 
 export default resize;

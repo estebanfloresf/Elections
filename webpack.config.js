@@ -8,6 +8,7 @@ const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const autoprefixer = require("autoprefixer");
 const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const tailwindcss = require("tailwindcss");
 
 const devMode = process.env.NODE_ENV !== "production";
 
@@ -140,7 +141,9 @@ const config = {
       // Options similar to the same options in webpackOptions.output
       // both options are optional
       filename: "[name].css"
-    })
+    }),
+    tailwindcss("./tailwind.config.js"),
+    require("autoprefixer")
   ],
   optimization: {
     minimizer: [
