@@ -1,3 +1,4 @@
+import express from "express";
 // import environmental variables from our variables.env file
 require("dotenv").config({ path: ".env" });
 const mongoose = require("mongoose");
