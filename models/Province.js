@@ -15,7 +15,8 @@ const provinceSchema = new mongoose.Schema({
   },
 
   flag: String,
-  path: String
+  svg_path: String,
+  valid_votes: Number
 });
 
 module.exports = mongoose.model("Province", provinceSchema);

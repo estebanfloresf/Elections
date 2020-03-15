@@ -5,24 +5,27 @@ const mongoose = require("mongoose");
 // const Results = mongoose.model("Results");
 
 const candidateSchema = new mongoose.Schema({
-  president: {
+  candidate: {
     type: String,
     lowercase: true,
+    trim: true,
     required: "There must be a president candidate"
   },
   vicepresident: {
     type: String,
     lowercase: true,
+    trim: true,
     required: "There must be a vicepresident candidate"
   },
-  polorg: {
+  organization: {
     type: String,
     lowercase: true,
+    trim: true,
     required: "Candidate must have an organization"
   },
 
-  photo_president: String,
-  photo_vicepresident: String
+  image: String,
+  image_vicepresident: String
 });
 
 // candidateSchema.statics.getNationResults = function() {
