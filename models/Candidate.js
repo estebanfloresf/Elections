@@ -63,13 +63,13 @@ const candidateSchema = new mongoose.Schema({
 //   ]);
 // };
 
-candidateSchema.statics.getAllCandidates = function() {
-  return this.find({}, function(err, results) {
-    if (err) {
-      console.log(err.message);
-    }
-    return results;
-  });
-};
+// candidateSchema.statics.getAllCandidates = function() {
+//   return this.find({}, function(err, results) {
+//     if (err) {
+//       console.log(err.message);
+//     }
+//     return results;
+//   });
+// };
 
 module.exports = mongoose.model("Candidate", candidateSchema, "candidates");

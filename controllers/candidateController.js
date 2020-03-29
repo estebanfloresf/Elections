@@ -61,7 +61,7 @@ const Candidate = mongoose.model("Candidate");
 
 //   res.render("candidates", { title: "Candidates", candidates });
 // };
-exports.getCandidatesInfo = async (req, res) => {
+exports.getAllCandidates = async (req, res) => {
   const candidates = await Candidate.getAllCandidates();
   res.json(candidates);
 };

@@ -1,10 +1,10 @@
 const express = require("express");
 const router = express.Router();
-// const candidateController = require("../controllers/candidateController");
+const candidateController = require("../controllers/candidateController");
 // const surveyController = require("../controllers/surveyController");
 // const provinceController = require("../controllers/provinceController");
 
-// const { catchErrors } = require("../handlers/errorHandlers");
+const { catchErrors } = require("../handlers/errorHandlers");
 
 /* GET home page. */
 router.get("/home", function(req, res, next) {
@@ -35,7 +35,7 @@ const controller = (req, res) => {
 };
 router
   .route("/")
-  .get(controller)
+  .get(catchErrors(candidateController.getAllCandidates))
   .post(controller);
 
 router

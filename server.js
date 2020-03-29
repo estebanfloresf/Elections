@@ -13,6 +13,9 @@ mongoose.connection.on("error", err => {
   console.error(`🙅 🚫 🙅 🚫 🙅 🚫 🙅 🚫 → ${err.message}`);
 });
 
+//import all our models
+require("./models/Candidate");
+
 // set the port of our application
 // process.env.PORT lets the port be set by Heroku
 const port = process.env.PORT || 8080;
