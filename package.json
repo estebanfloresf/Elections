@@ -9,7 +9,7 @@
   "scripts": {
     "dev": "parcel client/index.html",
     "lint": "eslint \"./**/*.{js,jsx}\" --quiet",
-    "format": "prettier \"./**/*.{js,html,json}\" --write",
+    "format": "prettier \"./**/*.{js,html,json,pug}\" --write",
     "prod": "node start.js",
     "watch": "nodemon ./start.js --ignore public/",
     "start": "concurrently \"npm run server\" \"💻,📦\" --prefix name",

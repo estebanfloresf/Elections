@@ -4,7 +4,10 @@ const mongoose = require("mongoose");
 const Bundler = require("parcel-bundler");
 
 // Connect to our Database and handle an bad connections
-mongoose.connect(process.env.DATABASE, { useNewUrlParser: true });
+mongoose.connect(process.env.DATABASE, {
+  useNewUrlParser: true,
+  useUnifiedTopology: false
+});
 mongoose.Promise = global.Promise; // Tell Mongoose to use ES6 promises
 mongoose.connection.on("connected", function() {
   console.log("Connected to MongoDB: Success");
@@ -12,7 +15,7 @@ mongoose.connection.on("connected", function() {
 mongoose.connection.on("error", err => {
   console.error(`🙅 🚫 🙅 🚫 🙅 🚫 🙅 🚫 → ${err.message}`);
 });
-
+console.log(mongoose.connection.readyState);
 //import all our models
 require("./models/Candidate");
 

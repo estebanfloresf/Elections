@@ -7,8 +7,10 @@ const candidateController = require("../controllers/candidateController");
 const { catchErrors } = require("../handlers/errorHandlers");
 
 /* GET home page. */
-router.get("/home", function(req, res, next) {
-  res.send({ message: "home" });
+router.get("/", function(req, res, next) {
+  res.render("index", {
+    title: "Home"
+  });
   next();
 });
 
@@ -30,18 +32,7 @@ router.get("/home", function(req, res, next) {
 // returns map info
 // router.get("/api/map", catchErrors(provinceController.getMapInfo));
 // router.post("/provinceInfo", catchErrors(provinceController.provinceResults));
-const controller = (req, res) => {
-  res.send({ message: "hello" });
-};
-router
-  .route("/")
-  .get(catchErrors(candidateController.getAllCandidates))
-  .post(controller);
 
-router
-  .route("/:id")
-  .get(controller)
-  .put(controller)
-  .delete(controller);
+router.route("/").get(catchErrors(candidateController.getAllCandidates));
 
 module.exports = router;
