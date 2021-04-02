@@ -7,6 +7,7 @@
 */
 
 exports.catchErrors = fn => {
+  console.log("🚀 ~ file: errorHandlers.js ~ line 10 ~ fn", fn);
   return function(req, res, next) {
     return fn(req, res, next).catch(next);
   };

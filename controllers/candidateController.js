@@ -6,7 +6,10 @@ const Candidate = mongoose.model("Candidate");
 // const Results = mongoose.model("Results");
 // const Province = mongoose.model("Province");
 
-// exports.getCandidates = async (req, res) => {
+exports.getCandidates = async (req, res) => {
+  const candidates = await Candidate.getNationResults();
+  res.render("candidates", { title: "Candidates", candidates });
+};
 
 //   //Order the candidates by their total votes
 //   function order(a, b) {
@@ -20,8 +23,6 @@ const Candidate = mongoose.model("Candidate");
 //   }
 
 //   const totalvotes = await Results.getNationResults();
-
-//   const candidates = await Candidate.getNationResults();
 
 //   // 1) Loop throught the array of candidates
 //   // 2) get the top provinces votes from each provinceand save it into an array
@@ -61,7 +62,7 @@ const Candidate = mongoose.model("Candidate");
 
 //   res.render("candidates", { title: "Candidates", candidates });
 // };
-exports.getAllCandidates = async (req, res) => {
-  const candidates = await Candidate.getAllCandidates();
-  res.json(candidates);
-};
+// exports.getAllCandidates = async (req, res) => {
+//   const candidates = await Candidate.getAllCandidates();
+//   res.json(candidates);
+// };

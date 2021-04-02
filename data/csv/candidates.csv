@@ -1,9 +1,9 @@
-image,organization,candidate
-guillermo_lasso.png,creo - suma ,guillermo lasso
-paco_moncayo.png,acuerdo por el cambio(up| id| pachakutik),paco moncayo
-abdala_bucaram.png,partido fuerza ecuador ,abdala bucaram
-cynthia_viteri.png,partido social cristiano,cynthia viteri
-lenin_moreno.png,movimiento alianza pais ,lenin moreno
-washington_pesantez.png,movimiento union ecuatoriana ,washington pesantez
-ivan_espinel.png,movimiento fuerza compromiso social ,ivan espinel
-patricio_zuquilanda.png,partido sociedad patriotica ,patricio zuquilanda
+image,organization,candidate,candidate_id
+guillermo_lasso.png,creo - suma ,guillermo lasso,5d55f0ee240f0f01f9170258
+paco_moncayo.png,acuerdo por el cambio(up| id| pachakutik),paco moncayo,5d55f0ee240f0f01f9170259
+abdala_bucaram.png,partido fuerza ecuador ,abdala bucaram,5d55f0ee240f0f01f917025a
+cynthia_viteri.png,partido social cristiano,cynthia viteri,5d55f0ee240f0f01f917025b
+lenin_moreno.png,movimiento alianza pais ,lenin moreno,5d55f0ee240f0f01f917025c
+washington_pesantez.png,movimiento union ecuatoriana ,washington pesantez,5d55f0ee240f0f01f917025d
+ivan_espinel.png,movimiento fuerza compromiso social ,ivan espinel,5d55f0ee240f0f01f917025e
+patricio_zuquilanda.png,partido sociedad patriotica ,patricio zuquilanda,5d55f0ee240f0f01f917025f

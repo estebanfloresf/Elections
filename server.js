@@ -6,7 +6,7 @@ const Bundler = require("parcel-bundler");
 // Connect to our Database and handle an bad connections
 mongoose.connect(process.env.DATABASE, {
   useNewUrlParser: true,
-  useUnifiedTopology: false
+  useUnifiedTopology: true
 });
 mongoose.Promise = global.Promise; // Tell Mongoose to use ES6 promises
 mongoose.connection.on("connected", function() {
@@ -15,7 +15,11 @@ mongoose.connection.on("connected", function() {
 mongoose.connection.on("error", err => {
   console.error(`🙅 🚫 🙅 🚫 🙅 🚫 🙅 🚫 → ${err.message}`);
 });
-console.log(mongoose.connection.readyState);
+
+console.log(
+  "🚀 ~ file: server.js ~ line 20 ~ mongoose.connection.readyState",
+  mongoose.connection.readyState
+);
 //import all our models
 require("./models/Candidate");
 
@@ -36,5 +40,9 @@ const port = process.env.PORT || 8080;
 const app = require("./app");
 
 app.listen(port, function() {
+  console.log(
+    "🚀 ~ file: server.js ~ line 39 ~ mongoose.connection.readyState",
+    mongoose.connection.readyState
+  );
   console.log("Our app is running on http://localhost:" + port);
 });

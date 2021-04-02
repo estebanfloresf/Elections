@@ -14,8 +14,8 @@ router.get("/", function(req, res, next) {
   next();
 });
 
-// candidateController
-// router.get("/candidates", catchErrors(candidateController.getCandidates));
+candidateController;
+router.get("/candidates", catchErrors(candidateController.getCandidates));
 // router.get(
 //   "/api/candidates",
 //   catchErrors(candidateController.getCandidatesInfo)
@@ -32,7 +32,5 @@ router.get("/", function(req, res, next) {
 // returns map info
 // router.get("/api/map", catchErrors(provinceController.getMapInfo));
 // router.post("/provinceInfo", catchErrors(provinceController.provinceResults));
-
-router.route("/").get(catchErrors(candidateController.getAllCandidates));
 
 module.exports = router;

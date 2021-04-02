@@ -11,12 +11,6 @@ const candidateSchema = new mongoose.Schema({
     trim: true,
     required: "There must be a president candidate"
   },
-  vicepresident: {
-    type: String,
-    lowercase: true,
-    trim: true,
-    required: "There must be a vicepresident candidate"
-  },
   organization: {
     type: String,
     lowercase: true,
@@ -25,51 +19,51 @@ const candidateSchema = new mongoose.Schema({
   },
 
   image: String,
-  image_vicepresident: String
+  candidate_id: String
 });
 
-// candidateSchema.statics.getNationResults = function() {
-//   return this.aggregate([
-//     {
-//       $lookup: {
-//         from: "results",
-//         localField: "_id",
-//         foreignField: "candidate",
-//         as: "results"
-//       }
-//     },
-//     { $match: { "results.0": { $exists: true } } }, // just to get rid of no values
+candidateSchema.statics.getNationResults = function() {
+  return this.aggregate([
+    {
+      $lookup: {
+        from: "results",
+        localField: "_id",
+        foreignField: "candidate",
+        as: "results"
+      }
+    },
+    { $match: { "results.0": { $exists: true } } }, // just to get rid of no values
 
-//     {
-//       $project: {
-//         totalmen: { $sum: "$results.men" },
-//         totalwomen: { $sum: "$results.women" },
-//         president: "$$ROOT.president",
-//         photo_president: "$$ROOT.photo_president",
-//         polorg: "$$ROOT.polorg"
-//       }
-//     },
+    {
+      $project: {
+        totalmen: { $sum: "$results.men" },
+        totalwomen: { $sum: "$results.women" },
+        president: "$$ROOT.president",
+        photo_president: "$$ROOT.photo_president",
+        polorg: "$$ROOT.polorg"
+      }
+    },
 
-//     {
-//       $project: {
-//         president: "$president",
-//         photo_president: "$photo_president",
-//         polorg: "$polorg",
-//         totalmen: "$totalmen",
-//         totalwomen: "$totalwomen",
-//         total: { $add: ["$totalmen", "$totalwomen"] }
-//       }
-//     }
-//   ]);
-// };
+    {
+      $project: {
+        president: "$president",
+        photo_president: "$photo_president",
+        polorg: "$polorg",
+        totalmen: "$totalmen",
+        totalwomen: "$totalwomen",
+        total: { $add: ["$totalmen", "$totalwomen"] }
+      }
+    }
+  ]);
+};
 
-// candidateSchema.statics.getAllCandidates = function() {
-//   return this.find({}, function(err, results) {
-//     if (err) {
-//       console.log(err.message);
-//     }
-//     return results;
-//   });
-// };
+candidateSchema.statics.getAllCandidates = function() {
+  return this.find({}, function(err, results) {
+    if (err) {
+      console.log(err.message);
+    }
+    return results;
+  });
+};
 
 module.exports = mongoose.model("Candidate", candidateSchema, "candidates");
